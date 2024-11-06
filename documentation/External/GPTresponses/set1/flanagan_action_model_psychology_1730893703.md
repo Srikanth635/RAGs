@@ -1,0 +1,5 @@
+What is the Flanagan action model in cognitive psychology?The Flanagan Action Model, developed by John C. Flanagan, is not a widely recognized term in the mainstream literature of cognitive psychology. It's possible there's a misunderstanding or misnaming of existing theories or models.
+
+However, John C. Flanagan is known for the Critical Incident Technique (CIT), a method used in industrial and organizational psychology to collect and analyze specific behavioral incidents that contribute to success or failure in a particular activity. CIT is used to identify competencies and improve performance by focusing on observable and significant events.
+
+If you are referring to a different model or study related to cognitive psychology of human actions, clarification with more context or alternative terms might be helpful. Alternatively, there may have been recent developments or works in niche areas that are not yet well-documented in mainstream resources. If you have more specifics or details, I can help investigate further.
