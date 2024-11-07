@@ -1,0 +1,1332 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ease-crc.org/ont/pouring_food#"
+     xml:base="http://www.ease-crc.org/ont/pouring_food"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pour="http://www.ease-crc.org/ont/pouring_food#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="http://www.ease-crc.org/ont/pouring_food">
+        <owl:versionIRI rdf:resource="http://www.ease-crc.org/ont/pouring_food/1.0"/>
+        <terms:contributor>Michaela Kümpel</terms:contributor>
+        <terms:license>https://opendatacommons.org/licenses/by/1-0/</terms:license>
+        <rdfs:comment>This is a pouring liquids knowledge graph example to teach robots new task variations of pouring liquids. It contains food object that are most commonly used in meal preparation tasks and pouring actions, as well as different synonyms and hyponyms for pouring actions, and translates them to action parameters: the pouring angle and pouring duration, which depends on the pouring task and the velocity of the poured food.</rdfs:comment>
+        <SpecificationMetadata:copyright>Copyright (c) 2021 Michaela Kümpel
+
+This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
+
+You are free:
+
+    To share: To copy, distribute and use the database.
+    To create: To produce works from the database.
+    To adapt: To modify, transform and build upon the database.
+
+As long as you:
+
+    Attribute: Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</SpecificationMetadata:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#synonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ease-crc.org/ont/pouring_food#synonym"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#verb -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ease-crc.org/ont/pouring_food#verb"/>
+    
+
+
+    <!-- https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright -->
+
+    <owl:AnnotationProperty rdf:about="https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt#hasQuantity"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#hasConsistency -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#hasInputObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/pouring_food#hasParameter"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt#valueQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt#valueQuantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30879 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_30879">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">alcohol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003064">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">drinking water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001260">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">beer beverage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001649 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001649">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>black or white pepper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002385 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002385">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>baking soda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003280">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">soup (liquid)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00004130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004130">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>food mixture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00004327 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004327">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Dry"/>
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">rice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301036">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">coffee (liquid drink)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301073">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>sugar (granulated)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301304 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301304">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">batter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301338 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301338">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">wine</synonym>
+        <rdfs:label xml:lang="en">wine beverage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301564 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301564">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">champagne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301705 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301705">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">vinegar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301777 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301777">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>butter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301940 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301940">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>baking powder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03302339 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03302339">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">flour</synonym>
+        <rdfs:label>white wheat flour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03303225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03303225">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">syrup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03306347 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03306347">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Dry"/>
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">noodles</synonym>
+        <rdfs:label xml:lang="en">pasta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03307240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03307240">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">chocolate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03309954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03309954">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>table salt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310334 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310334">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>bakers yeast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310387 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310387">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">oil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03311146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03311146">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">sauce</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315081">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">tea</synonym>
+        <rdfs:label xml:lang="en">tea food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315498 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315498">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">dressing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315552 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315552">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">juice beverage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03316061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316061">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">egg</synonym>
+        <rdfs:label xml:lang="en">chicken egg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420170 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420170">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">stock</synonym>
+        <rdfs:label xml:lang="en">broth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001913 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001913">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">milk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Degree -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Degree">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Quantity -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Second -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Second">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Feature -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/food_cutting#PouringAction -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/food_cutting#PouringAction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pour.owl#Container -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pour.owl#Container">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Cascading -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Cascading">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Pouring"/>
+        <verb xml:lang="en">cascade</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Consistency -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Consistency">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Draining -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Draining">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringThrough"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Sieve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <verb xml:lang="en">drain</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Dry -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Dry">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Consistency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Flowing -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Flowing">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Pouring"/>
+        <verb xml:lang="en">flow</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Food -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Food">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+        <synonym xml:lang="en">content</synonym>
+        <synonym xml:lang="en">ingredient</synonym>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Liquid -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Liquid">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Consistency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Liquids -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Liquids">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym xml:lang="en">Fluids</synonym>
+        <rdfs:label xml:lang="en">liquids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Mixtures -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Mixtures">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:label xml:lang="en">mixtures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Moist -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Moist">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Consistency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Pouring -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Pouring">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringAngle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <verb xml:lang="en">pour</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#PouringAngle -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#PouringAngle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#PouringDuration -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#PouringDuration">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#PouringTask -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#PouringTask">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#PouringThrough -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#PouringThrough">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringAngle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Sieve"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <verb xml:lang="en">pour through</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Powder -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Powder">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">powder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Powdery -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Powdery">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Consistency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Shaker -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Shaker">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pour.owl#Container"/>
+        <rdfs:comment>A salt or pepper shaker to sprinkle something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Sieve -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Sieve">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Tool"/>
+        <rdfs:comment>A sieve is intended for draining liquids.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Spilling -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Spilling">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringTask"/>
+        <verb xml:lang="en">spill</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Splashing -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Splashing">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Pouring"/>
+        <verb xml:lang="en">splash</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Sprinkling -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Sprinkling">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Shaker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <verb xml:lang="en">sprinkle</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Streaming -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Streaming">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Pouring"/>
+        <verb xml:lang="en">stream</verb>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Tool -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Tool">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#Viscuous -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#Viscuous">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Consistency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#cream -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#cream">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">cream</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#drink -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#drink">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">drink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#grease -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#grease">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <synonym xml:lang="en">fat</synonym>
+        <rdfs:label xml:lang="en">grease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#marinade -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#marinade">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Dry"/>
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">marinade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#puree -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#puree">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">puree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#smoothie -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#smoothie">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquids"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#Mixtures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">smoothie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#10Seconds -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#10Seconds">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringDuration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Second"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Food"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Dry"/>
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#2Seconds -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#2Seconds">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringDuration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Second"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Food"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                                <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#45Degree -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#45Degree">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringAngle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Degree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Food"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                                <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/pouring_food#Liquid"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/pouring_food#90Degree -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/pouring_food#90Degree">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/pouring_food#PouringAngle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Degree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasInputObject"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Food"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/pouring_food#hasConsistency"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Dry"/>
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Moist"/>
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Powdery"/>
+                                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/pouring_food#Viscuous"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">46</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt#valueQuantity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

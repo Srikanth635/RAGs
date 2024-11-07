@@ -17,6 +17,12 @@ set_str = ""
 
 def query_GPT(prompts : List):
 
+    if not os.path.exists(os.path.join(os.getcwd(), "documentation", "External", "GPTresponses", set_str)):
+        os.makedirs(os.path.join(os.getcwd(), "documentation", "External", "GPTresponses", set_str))
+        print("Directory Created")
+    else:
+        print("Directory Exists")
+
     for prompt in prompts:
 
         gen_file_name = client.chat.completions.create(
@@ -44,7 +50,7 @@ def query_GPT(prompts : List):
         )
 
         answer = client.chat.completions.create(
-            model="gpt-4-turbo", # Use gpt-4o
+            model="gpt-4o", # Use gpt-4o
             messages=[
                 {"role": "system",
                  "content": "You are a helpful scientific assistant. Export response in markdown formatting"},
@@ -53,7 +59,7 @@ def query_GPT(prompts : List):
             ],
         )
 
-        with open(os.path.join(os.getcwd(), "documentation", "External", "GPTresponses", "web" ,
+        with open(os.path.join(os.getcwd(), "documentation", "External", "GPTresponses", set_str,
                                f"{file_name}_{str(int(time.time()))}.md"), 'w') as f:
             f.write(question.choices[0].message.content)
             f.write(answer.choices[0].message.content)
@@ -62,7 +68,7 @@ def query_GPT(prompts : List):
 
 if __name__ == "__main__":
 
-    set_str = "set6"
+    set_str = "cutting_action_domains"
 
     print(type(prompts[set_str]), len(prompts[set_str]))
 
