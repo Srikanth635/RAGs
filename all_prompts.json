@@ -50,7 +50,7 @@
     "How can we use an action model to recognize and interpret human actions from sensory data? What are the challenges in action recognition and understanding?",
     "How can we use an action model to evaluate the quality of actions and to learn from past experiences? What are the key metrics for evaluating action performance?"
   ],
-  "set4" : [
+  "models2" : [
     "What is the conceptual framework underlying the Action Model for Manipulation(AMM)? Provide an overview of AMM's purpose and its theoretical foundations.",
     "How does the Model of Tool-Use (MTU) relate to understanding everyday manipulation actions? What are its key components, and what problem does it aim to address?",
     "Describe the Perceptual-Hierarchical Model of Action (PHMA). What is its primary purpose, and how does it represent everyday manipulation actions in a hierarchical structure?",
@@ -222,5 +222,32 @@
     "What is the purpose of evaluation metrics in models of robotic cutting actions? Explain how success criteria like edge smoothness, precision, and force consistency provide feedback on cutting quality.",
     "How can robots use evaluation metrics to identify and correct cutting errors? Describe how feedback on errors such as uneven cuts or excessive force helps refine robotic control models for improved performance.",
     "How does real-time evaluation help robots continuously improve their cutting capabilities? Explain how immediate feedback on each cut enables robots to adjust models and improve action outcomes."
+  ],
+  "framenet_frames_cutting" : [
+    "What are the core frame elements for the Cutting frame when cutting fruits like mango?",
+    "What are the core frame elements for cutting vegetables?",
+    "What are the core frame elements for cutting paper?",
+    "What constraints are associated with the Patient frame element in the Cutting frame?",
+    "What frame elements are involved in the Cutting frame with knife used on carrot?",
+    "What frame elements are involved in cutting meat with a knife?",
+    "What constraints are on the Patient when cutting fabric with scissors?",
+    "What are the related frames to Cutting in the context of altering the shape of objects?",
+    "How does the Cutting frame relate to other frames like Dividing, Breaking, and Separating?",
+    "Which sub-frames or related frames specify types of cutting (e.g., slicing, chopping, carving)?",
+    "What frames provide variations on the Cutting frame based on purpose (e.g., artistic cutting, food preparation)?",
+    "What are the causative and descriptive relations in the Cutting frame for cutting bread with a bread knife?",
+    "What are the descriptive frame relations for chopping vegetables?",
+    "What is the frame representation for cutting with a saw and What is the frame representation for using scissors?",
+    "What frames apply when cutting an apple and What frames apply when cutting wood?",
+    "What frames are involved in multi-instrument cutting scenarios (e.g., cutting with both knife and fork)?",
+    "What representations exist for sequential actions (e.g., cutting then peeling)?",
+    "What elements are in the Cutting frame when cutting fruits for cooking?",
+    "What are the frame elements for cutting paper in a crafting context?",
+    "What are the result frame elements for chopping vegetables?",
+    "What are the frame elements involved in achieving a diced or minced result?",
+    "What are the frame distinctions between continuous cutting actions (e.g., slicing, shaving) and single cut actions?",
+    "What frame distinctions are made between slicing and chopping?",
+    "What frame elements represent the purpose behind cutting actions (e.g., decorative, functional)?",
+    "How are agent roles represented in FrameNet for specific cutting actions (e.g., chef, surgeon)?"
   ]
 }

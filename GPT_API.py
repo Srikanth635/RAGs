@@ -6,7 +6,7 @@ import time
 from typing import List
 import json
 
-with open(os.path.join(os.getcwd(), "all_prompts.json"), "r") as f:
+with open(os.path.join(os.getcwd(), "all_prompts.json") ,"r", encoding="latin-1") as f:
     prompts = json.load(f)
 
 from openai import OpenAI
@@ -68,7 +68,7 @@ def query_GPT(prompts : List):
 
 if __name__ == "__main__":
 
-    set_str = "cutting_action_domains"
+    set_str = "framenet_frames_cutting"
 
     print(type(prompts[set_str]), len(prompts[set_str]))
 
