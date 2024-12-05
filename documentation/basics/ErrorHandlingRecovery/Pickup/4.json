@@ -1,0 +1,95 @@
+{
+  "task": "Picking_Up",
+  "alternate_strategies_for_dynamic_selection": [
+    {
+      "trigger": "Dropped Object",
+      "condition": "Object slips from hand or tool.",
+      "strategy_options": [
+        {
+          "strategy": "Reposition the Object",
+          "description": "Move the object to a more stable position to prevent it from slipping further."
+        },
+        {
+          "strategy": "Use Additional Tools",
+          "description": "Use a gripper, tongs, or gloves to help secure the object more effectively."
+        },
+        {
+          "strategy": "Slow Down and Focus",
+          "description": "Reduce speed and concentrate on maintaining control while lifting."
+        }
+      ]
+    },
+    {
+      "trigger": "Improper Object Positioning",
+      "condition": "Incorrect hand or tool placement during pickup.",
+      "strategy_options": [
+        {
+          "strategy": "Adjust Grip",
+          "description": "Reposition your hand or tool to ensure better control and a secure grip."
+        },
+        {
+          "strategy": "Use Proper Lifting Techniques",
+          "description": "Use the correct posture and hand positioning to enhance lift stability."
+        },
+        {
+          "strategy": "Reorganize Workspace",
+          "description": "Clear any obstacles or reposition the object to improve accessibility and stability."
+        }
+      ]
+    },
+    {
+      "trigger": "Object Shifting",
+      "condition": "Object moves or shifts unexpectedly during the pickup attempt.",
+      "strategy_options": [
+        {
+          "strategy": "Stabilize the Object",
+          "description": "Secure the object with a non-slip mat or by holding it more firmly."
+        },
+        {
+          "strategy": "Reposition the Object",
+          "description": "Adjust the position of the object to ensure a more stable grip before lifting."
+        },
+        {
+          "strategy": "Use Additional Tools",
+          "description": "Use tools such as tongs or a lifter to stabilize the object during pickup."
+        }
+      ]
+    },
+    {
+      "trigger": "Excessive Force Applied",
+      "condition": "Too much force applied during the pickup, potentially damaging the object.",
+      "strategy_options": [
+        {
+          "strategy": "Adjust Grip",
+          "description": "Reduce the grip pressure to prevent damaging the object."
+        },
+        {
+          "strategy": "Use Proper Lifting Techniques",
+          "description": "Apply gradual force and avoid jerky movements to prevent strain or damage."
+        },
+        {
+          "strategy": "Pause and Reassess",
+          "description": "Stop and assess the situation to determine if a different approach is needed."
+        }
+      ]
+    },
+    {
+      "trigger": "Injury or Nicks",
+      "condition": "Injury or discomfort occurs during the attempt.",
+      "strategy_options": [
+        {
+          "strategy": "Pause and Reassess",
+          "description": "Stop the task, apply first aid if necessary, and re-evaluate the approach."
+        },
+        {
+          "strategy": "Use Protective Gear",
+          "description": "Wear gloves or other protective equipment to prevent injury during future attempts."
+        },
+        {
+          "strategy": "Seek Assistance",
+          "description": "Ask for help when dealing with objects that are difficult or risky to handle alone."
+        }
+      ]
+    }
+  ]
+}

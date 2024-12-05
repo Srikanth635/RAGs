@@ -1,0 +1,55 @@
+{
+  "task": "Picking_Up",
+  "visual_cues": [
+    {
+      "cue": "Shape",
+      "description": "Identifies the overall form of the object to determine the grip approach.",
+      "examples": ["Cylindrical water bottle", "Flat book"]
+    },
+    {
+      "cue": "Size",
+      "description": "Determines the dimensions of the object to adjust hand positioning or tool selection.",
+      "examples": ["Small keys", "Large cushion"]
+    },
+    {
+      "cue": "Color",
+      "description": "Distinguishes objects visually, especially in cluttered environments.",
+      "examples": ["Red ball among other toys", "Black remote on a white table"]
+    },
+    {
+      "cue": "Texture",
+      "description": "Indicates surface properties to determine grip strength or tool use.",
+      "examples": ["Smooth glass cup", "Rough cardboard box"]
+    },
+    {
+      "cue": "Position",
+      "description": "Locates the object in relation to its surroundings.",
+      "examples": ["Book on a table", "Towel hanging on a rack"]
+    },
+    {
+      "cue": "Orientation",
+      "description": "Identifies the alignment of the object for optimal pickup strategy.",
+      "examples": ["Bottle standing upright", "Knife lying flat on a counter"]
+    },
+    {
+      "cue": "Weight Estimation",
+      "description": "Infers the weight of the object based on its size and material.",
+      "examples": ["A small metal tool appearing heavier than a large plastic cup"]
+    },
+    {
+      "cue": "Transparency",
+      "description": "Assesses the visibility of the object's content or structure.",
+      "examples": ["Seeing water inside a glass bottle", "Identifying an empty jar"]
+    },
+    {
+      "cue": "Edge and Boundary",
+      "description": "Defines the object’s limits to facilitate grip placement.",
+      "examples": ["Edges of a book", "Boundary of a plate"]
+    },
+    {
+      "cue": "Contrast with Background",
+      "description": "Improves visibility of the object by distinguishing it from its surroundings.",
+      "examples": ["White plate on a dark countertop", "Dark shoes on a light floor"]
+    }
+  ]
+}

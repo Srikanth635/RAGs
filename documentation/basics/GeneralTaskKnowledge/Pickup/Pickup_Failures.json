@@ -1,0 +1,55 @@
+{
+  "task": "Picking_Up",
+  "common_failures": [
+    {
+      "failure": "Object slips from grasp",
+      "cause": "Insufficient grip strength or improper grip technique",
+      "resolution": "Adjust grip and ensure secure contact with the object before lifting."
+    },
+    {
+      "failure": "Inability to lift the object",
+      "cause": "Object is too heavy or exceeds the lifting capability of the agent",
+      "resolution": "Use a tool or assistance to lift heavy objects, or divide the load into smaller parts."
+    },
+    {
+      "failure": "Object is dropped during transport",
+      "cause": "Loss of grip or imbalance while moving",
+      "resolution": "Maintain consistent grip pressure and move slowly to ensure balance."
+    },
+    {
+      "failure": "Damage to fragile objects",
+      "cause": "Excessive force or improper handling",
+      "resolution": "Use a gentle grip and appropriate handling techniques for fragile items."
+    },
+    {
+      "failure": "Inability to reach the object",
+      "cause": "Object is located out of reach or in an obstructed position",
+      "resolution": "Use an extended tool or reposition the object to make it accessible."
+    },
+    {
+      "failure": "Object is not fully grasped",
+      "cause": "Object's shape or texture prevents a secure hold",
+      "resolution": "Adjust grip position or use a tool designed for irregularly shaped objects."
+    },
+    {
+      "failure": "Agent loses balance during pickup",
+      "cause": "Improper stance or heavy load causing instability",
+      "resolution": "Ensure proper body positioning and distribute weight evenly before lifting."
+    },
+    {
+      "failure": "Object stuck to the surface",
+      "cause": "Adhesion or friction between the object and the surface",
+      "resolution": "Apply additional force or use a tool to separate the object from the surface."
+    },
+    {
+      "failure": "Picking up the wrong object",
+      "cause": "Misidentification of the target object",
+      "resolution": "Verify the object's identity before attempting to pick it up."
+    },
+    {
+      "failure": "Injury to hand or fingers",
+      "cause": "Improper handling or sharp edges on the object",
+      "resolution": "Use protective gloves and ensure careful handling of objects with sharp edges."
+    }
+  ]
+}

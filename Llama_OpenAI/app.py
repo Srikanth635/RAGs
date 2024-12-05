@@ -7,6 +7,7 @@ from llama_index.vector_stores.milvus import MilvusVectorStore
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.embeddings.ollama import OllamaEmbedding
+from llama_index.core.indices.composability.graph import ComposableGraph
 from docs_process import load_multimodal_data, load_data_from_directory
 # from utils import set_environment_variables
 from llama_index.core.agent import ReActAgent
@@ -39,7 +40,7 @@ def main():
 
     col1, col2 = st.columns([1, 2])
 
-    with col1:
+    with (col1):
         st.title("RAG")
 
         input_method = st.radio("Choose input method:", ("Upload Files", "Enter Directory Path"))
@@ -49,6 +50,10 @@ def main():
             if uploaded_files and st.button("Process Files"):
                 with st.spinner("Processing files..."):
                     documents = load_multimodal_data(uploaded_files)
+
+                    # markdown_docs = [doc for doc in documents if doc.metadata.get('filetype') in ['pdf','.png','.jpg','.jpeg','others','.ppt','.pptx']]
+                    # json_docs = [doc for doc in documents if doc.metadata.get('filetype') == 'json']
+
                     st.session_state['index'] = create_index(documents)
                     st.session_state['history'] = []
                     st.success("Files processed and index created!")
@@ -58,6 +63,7 @@ def main():
                 if os.path.isdir(directory_path):
                     with st.spinner("Processing directory..."):
                         documents = load_data_from_directory(directory_path)
+                        print(type(documents), documents[0].get_type())
                         st.session_state['index'] = create_index(documents)
                         st.session_state['history'] = []
                         st.success("Directory processed and index created!")

@@ -1,0 +1,51 @@
+{
+  "task": "Pouring a Liquid from Bottle to Cup",
+  "steps": [
+    {
+      "step": "Prepare the Bottle",
+      "description": "Hold the bottle upright and remove any cap or lid if necessary."
+    },
+    {
+      "step": "Position the Bottle",
+      "description": "Align the spout of the bottle over the cup, ensuring it is directly above the target container."
+    },
+    {
+      "step": "Tilt the Bottle",
+      "description": "Slowly tilt the bottle to begin pouring the liquid into the cup."
+    },
+    {
+      "step": "Control the Pour",
+      "description": "Adjust the tilt to control the flow of liquid, ensuring the right amount is poured into the cup."
+    },
+    {
+      "step": "Stop Pouring",
+      "description": "Once the desired amount of liquid is in the cup, return the bottle to its upright position."
+    },
+    {
+      "step": "Replace the Cap",
+      "description": "If the bottle has a cap, replace it securely after pouring."
+    }
+  ],
+  "action_roles": [
+    {
+      "role": "Agent",
+      "description": "The person performing the pouring action, responsible for controlling the bottle and directing the liquid flow."
+    },
+    {
+      "role": "Tool",
+      "description": "The bottle, which contains the liquid and is used to pour it into the cup."
+    },
+    {
+      "role": "Object to be Poured",
+      "description": "The liquid, which is transferred from the bottle into the cup."
+    },
+    {
+      "role": "Target Container",
+      "description": "The cup, which receives the liquid from the bottle."
+    },
+    {
+      "role": "Surface",
+      "description": "The surface on which the cup is placed to receive the liquid."
+    }
+  ]
+}

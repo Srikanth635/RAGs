@@ -1,0 +1,43 @@
+{
+  "task": "Slicing Cake into Medium-Sized Pieces",
+  "required_tools": [
+    {
+      "tool": "Sharp Knife",
+      "description": "A well-sharpened knife is essential for cutting through the cake cleanly without crumbling."
+    },
+    {
+      "tool": "Cake Cutter (optional)",
+      "description": "A specialized cake cutter with a straight edge or serrated blade to make even slices."
+    },
+    {
+      "tool": "Cutting Board",
+      "description": "A stable, flat surface for the cake to be placed on while slicing."
+    },
+    {
+      "tool": "Measuring Tool (optional)",
+      "description": "A ruler or cake divider to ensure consistent slice sizes."
+    }
+  ],
+  "required_conditions": [
+    {
+      "condition": "Stable Cake",
+      "description": "The cake should be firm enough to hold its shape during cutting and not be too soft or too hard."
+    },
+    {
+      "condition": "Proper Knife Grip",
+      "description": "Ensure the knife is held with a firm grip to maintain control and prevent uneven cutting."
+    },
+    {
+      "condition": "Proper Angle",
+      "description": "Maintain the right angle while slicing to achieve even cuts and prevent squishing the cake."
+    },
+    {
+      "condition": "Clean Knife",
+      "description": "Wipe the knife between slices to ensure clean cuts and prevent frosting or crumbs from sticking."
+    },
+    {
+      "condition": "Correct Cake Temperature",
+      "description": "The cake should be at room temperature or slightly chilled for cleaner, easier slicing."
+    }
+  ]
+}

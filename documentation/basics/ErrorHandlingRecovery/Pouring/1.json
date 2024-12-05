@@ -1,0 +1,65 @@
+{
+  "task": "Pouring",
+  "common_errors_and_failures": [
+    {
+      "error": "Spillage or Overflow",
+      "cause": "Incorrect angle or pouring too quickly.",
+      "detection": "Liquid spilling over the edge of the container or pooling around the target container.",
+      "solution": "Adjust the pouring angle and slow the flow rate to control the amount being poured."
+    },
+    {
+      "error": "Wrong Amount Poured",
+      "cause": "Pouring without measuring or misjudging the required amount.",
+      "detection": "The amount of liquid is either too much or too little in the target container.",
+      "solution": "Use a measuring cup or container with markings to ensure the correct amount is poured."
+    },
+    {
+      "error": "Drips or Residual Liquid",
+      "cause": "Pouring from a container with a poorly designed spout.",
+      "detection": "Drips or liquid trails left on the container after pouring.",
+      "solution": "Use a container with a drip-free spout or wipe the spout after pouring."
+    },
+    {
+      "error": "Unstable Container",
+      "cause": "Improper grip or the container being placed on an unstable surface.",
+      "detection": "The container tilts or moves unexpectedly during the pour, causing spillage.",
+      "solution": "Ensure the container is stable and secure before starting to pour."
+    },
+    {
+      "error": "Misalignment of Spout and Target",
+      "cause": "Not aligning the spout properly with the target container.",
+      "detection": "Liquid missing the target container or spilling outside the edge.",
+      "solution": "Visually align the spout with the center of the target container before pouring."
+    },
+    {
+      "error": "Wrong Liquid Poured",
+      "cause": "Misidentifying the container or liquid to be poured.",
+      "detection": "Pouring the wrong substance into the target container, leading to confusion or contamination.",
+      "solution": "Double-check the liquid type and container before pouring."
+    },
+    {
+      "error": "Too Slow or Interrupted Pour",
+      "cause": "Pouring too slowly or stopping the flow unexpectedly.",
+      "detection": "The liquid flow is inconsistent, leading to difficulty in achieving the desired amount in the target container.",
+      "solution": "Maintain a steady pour and control the flow rate to match the desired volume."
+    },
+    {
+      "error": "Pouring from the Wrong Height",
+      "cause": "Pouring from too high a distance or angle.",
+      "detection": "Liquid splashing or coming out too fast, creating bubbles or splatters.",
+      "solution": "Pour from a moderate height and angle to minimize splashing and control the flow."
+    },
+    {
+      "error": "Pouring Excessively Hard or Fast",
+      "cause": "Using too much force to pour a dense or viscous liquid.",
+      "detection": "The liquid splashes, overflows, or creates a mess.",
+      "solution": "Pour slowly and steadily, adjusting the flow based on liquid thickness."
+    },
+    {
+      "error": "Container Blockage or Clogging",
+      "cause": "The spout or opening is partially blocked or clogged.",
+      "detection": "The liquid flow slows down or stops entirely, with the container seeming stuck.",
+      "solution": "Clear any blockages from the container or spout before pouring."
+    }
+  ]
+}

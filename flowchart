@@ -1,0 +1,21 @@
+digraph {
+	A [label=Start]
+	B [label="Identify Box"]
+	C [label="Check Box Orientation"]
+	D [label="Approach Box"]
+	E [label="Pick Up Box"]
+	F [label="Transport to Shelf"]
+	G [label="Identify Shelf Location"]
+	H [label="Place Box on Shelf"]
+	I [label="Update User on Progress"]
+	J [label=End]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I
+	I -> J
+}

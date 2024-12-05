@@ -1,0 +1,41 @@
+{
+  "task": "Picking_Up",
+  "sensory_integration": [
+    {
+      "sensory_inputs": ["Vision", "Touch"],
+      "role": "Object Identification",
+      "description": "Vision identifies the object's shape and size, while touch provides tactile information about texture and weight.",
+      "example": "Seeing a glass cup on the table and feeling its weight and smoothness as you grip it."
+    },
+    {
+      "sensory_inputs": ["Vision", "Proprioception"],
+      "role": "Movement Coordination",
+      "description": "Vision guides hand movement to the object, while proprioception ensures proper arm positioning and balance during the pickup.",
+      "example": "Seeing the toy on the floor and using proprioception to position your hand in the right angle to pick it up."
+    },
+    {
+      "sensory_inputs": ["Touch", "Vision"],
+      "role": "Grip Adjustment",
+      "description": "Touch senses how much pressure is needed to securely hold the object, while vision checks for alignment and any potential obstructions.",
+      "example": "Sensing how tightly to grip a book while visually confirming your hand's position on the book’s spine."
+    },
+    {
+      "sensory_inputs": ["Vision", "Sound"],
+      "role": "Feedback Monitoring",
+      "description": "Vision monitors the object's position and alignment, while sound provides additional feedback on whether an object is placed correctly or if it's slipping.",
+      "example": "Seeing a plate being lifted and hearing the sound of a slight scrape against the surface, signaling the need to adjust grip."
+    },
+    {
+      "sensory_inputs": ["Vision", "Touch", "Proprioception"],
+      "role": "Stability Confirmation",
+      "description": "Vision confirms the object's position and the environment, touch assesses grip strength, and proprioception helps maintain balance during the lift.",
+      "example": "Seeing a heavy book on the shelf, feeling the grip on the spine, and using proprioception to ensure steady movement."
+    },l
+    {
+      "sensory_inputs": ["Touch", "Proprioception"],
+      "role": "Force Regulation",
+      "description": "Touch detects the resistance of the object and adjusts pressure accordingly, while proprioception helps manage force applied to avoid overexertion or injury.",
+      "example": "Feeling a soft pillow and adjusting the force used to lift it, using proprioception to avoid strain on your wrist."
+    }
+  ]
+}

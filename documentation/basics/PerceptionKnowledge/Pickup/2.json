@@ -1,0 +1,55 @@
+{
+  "task": "Picking_Up",
+  "visual_feedback_mechanisms": [
+    {
+      "mechanism": "Object Position",
+      "description": "Observing the location of the object to align the hand or tool for pickup.",
+      "examples": ["Seeing a ball on the floor", "Noticing a book on a shelf"]
+    },
+    {
+      "mechanism": "Grip Point Identification",
+      "description": "Identifying optimal points on the object for secure grip.",
+      "examples": ["Spotting the handle of a cup", "Locating the edge of a box"]
+    },
+    {
+      "mechanism": "Object Stability",
+      "description": "Monitoring the object's movement or steadiness during pickup.",
+      "examples": ["Checking if a plate is balanced on a table", "Watching a toy roll slightly"]
+    },
+    {
+      "mechanism": "Surface Texture Indicators",
+      "description": "Using visual cues to anticipate the object's texture and adjust grip.",
+      "examples": ["Recognizing a glossy, smooth surface of a glass", "Identifying a rough wooden toy"]
+    },
+    {
+      "mechanism": "Weight Estimation",
+      "description": "Visually inferring the weight of the object based on its size and material.",
+      "examples": ["A small metal tool appearing heavy", "A large plastic container seeming light"]
+    },
+    {
+      "mechanism": "Color Contrast",
+      "description": "Distinguishing the object from its surroundings based on color.",
+      "examples": ["Seeing a red toy on a beige carpet", "Spotting a black remote on a white table"]
+    },
+    {
+      "mechanism": "Orientation Tracking",
+      "description": "Observing the alignment of the object to adjust pickup approach.",
+      "examples": ["Noticing a bottle lying horizontally", "Seeing a chair upright"]
+    },
+    {
+      "mechanism": "Obstruction Detection",
+      "description": "Identifying any obstacles around the object that may hinder pickup.",
+      "examples": ["Spotting toys around a box", "Noticing a book under a pile of clothes"]
+    },
+    {
+      "mechanism": "Real-Time Motion Adjustment",
+      "description": "Visually tracking the hand or tool movement to make corrections during pickup.",
+      "examples": ["Aligning a gripper with a ball", "Adjusting hand movement while grabbing a towel"]
+    },
+    {
+      "mechanism": "Contact Confirmation",
+      "description": "Observing the moment the hand or tool makes contact with the object.",
+      "examples": ["Seeing fingers touch a cup's handle", "Noticing a claw gripper clamp onto a box"]
+    }
+  ]
+}

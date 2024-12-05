@@ -1,0 +1,61 @@
+{
+  "task": "Pouring",
+  "environmental_factors": [
+    {
+      "factor": "Temperature",
+      "effect": {
+        "positive": "Optimal temperature ensures liquid viscosity remains stable, making pouring smoother.",
+        "negative": "High temperatures may make liquids expand or evaporate; low temperatures may cause liquids to thicken or freeze."
+      },
+      "recommendation": "Perform pouring tasks in moderate temperatures and store liquids appropriately to maintain their ideal state."
+    },
+    {
+      "factor": "Light",
+      "effect": {
+        "positive": "Adequate lighting improves visibility, preventing overflows or misalignment.",
+        "negative": "Poor lighting increases the risk of spillage or misjudging container levels."
+      },
+      "recommendation": "Ensure the pouring area is well-lit, particularly when working with precise measurements."
+    },
+    {
+      "factor": "Surface Stability",
+      "effect": {
+        "positive": "Stable surfaces allow for controlled pouring without tipping or spilling.",
+        "negative": "Uneven or slippery surfaces increase the risk of accidents during pouring."
+      },
+      "recommendation": "Place containers on stable, non-slip surfaces before pouring."
+    },
+    {
+      "factor": "Airflow",
+      "effect": {
+        "positive": "Proper ventilation reduces odors when pouring strong-smelling liquids.",
+        "negative": "Strong airflow may disrupt the pouring stream or cause lightweight liquids to splash."
+      },
+      "recommendation": "Pour in an area with moderate ventilation but avoid direct airflow on the pouring stream."
+    },
+    {
+      "factor": "Noise",
+      "effect": {
+        "positive": "Quiet environments help focus on precise pouring tasks.",
+        "negative": "Loud noise may distract the user and lead to overfilling or spillage."
+      },
+      "recommendation": "Perform pouring tasks in a controlled noise environment, especially for precise measurements."
+    },
+    {
+      "factor": "Humidity",
+      "effect": {
+        "positive": "Low humidity helps avoid condensation on containers, ensuring a firm grip.",
+        "negative": "High humidity may cause surfaces and containers to become slippery, increasing the risk of spillage."
+      },
+      "recommendation": "Wipe containers and work in a dry area when humidity is high."
+    },
+    {
+      "factor": "Dust and Debris",
+      "effect": {
+        "positive": "A clean environment ensures the poured substance remains uncontaminated.",
+        "negative": "Dust or debris can contaminate liquids or block spouts during pouring."
+      },
+      "recommendation": "Ensure the pouring area and tools are clean before starting the task."
+    }
+  ]
+}

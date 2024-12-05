@@ -1,0 +1,47 @@
+{
+  "task": "Pouring Honey onto the Salad",
+  "key_actions": [
+    {
+      "action": "Prepare the Honey Container",
+      "description": "Ensure the honey container is ready, with the cap or lid removed if necessary."
+    },
+    {
+      "action": "Position the Container",
+      "description": "Hold the honey container above the salad, ensuring proper alignment to avoid spilling."
+    },
+    {
+      "action": "Tilt the Container",
+      "description": "Slowly tilt the honey container to begin pouring the honey onto the salad."
+    },
+    {
+      "action": "Control the Pouring Flow",
+      "description": "Adjust the angle of the container to regulate the flow of honey, ensuring an even distribution."
+    },
+    {
+      "action": "Stop the Pouring",
+      "description": "Once the desired amount of honey is poured, return the container to its upright position."
+    },
+    {
+      "action": "Replace the Lid or Cap",
+      "description": "Secure the cap or lid back on the honey container after pouring to prevent spillage."
+    }
+  ],
+  "sensory_inputs": [
+    {
+      "input": "Vision",
+      "description": "Used to monitor the positioning of the honey container and ensure the honey is directed onto the salad."
+    },
+    {
+      "input": "Touch",
+      "description": "Helps feel the weight and consistency of the honey as it begins to pour and adjust the pressure if needed."
+    },
+    {
+      "input": "Proprioception",
+      "description": "Provides feedback from the hands to adjust the tilt of the container for controlled pouring."
+    },
+    {
+      "input": "Sound",
+      "description": "Hearing the sound of honey flowing can help gauge the amount being poured."
+    }
+  ]
+}

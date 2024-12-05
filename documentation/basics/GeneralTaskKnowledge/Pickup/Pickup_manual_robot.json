@@ -1,0 +1,29 @@
+{
+  "task": "Picking_Up",
+  "comparison": {
+    "manual_pickup": {
+      "description": "Picking up objects performed by a human using hands or simple tools.",
+      "characteristics": {
+        "precision": "Dependent on the individual’s dexterity and grip strength.",
+        "effort": "Requires physical effort, particularly for heavy or awkwardly shaped objects.",
+        "adaptability": "Highly adaptable to different object types, shapes, and materials.",
+        "speed": "Moderate speed, depending on the individual's agility.",
+        "safety": "Higher risk of strain or injury, especially when lifting heavy objects."
+      },
+      "tools": ["Hands", "Tongs", "Grippers", "Lifting aids"],
+      "applications": ["Daily household tasks, tidying up, organizing items"]
+    },
+    "robotic_pickup": {
+      "description": "Picking up objects performed using a robot or automated system.",
+      "characteristics": {
+        "precision": "High precision, especially for repetitive or programmed tasks.",
+        "effort": "Minimal human effort after setup; fully automated for repetitive actions.",
+        "adaptability": "Limited by programming; may struggle with complex or irregular objects.",
+        "speed": "Faster for repetitive tasks but slower for complex, unprogrammed actions.",
+        "safety": "Lower risk of strain or injury to humans, but requires safety measures to avoid damaging fragile items."
+      },
+      "tools": ["Robotic arms", "Automated vacuum cleaners", "Smart home assistants"],
+      "applications": ["Smart home organization, repetitive cleanup tasks, automation in households"]
+    }
+  }
+}

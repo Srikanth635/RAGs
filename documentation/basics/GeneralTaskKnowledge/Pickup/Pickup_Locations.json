@@ -1,0 +1,55 @@
+{
+  "task": "Picking_Up",
+  "typical_locations": [
+    {
+      "location": "Living Room",
+      "description": "Common area for picking up toys, cushions, and small objects.",
+      "features": ["Flat surfaces like tables", "Soft surfaces like couches", "Cluttered areas"]
+    },
+    {
+      "location": "Bedroom",
+      "description": "Area for picking up clothes, shoes, and personal items.",
+      "features": ["Floor, bed, nightstands", "Storage areas like wardrobes"]
+    },
+    {
+      "location": "Kitchen",
+      "description": "Space for picking up utensils, plates, and ingredients.",
+      "features": ["Countertops", "Cabinets", "Sink area"]
+    },
+    {
+      "location": "Bathroom",
+      "description": "Area for picking up toiletries, towels, and cleaning supplies.",
+      "features": ["Countertops", "Sink edge", "Floor space"]
+    },
+    {
+      "location": "Dining Room",
+      "description": "Area for picking up dishes, glasses, and cutlery.",
+      "features": ["Dining table", "Sideboards", "Chairs"]
+    },
+    {
+      "location": "Laundry Room",
+      "description": "Space for picking up clothes, detergents, and cleaning items.",
+      "features": ["Floor, shelves", "Washing machine and dryer surfaces"]
+    },
+    {
+      "location": "Garden or Outdoor Area",
+      "description": "Area for picking up gardening tools, plants, and outdoor toys.",
+      "features": ["Grass, soil", "Patio tables and chairs"]
+    },
+    {
+      "location": "Garage or Storage Room",
+      "description": "Space for picking up tools, boxes, and equipment.",
+      "features": ["Shelves, workbenches", "Floor and storage bins"]
+    },
+    {
+      "location": "Hallway",
+      "description": "Area for picking up shoes, bags, and coats.",
+      "features": ["Floor, shoe racks", "Hooks and small tables"]
+    },
+    {
+      "location": "Study or Office",
+      "description": "Space for picking up books, stationery, and electronics.",
+      "features": ["Desks, shelves", "Chair surfaces"]
+    }
+  ]
+}

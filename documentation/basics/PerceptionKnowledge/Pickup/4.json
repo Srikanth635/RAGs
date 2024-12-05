@@ -1,0 +1,53 @@
+{
+  "task": "Picking_Up",
+  "ideal_force_range": [
+    {
+      "object_type": "Lightweight Objects",
+      "examples": ["Keys", "Coins", "Pencils"],
+      "force_range": "1-5 N",
+      "description": "Minimal force required to lift small, lightweight objects."
+    },
+    {
+      "object_type": "Fragile Objects",
+      "examples": ["Glassware", "Ceramic Plates", "Eggs"],
+      "force_range": "2-8 N",
+      "description": "Gentle force needed to avoid damage or breakage."
+    },
+    {
+      "object_type": "Medium-Weight Objects",
+      "examples": ["Books", "Shoes", "Toys"],
+      "force_range": "5-15 N",
+      "description": "Moderate force required to lift objects of average weight."
+    },
+    {
+      "object_type": "Heavy Objects",
+      "examples": ["Boxes", "Furniture", "Large Appliances"],
+      "force_range": "15-50 N",
+      "description": "Significant force needed to handle larger or heavier items."
+    },
+    {
+      "object_type": "Soft Objects",
+      "examples": ["Pillows", "Clothing", "Towels"],
+      "force_range": "3-10 N",
+      "description": "Light to moderate force to maintain grip without deforming the object."
+    },
+    {
+      "object_type": "Irregularly Shaped Objects",
+      "examples": ["Toys", "Cables", "Branches"],
+      "force_range": "5-12 N",
+      "description": "Adjusted force depending on the grip points and object stability."
+    },
+    {
+      "object_type": "Slippery Objects",
+      "examples": ["Plastic Bottles", "Wet Dishes"],
+      "force_range": "8-15 N",
+      "description": "Increased force required to counteract reduced grip friction."
+    },
+    {
+      "object_type": "Bulk Items",
+      "examples": ["Bags of Groceries", "Laundry Baskets"],
+      "force_range": "10-30 N",
+      "description": "Moderate to high force needed for larger, bulkier items."
+    }
+  ]
+}

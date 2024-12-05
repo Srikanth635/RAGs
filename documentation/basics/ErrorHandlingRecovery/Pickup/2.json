@@ -1,0 +1,65 @@
+{
+  "task": "Picking_Up",
+  "thresholds_and_metrics_for_anomaly_detection": [
+    {
+      "metric": "Grip Strength",
+      "threshold": "Deviation greater than 10% from the average grip force for the object",
+      "description": "Monitors the force applied to grip the object.",
+      "detection": "Excessive or insufficient grip force detected through tactile feedback or sensor data."
+    },
+    {
+      "metric": "Lift Height",
+      "threshold": "Deviation greater than 5 cm from the intended lift height",
+      "description": "Measures the height at which the object is lifted relative to the target.",
+      "detection": "Measured lift height shows significant difference from the expected range."
+    },
+    {
+      "metric": "Object Movement",
+      "threshold": "Object shifts by more than 2 cm during pickup",
+      "description": "Monitors object stability during lifting.",
+      "detection": "Visual or tactile feedback indicates unexpected object movement during the pickup."
+    },
+    {
+      "metric": "Pressure Applied to Object",
+      "threshold": "Force applied exceeds 15 N for lightweight objects or less than 5 N for heavy objects",
+      "description": "Monitors the force applied while lifting to ensure appropriate handling.",
+      "detection": "Abnormal force levels indicate either excessive pressure or inadequate grip."
+    },
+    {
+      "metric": "Tool Alignment",
+      "threshold": "Angle deviation greater than 10 degrees from the optimal pickup angle",
+      "description": "Monitors the alignment of the tool or hand with the object.",
+      "detection": "Visual or sensor feedback shows misalignment between the tool and the object."
+    },
+    {
+      "metric": "Object Stability",
+      "threshold": "Movement greater than 3 cm during pickup",
+      "description": "Tracks object movement or instability during the lifting process.",
+      "detection": "The object moves unexpectedly, signaling improper stabilization or poor grip."
+    },
+    {
+      "metric": "Object Weight Detection",
+      "threshold": "Weight deviation greater than 20% from the expected weight",
+      "description": "Measures the perceived weight of the object to confirm proper lifting technique.",
+      "detection": "Unexpected weight detected, indicating either incorrect object or lifting technique."
+    },
+    {
+      "metric": "Reach Distance",
+      "threshold": "Reach distance exceeds 1 meter or is below minimum ergonomic threshold",
+      "description": "Measures the distance required to reach the object before lifting.",
+      "detection": "Excessive reach detected, leading to strain or reduced lifting efficiency."
+    },
+    {
+      "metric": "Lift Speed",
+      "threshold": "Lift speed exceeds 1 meter per second for heavy objects",
+      "description": "Monitors the speed at which the object is lifted.",
+      "detection": "Excessive speed during lifting indicates rushed or unsafe behavior."
+    },
+    {
+      "metric": "Object Integrity",
+      "threshold": "Object integrity loss greater than 10% (e.g., breakage or deformation)",
+      "description": "Checks for damage to the object during or after lifting.",
+      "detection": "Visible cracks or deformations indicating damage caused during the pickup process."
+    }
+  ]
+}

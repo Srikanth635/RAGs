@@ -1,0 +1,51 @@
+{
+  "task": "Cutting Chicken with Machete",
+  "key_actions": [
+    {
+      "action": "Position the Chicken",
+      "description": "Place the chicken on a stable surface, ensuring it is properly secured for easy cutting."
+    },
+    {
+      "action": "Grip the Machete",
+      "description": "Firmly hold the machete handle with both hands for better control and force application."
+    },
+    {
+      "action": "Align the Blade",
+      "description": "Position the machete's blade at the desired cutting location, such as joints or the meat section."
+    },
+    {
+      "action": "Apply Force",
+      "description": "Swing the machete with controlled force to cut through the chicken, using the full blade for efficient cutting."
+    },
+    {
+      "action": "Guide the Cut",
+      "description": "Guide the machete in a steady motion, ensuring the cut is precise and clean."
+    },
+    {
+      "action": "Complete the Cut",
+      "description": "Finish the cutting motion, ensuring the machete passes through the chicken completely."
+    },
+    {
+      "action": "Release the Machete",
+      "description": "Safely release the machete after completing the cut and secure it in a safe location."
+    }
+  ],
+  "sensory_inputs": [
+    {
+      "input": "Vision",
+      "description": "Used to locate the cutting point, position the machete accurately, and ensure proper alignment during the cut."
+    },
+    {
+      "input": "Touch",
+      "description": "Used to feel the resistance of the chicken's skin, bone, and muscle during the cut, adjusting force accordingly."
+    },
+    {
+      "input": "Sound",
+      "description": "Hearing the sound of the machete cutting through the meat or bone helps gauge the force needed and confirms a successful cut."
+    },
+    {
+      "input": "Proprioception",
+      "description": "Sensory feedback from the hands and arms to ensure the machete is gripped securely and moved in the correct direction."
+    }
+  ]
+}

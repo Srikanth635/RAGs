@@ -1,0 +1,61 @@
+{
+  "task": "Picking_Up",
+  "environmental_factors": [
+    {
+      "factor": "Temperature",
+      "effect": {
+        "positive": "Moderate temperature ensures comfortable handling of objects.",
+        "negative": "High temperatures may make surfaces or objects hot to touch; low temperatures may make hands less dexterous."
+      },
+      "recommendation": "Ensure the environment is at a comfortable temperature for handling objects."
+    },
+    {
+      "factor": "Light",
+      "effect": {
+        "positive": "Good lighting improves visibility and makes locating objects easier.",
+        "negative": "Poor lighting increases the risk of missing objects or picking up the wrong ones."
+      },
+      "recommendation": "Ensure adequate lighting in the pickup area, particularly in cluttered or dim spaces."
+    },
+    {
+      "factor": "Surface Stability",
+      "effect": {
+        "positive": "Stable surfaces help in accessing and picking up objects safely.",
+        "negative": "Uneven or unstable surfaces may cause objects to shift, increasing difficulty."
+      },
+      "recommendation": "Secure objects on stable surfaces before attempting to pick them up."
+    },
+    {
+      "factor": "Airflow",
+      "effect": {
+        "positive": "Moderate airflow has no significant impact on pickup tasks.",
+        "negative": "Strong airflow may displace lightweight objects, making them harder to pick up."
+      },
+      "recommendation": "Avoid performing pickup tasks in areas with high wind or strong airflow."
+    },
+    {
+      "factor": "Humidity",
+      "effect": {
+        "positive": "Low humidity helps maintain object and surface grip.",
+        "negative": "High humidity may make objects or hands slippery, reducing grip efficiency."
+      },
+      "recommendation": "Wipe down objects or hands in high-humidity conditions to improve grip."
+    },
+    {
+      "factor": "Noise",
+      "effect": {
+        "positive": "Quiet environments improve focus and precision.",
+        "negative": "Loud noise can distract the individual, leading to errors or dropped objects."
+      },
+      "recommendation": "Perform pickup tasks in a quiet or noise-controlled environment."
+    },
+    {
+      "factor": "Dust and Debris",
+      "effect": {
+        "positive": "Clean surfaces allow objects to be easily accessed and picked up.",
+        "negative": "Dust or debris may obscure objects or make surfaces slippery."
+      },
+      "recommendation": "Keep pickup areas clean to ensure ease and safety."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "task": "Picking_Up",
+  "key_action_roles": {
+    "Agent": {
+      "description": "The entity performing the pickup action.",
+      "example": "The child picks up the toy.",
+      "attributes": ["Dexterity", "Grip strength", "Control"]
+    },
+    "Object": {
+      "description": "The item being picked up.",
+      "example": "The child picks up the toy.",
+      "attributes": ["Size", "Weight", "Shape", "Fragility"]
+    },
+    "Tool": {
+      "description": "The implement used to assist in picking up the object, if any.",
+      "example": "The robot uses a gripper to pick up the ball.",
+      "attributes": ["Grip type", "Capacity", "Reach"]
+    },
+    "Location": {
+      "description": "The place where the object is located before being picked up.",
+      "example": "The child picks up the toy from the floor.",
+      "attributes": ["Height", "Surface type", "Proximity to agent"]
+    },
+    "Goal": {
+      "description": "The intended state or location of the object after it is picked up.",
+      "example": "The child picks up the toy to place it on the shelf.",
+      "attributes": ["Target location", "Alignment", "Orientation"]
+    },
+    "Manner": {
+      "description": "The way the pickup action is performed.",
+      "example": "The child carefully picks up the fragile vase.",
+      "attributes": ["Speed", "Precision", "Force"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "task": "Pouring",
+  "comparison": {
+    "manual_pouring": {
+      "description": "Pouring performed by a human using hands and common household tools.",
+      "characteristics": {
+        "precision": "Dependent on the individual’s control and experience.",
+        "effort": "Requires physical effort, especially for large or heavy containers.",
+        "adaptability": "Easily adaptable to different container types, shapes, and materials.",
+        "speed": "Moderate speed, depending on the user’s dexterity.",
+        "safety": "Higher risk of spills or accidents due to human error."
+      },
+      "tools": ["Pitcher", "Measuring cup", "Bottle", "Funnel"],
+      "applications": ["Cooking, gardening, serving drinks"]
+    },
+    "robotic_pouring": {
+      "description": "Pouring performed by a robot or automated system.",
+      "characteristics": {
+        "precision": "High precision for consistent and repeatable results.",
+        "effort": "Minimal human effort after setup; fully automated.",
+        "adaptability": "Limited to programmed container types and specific tasks.",
+        "speed": "Faster and more consistent for repetitive tasks.",
+        "safety": "Reduced risk of spillage or accidents, as robotic systems are controlled and predictable."
+      },
+      "tools": ["Robotic arm with gripper", "Smart dispenser", "Automated beverage system"],
+      "applications": ["Smart kitchen appliances, automated beverage dispensers, industrial liquid handling"]
+    }
+  }
+}

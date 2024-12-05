@@ -1,0 +1,75 @@
+{
+  "task": "Pouring",
+  "steps": {
+    "physical_steps": [
+      {
+        "step": "Grasping the container",
+        "description": "Securely hold the container with the substance to be poured.",
+        "required_inputs": ["container_location", "grip_type"],
+        "output": "Container held securely"
+      },
+      {
+        "step": "Positioning the container",
+        "description": "Bring the container close to the target receptacle.",
+        "required_inputs": ["container_position", "target_position"],
+        "output": "Container positioned over target"
+      },
+      {
+        "step": "Tilting the container",
+        "description": "Tilt the container to allow the substance to flow out.",
+        "required_inputs": ["tilt_angle", "flow_rate"],
+        "output": "Substance begins to flow"
+      },
+      {
+        "step": "Controlling the flow",
+        "description": "Adjust the tilt or speed to control the flow of the substance.",
+        "required_inputs": ["flow_feedback", "pouring_speed"],
+        "output": "Flow rate maintained as desired"
+      },
+      {
+        "step": "Stopping the flow",
+        "description": "Return the container to an upright position to stop pouring.",
+        "required_inputs": ["container_orientation"],
+        "output": "Flow stopped"
+      },
+      {
+        "step": "Placing the container",
+        "description": "Place the container back on a stable surface.",
+        "required_inputs": ["placement_location"],
+        "output": "Container safely placed"
+      }
+    ],
+    "cognitive_steps": [
+      {
+        "step": "Identifying the substance to pour",
+        "description": "Recognize the substance and confirm its properties.",
+        "required_inputs": ["visual_information", "task_goal"],
+        "output": "Substance identified for pouring"
+      },
+      {
+        "step": "Selecting the appropriate container",
+        "description": "Choose a container suitable for the substance and target.",
+        "required_inputs": ["substance_properties", "available_containers"],
+        "output": "Correct container selected"
+      },
+      {
+        "step": "Planning the pouring motion",
+        "description": "Decide on the angle, speed, and positioning for pouring.",
+        "required_inputs": ["target_properties", "pouring_goal"],
+        "output": "Pouring plan established"
+      },
+      {
+        "step": "Monitoring the pouring process",
+        "description": "Observe and adjust the flow to prevent spillage.",
+        "required_inputs": ["visual_feedback", "haptic_feedback"],
+        "output": "Pouring progress monitored"
+      },
+      {
+        "step": "Evaluating the result",
+        "description": "Assess whether the target has been filled as intended.",
+        "required_inputs": ["pouring_goal", "target_condition"],
+        "output": "Pouring task evaluated as complete or incomplete"
+      }
+    ]
+  }
+}

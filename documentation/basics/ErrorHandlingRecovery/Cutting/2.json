@@ -1,0 +1,65 @@
+{
+  "task": "Cutting",
+  "thresholds_and_metrics_for_anomaly_detection": [
+    {
+      "metric": "Cut Depth",
+      "threshold": "Deviation greater than 1 cm from intended depth",
+      "description": "Monitors if the cut is too shallow or too deep compared to the intended depth.",
+      "detection": "Measurement tools or visual inspection show inconsistencies in the cut depth."
+    },
+    {
+      "metric": "Cutting Speed",
+      "threshold": "Cutting speed deviates by more than 20% from average speed for material",
+      "description": "Monitors the speed at which cutting is being done.",
+      "detection": "Excessively fast or slow cutting may indicate fatigue, tool issues, or improper technique."
+    },
+    {
+      "metric": "Pressure Applied",
+      "threshold": "Force applied exceeds 15 N for soft materials or less than 5 N for tough materials",
+      "description": "Monitors if excessive or insufficient force is applied during cutting.",
+      "detection": "Tactile feedback or visible tool resistance is inconsistent with typical force needed."
+    },
+    {
+      "metric": "Object Movement",
+      "threshold": "Movement exceeding 5 mm during the cut",
+      "description": "Measures object stability during the cut.",
+      "detection": "Visual or tactile feedback indicates unwanted object movement, leading to miscuts."
+    },
+    {
+      "metric": "Blade Alignment",
+      "threshold": "Angle deviation greater than 10 degrees from ideal cutting angle",
+      "description": "Checks if the blade is properly aligned with the object to ensure straight cuts.",
+      "detection": "Visual inspection or measurement tools show significant misalignment."
+    },
+    {
+      "metric": "Cutting Tool Condition",
+      "threshold": "Blade dullness exceeding 20% wear, or bending of blade beyond 2 mm",
+      "description": "Monitors the condition of the cutting tool.",
+      "detection": "Difficulty in cutting, increased resistance, or rough edges indicate tool degradation."
+    },
+    {
+      "metric": "Cut Accuracy",
+      "threshold": "Deviation greater than 5% from the intended path",
+      "description": "Monitors the accuracy of the cut relative to the target guide or line.",
+      "detection": "Visual or measuring feedback shows significant misalignment from the intended path."
+    },
+    {
+      "metric": "Tool Stability",
+      "threshold": "Tool or object slipping by more than 3 cm during cutting",
+      "description": "Monitors whether the tool or object remains stable during the task.",
+      "detection": "Tactile feedback or visual observation indicates instability or slippage."
+    },
+    {
+      "metric": "Temperature Variance",
+      "threshold": "Material temperature deviates more than 5°C from ideal cutting conditions",
+      "description": "Monitors material temperature to ensure optimal cutting conditions.",
+      "detection": "Change in texture or resistance indicating a temperature anomaly."
+    },
+    {
+      "metric": "Material Hardness",
+      "threshold": "Hardness variation greater than 10% compared to expected material properties",
+      "description": "Monitors material consistency to detect hardness discrepancies.",
+      "detection": "Tactile feedback or resistance changes during cutting, suggesting an unexpected material hardness."
+    }
+  ]
+}

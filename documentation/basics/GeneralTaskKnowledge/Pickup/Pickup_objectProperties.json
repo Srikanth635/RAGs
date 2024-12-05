@@ -1,0 +1,105 @@
+{
+  "task": "Picking_Up",
+  "household_objects_physical_properties": [
+    {
+      "object": "Books",
+      "properties": {
+        "material": "Paper, cardboard cover",
+        "shape": "Rectangular, flat",
+        "size": "Varies (small to large)",
+        "weight": "Light to moderate",
+        "special_features": ["Stackable", "Rigid structure"]
+      }
+    },
+    {
+      "object": "Toys",
+      "properties": {
+        "material": "Plastic, metal, fabric",
+        "shape": "Varies (irregular, small parts)",
+        "size": "Small to medium",
+        "weight": "Light",
+        "special_features": ["Smooth or textured surfaces", "Varied shapes for grip"]
+      }
+    },
+    {
+      "object": "Clothing",
+      "properties": {
+        "material": "Fabric (cotton, polyester, wool)",
+        "shape": "Flexible, foldable",
+        "size": "Small to large",
+        "weight": "Light",
+        "special_features": ["Soft texture", "Easily stackable when folded"]
+      }
+    },
+    {
+      "object": "Plates",
+      "properties": {
+        "material": "Ceramic, glass, plastic",
+        "shape": "Circular, flat with a rim",
+        "size": "Small to large (6-12 inches typical diameter)",
+        "weight": "Light to moderate",
+        "special_features": ["Fragile", "Smooth surfaces"]
+      }
+    },
+    {
+      "object": "Glasses",
+      "properties": {
+        "material": "Glass, plastic",
+        "shape": "Cylindrical or stemmed",
+        "size": "Small to medium",
+        "weight": "Light",
+        "special_features": ["Fragile", "Smooth, transparent surface"]
+      }
+    },
+    {
+      "object": "Shoes",
+      "properties": {
+        "material": "Leather, fabric, rubber",
+        "shape": "Irregular, with flat or curved sole",
+        "size": "Small to large",
+        "weight": "Light to moderate",
+        "special_features": ["Textured sole", "Flexible upper structure"]
+      }
+    },
+    {
+      "object": "Cushions",
+      "properties": {
+        "material": "Fabric cover with foam or fiber filling",
+        "shape": "Square, rectangular, or circular",
+        "size": "Medium to large",
+        "weight": "Light",
+        "special_features": ["Soft texture", "Compressible structure"]
+      }
+    },
+    {
+      "object": "Keys",
+      "properties": {
+        "material": "Metal",
+        "shape": "Flat with protruding edges",
+        "size": "Small",
+        "weight": "Light",
+        "special_features": ["Smooth, rigid surface", "Small gripping area"]
+      }
+    },
+    {
+      "object": "Bottles",
+      "properties": {
+        "material": "Plastic, glass, metal",
+        "shape": "Cylindrical with narrow neck",
+        "size": "Small to medium",
+        "weight": "Light to moderate",
+        "special_features": ["Smooth surface", "Handle or grip area on some designs"]
+      }
+    },
+    {
+      "object": "Boxes",
+      "properties": {
+        "material": "Cardboard, plastic, wood",
+        "shape": "Rectangular or cubic",
+        "size": "Small to large",
+        "weight": "Light to heavy",
+        "special_features": ["Stackable", "Rigid or semi-rigid structure"]
+      }
+    }
+  ]
+}

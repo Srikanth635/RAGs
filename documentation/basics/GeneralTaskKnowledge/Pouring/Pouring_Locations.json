@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "typical_locations": [
+    {
+      "location": "Kitchen Countertop",
+      "description": "Used for pouring liquids during food preparation.",
+      "features": ["Flat surface", "Proximity to containers and utensils", "Easy to clean"]
+    },
+    {
+      "location": "Dining Table",
+      "description": "Used for pouring beverages during meals.",
+      "features": ["Flat surface", "Centralized location for serving"]
+    },
+    {
+      "location": "Sink Area",
+      "description": "Used for pouring liquids that need to be discarded or drained.",
+      "features": ["Direct access to drainage", "Splash-resistant surfaces"]
+    },
+    {
+      "location": "Coffee or Tea Station",
+      "description": "Used for pouring hot beverages or water.",
+      "features": ["Proximity to kettles and mugs", "Heat-resistant surfaces"]
+    },
+    {
+      "location": "Refrigerator Area",
+      "description": "Used for pouring liquids like milk or juice stored in the fridge.",
+      "features": ["Access to cold storage", "Nearby flat surfaces"]
+    },
+    {
+      "location": "Bathroom Counter",
+      "description": "Used for pouring water or personal care products.",
+      "features": ["Flat surface", "Proximity to sinks and mirrors"]
+    },
+    {
+      "location": "Garden or Outdoor Area",
+      "description": "Used for watering plants or mixing gardening solutions.",
+      "features": ["Open space", "Access to plants and soil"]
+    },
+    {
+      "location": "Laundry Area",
+      "description": "Used for pouring detergents or cleaning solutions.",
+      "features": ["Proximity to washing machines", "Splash-proof surfaces"]
+    },
+    {
+      "location": "Bedroom or Nightstand",
+      "description": "Used for pouring water into glasses or humidifiers.",
+      "features": ["Flat surfaces", "Proximity to sleeping area"]
+    },
+    {
+      "location": "Living Room or Lounge",
+      "description": "Used for pouring drinks during social gatherings.",
+      "features": ["Flat surfaces like coffee tables", "Centralized for serving"]
+    }
+  ]
+}

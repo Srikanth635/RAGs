@@ -1,0 +1,61 @@
+{
+  "task": "Cutting",
+  "environmental_factors": [
+    {
+      "factor": "Temperature",
+      "effect": {
+        "positive": "Optimal temperature maintains the material properties of objects and tools, ensuring precise cuts.",
+        "negative": "Extreme cold makes materials brittle and difficult to cut; heat may soften objects, reducing stability."
+      },
+      "recommendation": "Perform cutting tasks in a moderate temperature environment suitable for the material being cut."
+    },
+    {
+      "factor": "Light",
+      "effect": {
+        "positive": "Adequate lighting improves visibility, allowing for precise and safe cutting.",
+        "negative": "Insufficient lighting increases the risk of errors or accidents."
+      },
+      "recommendation": "Ensure the cutting area is well-lit, using focused task lighting if necessary."
+    },
+    {
+      "factor": "Humidity",
+      "effect": {
+        "positive": "Low humidity prevents moisture from affecting tools and materials.",
+        "negative": "High humidity may cause tools to rust and some materials (e.g., paper, wood) to warp, affecting cut quality."
+      },
+      "recommendation": "Store tools in a dry environment and wipe down materials before cutting if moisture is present."
+    },
+    {
+      "factor": "Surface Stability",
+      "effect": {
+        "positive": "A stable surface ensures safe and controlled cutting.",
+        "negative": "Uneven or slippery surfaces lead to imprecise cuts and increase the risk of accidents."
+      },
+      "recommendation": "Use a stable, non-slip surface for cutting tasks, and secure cutting boards if necessary."
+    },
+    {
+      "factor": "Airflow",
+      "effect": {
+        "positive": "Proper ventilation prevents accumulation of dust or debris during cutting tasks.",
+        "negative": "Strong airflow can displace lightweight materials or spread debris, disrupting the task."
+      },
+      "recommendation": "Ensure adequate ventilation without excessive airflow that could interfere with the task."
+    },
+    {
+      "factor": "Noise",
+      "effect": {
+        "positive": "Quiet environments help with focus and precision during delicate cuts.",
+        "negative": "Loud noise may distract the user, leading to errors or unsafe handling of tools."
+      },
+      "recommendation": "Perform cutting tasks in a noise-controlled environment, especially for precision work."
+    },
+    {
+      "factor": "Dust and Debris",
+      "effect": {
+        "positive": "A clean workspace ensures unobstructed cutting and safe tool handling.",
+        "negative": "Dust or debris on the surface can cause uneven cuts or damage to tools."
+      },
+      "recommendation": "Keep the cutting area clean and remove debris regularly during the task."
+    }
+  ]
+}

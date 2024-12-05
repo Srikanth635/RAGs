@@ -1,0 +1,55 @@
+{
+  "task": "Cutting",
+  "tactile_feedback": [
+    {
+      "feedback": "Resistance",
+      "description": "Feedback on the resistance encountered while cutting through the material.",
+      "examples": ["Feeling soft resistance when cutting bread", "Strong resistance while cutting raw meat"]
+    },
+    {
+      "feedback": "Texture",
+      "description": "Perception of the surface texture of the object being cut.",
+      "examples": ["Smoothness of a tomato skin", "Roughness of bread crust"]
+    },
+    {
+      "feedback": "Grip Stability",
+      "description": "Feedback on the stability of the tool in the hand during cutting.",
+      "examples": ["Knife handle slipping due to moisture", "Firm grip on scissors handle"]
+    },
+    {
+      "feedback": "Cut Completion",
+      "description": "Sensation of the tool passing completely through the material.",
+      "examples": ["Knife hitting the cutting board after slicing", "Scissors closing completely on fabric"]
+    },
+    {
+      "feedback": "Object Stability",
+      "description": "Feedback on the stability of the object being held or positioned for cutting.",
+      "examples": ["Apple rolling during slicing", "Vegetable staying still on a flat surface"]
+    },
+    {
+      "feedback": "Tool Vibration",
+      "description": "Vibrations felt in the tool during cutting, indicating material properties or issues.",
+      "examples": ["Vibration when cutting hard carrots", "Smooth motion while slicing soft cheese"]
+    },
+    {
+      "feedback": "Force Applied",
+      "description": "The amount of pressure or force required to cut through the material.",
+      "examples": ["Minimal force for slicing a banana", "Significant force for cutting through a bone"]
+    },
+    {
+      "feedback": "Material Separation",
+      "description": "Tactile sensation of the material separating as it is being cut.",
+      "examples": ["Peel separating from an orange", "Bread splitting into slices"]
+    },
+    {
+      "feedback": "Tool Sharpness",
+      "description": "Tactile cues indicating if the cutting tool is sharp or dull.",
+      "examples": ["Smooth slicing with a sharp knife", "Dragging sensation with a dull blade"]
+    },
+    {
+      "feedback": "Edge Contact",
+      "description": "Feeling the tool's edge interacting with the surface or object.",
+      "examples": ["Knife edge catching on a tough vegetable skin", "Scissors smoothly cutting through paper"]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "visual_feedback_mechanisms": [
+    {
+      "mechanism": "Liquid Flow",
+      "description": "Observing the stream of liquid as it moves from the source to the target container.",
+      "examples": ["Seeing a steady stream of water into a glass", "Watching oil flow into a pan"]
+    },
+    {
+      "mechanism": "Fill Level",
+      "description": "Monitoring the liquid level in the target container to avoid overfilling.",
+      "examples": ["Stopping when the glass is three-quarters full", "Observing markings on a measuring cup"]
+    },
+    {
+      "mechanism": "Alignment of Containers",
+      "description": "Ensuring the spout of the source container is properly aligned with the target.",
+      "examples": ["Aligning a pitcher spout with a glass", "Positioning a funnel over a bottle"]
+    },
+    {
+      "mechanism": "Liquid Surface Movement",
+      "description": "Watching the liquid surface change as the container is tilted or returned upright.",
+      "examples": ["Seeing liquid recede in a bottle after tilting back", "Observing ripples in a target container"]
+    },
+    {
+      "mechanism": "Spillage Indicators",
+      "description": "Noticing liquid splashes or overflow around the target container.",
+      "examples": ["Liquid spilling over the edge of a cup", "Drips forming around the base of a container"]
+    },
+    {
+      "mechanism": "Transparency and Color",
+      "description": "Using the appearance of the liquid to monitor flow and detect any inconsistencies.",
+      "examples": ["Seeing transparent water flow smoothly", "Identifying different liquids by their color"]
+    },
+    {
+      "mechanism": "Pouring Speed",
+      "description": "Visualizing the rate of flow to adjust the tilt angle or pouring force.",
+      "examples": ["Observing a fast stream for high-speed pouring", "Controlling a slow drizzle for precise amounts"]
+    },
+    {
+      "mechanism": "Foaming or Bubbling",
+      "description": "Observing bubbles or foam forming during pouring to adjust technique.",
+      "examples": ["Foaming while pouring beer into a glass", "Bubbles forming when pouring soap into water"]
+    },
+    {
+      "mechanism": "Container Stability",
+      "description": "Ensuring the source and target containers remain steady during pouring.",
+      "examples": ["Checking a glass stays upright on the table", "Ensuring a bottle doesn't tip over while pouring"]
+    },
+    {
+      "mechanism": "Residual Drips",
+      "description": "Noticing leftover drips or liquid trails on the container after pouring.",
+      "examples": ["Drips running down the side of a jug", "Liquid pooling near the spout after pouring"]
+    }
+  ]
+}

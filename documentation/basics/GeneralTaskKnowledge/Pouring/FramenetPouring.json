@@ -1,0 +1,83 @@
+{
+  "task": "Pouring",
+  "semantic_roles": {
+    "core_roles": [
+      {
+        "role": "Agent",
+        "description": "The entity performing the pouring action.",
+        "example": "The chef pours water into the glass.",
+        "frame_element": "Pourer"
+      },
+      {
+        "role": "Theme",
+        "description": "The substance being poured.",
+        "example": "The chef pours water into the glass.",
+        "frame_element": "Liquid"
+      },
+      {
+        "role": "Goal",
+        "description": "The target or receptacle into which the substance is poured.",
+        "example": "The chef pours water into the glass.",
+        "frame_element": "Receptacle"
+      },
+      {
+        "role": "Instrument",
+        "description": "The tool or container used to pour the substance.",
+        "example": "The chef pours water from the pitcher into the glass.",
+        "frame_element": "Container"
+      }
+    ],
+    "peripheral_roles": [
+      {
+        "role": "Source",
+        "description": "The initial location or container holding the substance.",
+        "example": "The chef pours water from the pitcher into the glass.",
+        "frame_element": "Source"
+      },
+      {
+        "role": "Manner",
+        "description": "The way in which the pouring action is performed.",
+        "example": "The chef pours water slowly into the glass.",
+        "frame_element": "Manner"
+      },
+      {
+        "role": "Extent",
+        "description": "The amount or volume of the substance poured.",
+        "example": "The chef pours half a glass of water.",
+        "frame_element": "Extent"
+      },
+      {
+        "role": "Time",
+        "description": "The time when the pouring action occurs.",
+        "example": "The chef pours water in the morning.",
+        "frame_element": "Time"
+      },
+      {
+        "role": "Place",
+        "description": "The location where the pouring action occurs.",
+        "example": "The chef pours water into the glass on the kitchen counter.",
+        "frame_element": "Place"
+      }
+    ],
+    "additional_roles": [
+      {
+        "role": "Cause",
+        "description": "The reason or motivation for the pouring action.",
+        "example": "The chef pours water to prepare tea.",
+        "frame_element": "Cause"
+      },
+      {
+        "role": "Result",
+        "description": "The outcome or effect of the pouring action.",
+        "example": "The glass is filled with water.",
+        "frame_element": "Result"
+      },
+      {
+        "role": "Co-Agent",
+        "description": "A secondary entity assisting in the pouring action.",
+        "example": "The chef and the assistant pour drinks together.",
+        "frame_element": "Co-Agent"
+      }
+    ]
+  }
+}

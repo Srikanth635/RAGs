@@ -1,0 +1,55 @@
+{
+  "task": "Picking_Up",
+  "strategies_for_recovery_from_failed_state": [
+    {
+      "strategy": "Reposition the Object",
+      "description": "Move the object to a more stable position before attempting to pick it up again.",
+      "example": "If a cup starts to slip, adjust its position to ensure better stability before lifting."
+    },
+    {
+      "strategy": "Adjust Grip",
+      "description": "Re-evaluate and adjust the hand placement or tool usage for better control and support.",
+      "example": "Switch from using one hand to two hands when picking up a heavier object."
+    },
+    {
+      "strategy": "Use Additional Tools",
+      "description": "Use lifting tools such as tongs, a gripper, or gloves to assist in handling difficult objects.",
+      "example": "Use tongs to pick up a hot pan from the stove if bare hands aren’t sufficient."
+    },
+    {
+      "strategy": "Stabilize the Object",
+      "description": "Use a non-slip mat or hold the object with additional support to prevent further movement or slipping.",
+      "example": "Place a non-slip mat under a vase to ensure it remains in place during the lift."
+    },
+    {
+      "strategy": "Slow Down and Focus",
+      "description": "Reduce speed and focus more on precision to prevent errors during the lifting process.",
+      "example": "If a heavy box is difficult to lift, slow down and lift it with more control."
+    },
+    {
+      "strategy": "Use Proper Lifting Techniques",
+      "description": "Ensure the correct posture and lifting technique to avoid strain and improve control over the object.",
+      "example": "Bend at the knees rather than the waist when lifting a heavy item to reduce the risk of injury."
+    },
+    {
+      "strategy": "Pause and Reassess",
+      "description": "Take a moment to stop, assess the situation, and ensure a safer approach to pick up the object.",
+      "example": "Pause to check your grip if you feel the object is slipping during the lift."
+    },
+    {
+      "strategy": "Reorganize Workspace",
+      "description": "Clear any obstacles or clutter in the area to create a safer and more efficient pickup space.",
+      "example": "Move objects around to create a clear path before attempting to lift a box."
+    },
+    {
+      "strategy": "Seek Assistance",
+      "description": "Request help for lifting large or difficult objects to prevent injury and ensure proper handling.",
+      "example": "Ask someone to help lift a heavy item such as a piece of furniture to prevent strain."
+    },
+    {
+      "strategy": "Double-Check Object Identification",
+      "description": "Verify the object’s identity or state before attempting to pick it up again to avoid mistakes.",
+      "example": "Confirm the item you're about to lift is not fragile or heavy beyond your capacity."
+    }
+  ]
+}

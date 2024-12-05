@@ -1,0 +1,69 @@
+{
+  "task": "Cutting",
+  "steps": {
+    "physical_steps": [
+      {
+        "step": "Grasping the utensil",
+        "description": "Pick up the cutting utensil (e.g., knife, scissors) and hold it securely.",
+        "required_inputs": ["utensil_location", "utensil_type"],
+        "output": "Utensil held in hand"
+      },
+      {
+        "step": "Positioning the object",
+        "description": "Place the object to be cut on a stable surface or hold it in place.",
+        "required_inputs": ["object_location", "object_type"],
+        "output": "Object positioned for cutting"
+      },
+      {
+        "step": "Applying force",
+        "description": "Apply sufficient force with the utensil to penetrate or divide the object.",
+        "required_inputs": ["cutting_force", "cutting_angle"],
+        "output": "Object partially or fully divided"
+      },
+      {
+        "step": "Repeating cutting motion",
+        "description": "Repeat the cutting motion until the desired result is achieved.",
+        "required_inputs": ["cutting_pattern", "object_size"],
+        "output": "Object cut into desired portions"
+      },
+      {
+        "step": "Releasing the utensil",
+        "description": "Put down the utensil or prepare it for further use.",
+        "required_inputs": ["utensil_storage_location"],
+        "output": "Utensil safely placed down"
+      }
+    ],
+    "cognitive_steps": [
+      {
+        "step": "Identifying the object to cut",
+        "description": "Recognize and confirm the object to be cut and its properties.",
+        "required_inputs": ["visual_information", "task_goal"],
+        "output": "Object identified for cutting"
+      },
+      {
+        "step": "Selecting an appropriate utensil",
+        "description": "Choose the proper cutting utensil based on the object's properties.",
+        "required_inputs": ["object_type", "available_utensils"],
+        "output": "Correct utensil selected"
+      },
+      {
+        "step": "Planning the cutting motion",
+        "description": "Decide the direction, angle, and force required for the cut.",
+        "required_inputs": ["object_shape", "cutting_goal"],
+        "output": "Cutting plan established"
+      },
+      {
+        "step": "Monitoring the cutting process",
+        "description": "Continuously observe and adjust actions to ensure accurate cutting.",
+        "required_inputs": ["visual_feedback", "haptic_feedback"],
+        "output": "Cutting progress monitored"
+      },
+      {
+        "step": "Evaluating the result",
+        "description": "Assess whether the object has been cut as intended.",
+        "required_inputs": ["cutting_goal", "object_condition"],
+        "output": "Cutting task evaluated as complete or incomplete"
+      }
+    ]
+  }
+}

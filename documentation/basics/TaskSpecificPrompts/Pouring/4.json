@@ -1,0 +1,43 @@
+{
+  "task": "Pouring Milk into Bowl",
+  "physical_requirements": [
+    {
+      "requirement": "Stable Surface",
+      "description": "The bowl should be placed on a stable, flat surface to prevent spillage during pouring."
+    },
+    {
+      "requirement": "Proper Grip",
+      "description": "A secure grip on the milk container is required to ensure controlled pouring."
+    },
+    {
+      "requirement": "Correct Pouring Angle",
+      "description": "The milk container should be tilted at the right angle to control the flow and avoid overfilling the bowl."
+    },
+    {
+      "requirement": "Controlled Pouring Speed",
+      "description": "Pour at a steady pace to ensure smooth and precise distribution of milk into the bowl."
+    },
+    {
+      "requirement": "Proper Bowl Alignment",
+      "description": "Ensure the bowl is positioned directly under the spout of the milk container for accurate pouring."
+    }
+  ],
+  "sensory_requirements": [
+    {
+      "input": "Vision",
+      "description": "Used to monitor the bowl’s fill level and ensure the milk is directed into the center of the bowl."
+    },
+    {
+      "input": "Touch",
+      "description": "Senses the weight of the milk container and helps guide the pouring process."
+    },
+    {
+      "input": "Proprioception",
+      "description": "Provides feedback on the position and angle of the container to maintain a steady pour."
+    },
+    {
+      "input": "Sound",
+      "description": "The sound of milk flowing helps assess the pour rate and ensures the correct amount is being poured."
+    }
+  ]
+}

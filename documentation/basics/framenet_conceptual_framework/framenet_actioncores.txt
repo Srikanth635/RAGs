@@ -1,0 +1,215 @@
+{
+  "action_cores": {
+    "Adding": {
+      "FrameNetActionCore": "Addition",
+      "CoreElements": ["Agent", "Theme", "Goal", "Source", "Recipient"],
+      "PeripheralElements": ["Instrument", "Manner", "Purpose", "Degree", "Time", "Place"]
+    },
+    "Arranging": {
+      "FrameNetActionCore": "Arranging",
+      "CoreElements": ["Agent", "Theme", "Configuration", "Location"],
+      "PeripheralElements": ["Manner", "Purpose", "Time", "Place", "Reason"]
+    },
+    "Baking": {
+      "FrameNetActionCore": "Cooking_creation",
+      "CoreElements": ["Cook", "Food", "Ingredient", "Result"],
+      "PeripheralElements": ["HeatSource", "Temperature", "Duration", "Place", "Time", "Manner"]
+    },
+    "Shutting": {
+      "FrameNetActionCore": "Closing",
+      "CoreElements": ["Agent", "Entity", "Goal"],
+      "PeripheralElements": ["Instrument", "Manner", "Time", "Place", "Reason"]
+    },
+    "Cooking": {
+      "FrameNetActionCore": "Preparing_food",
+      "CoreElements": ["Cook", "Food", "Ingredient", "Result"],
+      "PeripheralElements": ["Instrument", "HeatSource", "Temperature", "Time", "Place", "Manner", "Purpose"]
+    },
+    "Cooling": {
+      "FrameNetActionCore": "Cooling",
+      "CoreElements": ["Agent", "Entity", "TargetTemperature"],
+      "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Reason"]
+    },
+    "Cutting": {
+      "FrameNetActionCore": "Cutting",
+      "CoreElements": ["Agent", "Theme", "Instrument", "Goal", "Parts"],
+      "PeripheralElements": ["Manner", "Purpose", "Time", "Place", "Reason"]
+    },
+    "Evaluating": {
+      "FrameNetActionCore": "Evaluation",
+      "CoreElements": ["Evaluator", "Item", "Criterion", "Result"],
+      "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+    },
+    "Filling": {
+      "FrameNetActionCore": "Filling",
+      "CoreElements": ["Agent", "Container", "Content", "Source"],
+      "PeripheralElements": ["Instrument", "Manner", "Purpose", "Time", "Place"]
+    },
+    "Flavouring": {
+      "FrameNetActionCore": "Flavoring",
+      "CoreElements": ["Cook", "Ingredient", "Food", "Result"],
+      "PeripheralElements": ["Amount", "Time", "Place", "Purpose", "Manner"]
+    },
+    "Flipping": {
+      "FrameNetActionCore": "Rotating",
+      "CoreElements": ["Agent", "Theme", "Axis"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Grabbing": {
+      "FrameNetActionCore": "Grabbing",
+      "CoreElements": ["Agent", "Object", "Source"],
+      "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+    },
+    "Lifting": {
+      "FrameNetActionCore": "Raising",
+      "CoreElements": ["Agent", "Theme", "Goal"],
+      "PeripheralElements": ["Height", "Time", "Place", "Manner", "Reason"]
+    },
+    "Mixing": {
+      "FrameNetActionCore": "Mixing",
+      "CoreElements": ["Agent", "Mixture", "Ingredients"],
+      "PeripheralElements": ["Instrument", "Manner", "Time", "Place", "Reason", "Purpose"]
+    },
+    "Neutralizing": {
+      "FrameNetActionCore": "Neutralization",
+      "CoreElements": ["Agent", "Substance", "TargetState"],
+      "PeripheralElements": ["Instrument", "Manner", "Purpose", "Time", "Place", "Reason"]
+    },
+    "Opening": {
+      "FrameNetActionCore": "Opening",
+      "CoreElements": ["Agent", "Entity", "Goal"],
+      "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Reason"]
+    },
+    "OpeningADoor": {
+      "FrameNetActionCore": "Opening",
+      "CoreElements": ["Agent", "Door", "Goal"],
+      "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Reason"]
+    },
+    "OperatingATap": {
+      "FrameNetActionCore": "Operating",
+      "CoreElements": ["Agent", "Device", "Result"],
+      "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+    },
+    "Pipetting": {
+      "FrameNetActionCore": "Transferring_liquid",
+      "CoreElements": ["Agent", "Liquid", "Source", "Goal"],
+      "PeripheralElements": ["Instrument", "Amount", "Time", "Place", "Purpose", "Manner"]
+    },
+    "Pouring": {
+      "FrameNetActionCore": "Pouring",
+      "CoreElements": ["Agent", "Liquid", "Goal", "Source"],
+      "PeripheralElements": ["Instrument", "Manner", "Time", "Place", "Purpose", "Reason"]
+    },
+    "Preheating": {
+      "FrameNetActionCore": "Preheating",
+      "CoreElements": ["Agent", "Device", "TargetTemperature"],
+      "PeripheralElements": ["Time", "Place", "Purpose", "Manner", "Reason"]
+    },
+    "Pressing": {
+      "FrameNetActionCore": "Pressing",
+      "CoreElements": ["Agent", "Theme", "Force"],
+      "PeripheralElements": ["Instrument", "Time", "Place", "Purpose", "Reason"]
+    },
+    "Pulling": {
+      "FrameNetActionCore": "Pulling",
+      "CoreElements": ["Agent", "Theme", "Source", "Goal"],
+      "PeripheralElements": ["Instrument", "Force", "Time", "Place", "Purpose", "Reason"]
+    },
+    "Putting": {
+      "FrameNetActionCore": "Placing",
+      "CoreElements": ["Agent", "Theme", "Goal"],
+      "PeripheralElements": ["Source", "Time", "Place", "Purpose", "Manner"]
+    },
+    "Removing": {
+      "FrameNetActionCore": "Removing",
+      "CoreElements": ["Agent", "Theme", "Source"],
+      "PeripheralElements": ["Instrument", "Manner", "Purpose", "Time", "Place", "Reason"]
+    },
+    "Rolling": {
+      "FrameNetActionCore": "Rolling",
+      "CoreElements": ["Agent", "Theme", "Surface"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Serving": {
+      "FrameNetActionCore": "Bringing",
+      "CoreElements": ["Agent", "Theme", "Recipient", "Goal"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Shaking": {
+      "FrameNetActionCore": "Shaking",
+      "CoreElements": ["Agent", "Theme"],
+      "PeripheralElements": ["Manner", "Time", "Place", "Purpose", "Reason"]
+    },
+    "Spooning": {
+      "FrameNetActionCore": "Scooping",
+      "CoreElements": ["Agent", "Theme", "Instrument", "Source", "Goal"],
+      "PeripheralElements": ["Amount", "Time", "Place", "Purpose", "Manner"]
+    },
+    "Spreading": {
+      "FrameNetActionCore": "Spreading",
+      "CoreElements": ["Agent", "Theme", "Goal"],
+      "PeripheralElements": ["Instrument", "Time", "Place", "Purpose", "Manner", "Reason"]
+    },
+    "Sprinkling": {
+      "FrameNetActionCore": "Sprinkling",
+      "CoreElements": ["Agent", "Theme", "Goal", "Source"],
+      "PeripheralElements": ["Instrument", "Time", "Place", "Purpose", "Manner"]
+    },
+    "Starting": {
+      "FrameNetActionCore": "Starting",
+      "CoreElements": ["Agent", "Activity", "Initiator"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Stopping": {
+      "FrameNetActionCore": "Stopping",
+      "CoreElements": ["Agent", "Activity", "Terminator"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Stirring": {
+      "FrameNetActionCore": "Stirring",
+      "CoreElements": ["Agent", "Mixture", "Instrument"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Storing": {
+      "FrameNetActionCore": "Storing",
+      "CoreElements": ["Agent", "Theme", "Location"],
+      "PeripheralElements": ["Time", "Place", "Purpose", "Manner", "Reason"]
+    },
+    "Taking": {
+      "FrameNetActionCore": "Taking",
+      "CoreElements": ["Agent", "Theme", "Source"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "Turning": {
+      "FrameNetActionCore": "Turning",
+      "CoreElements": ["Agent", "Theme", "Axis"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "TurningOnElectricalDevice": {
+      "FrameNetActionCore": "Turning_on",
+      "CoreElements": ["Agent", "Device"],
+      "PeripheralElements": ["Time", "Place", "Purpose", "Manner", "Reason"]
+    },
+    "Unscrewing": {
+      "FrameNetActionCore": "Unscrewing",
+      "CoreElements": ["Agent", "Theme", "Instrument"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    },
+    "UsingMeasuringCup": {
+      "FrameNetActionCore": "Using",
+      "CoreElements": ["Agent", "Instrument"],
+      "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+    },
+    "UsingSpiceJar": {
+      "FrameNetActionCore": "Using",
+      "CoreElements": ["Agent", "Instrument"],
+      "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+    },
+    "Waiting": {
+      "FrameNetActionCore": "Waiting",
+      "CoreElements": ["Waiter", "Activity", "Goal"],
+      "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+    }
+  }
+}
+

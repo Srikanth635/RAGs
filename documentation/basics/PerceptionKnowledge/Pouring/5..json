@@ -1,0 +1,40 @@
+{
+  "task": "Pouring",
+  "multisensory_integration": {
+    "vision_and_touch": {
+      "role": "Flow Control",
+      "description": "Vision monitors the liquid stream, while touch adjusts the container tilt for desired flow.",
+      "example": "Watching milk pour into a bowl while feeling the pitcher tilt in hand."
+    },
+    "vision_and_sound": {
+      "role": "Liquid Level Detection",
+      "description": "Vision observes the target fill level, while sound provides cues about the pouring progress.",
+      "example": "Seeing the water rise in a glass and hearing the splash as it nears the top."
+    },
+    "touch_and_balance": {
+      "role": "Container Stability",
+      "description": "Touch senses grip on the container, and balance feedback ensures steady handling.",
+      "example": "Holding a heavy jug steady while pouring into a smaller container."
+    },
+    "vision_and proprioception": {
+      "role": "Target Alignment",
+      "description": "Vision aligns the spout with the target, while proprioception ensures accurate movement.",
+      "example": "Aligning a teapot spout with a cup and smoothly tilting it."
+    },
+    "vision, touch, and sound": {
+      "role": "Spillage Prevention",
+      "description": "Vision tracks the fill level, touch senses grip and container tilt, and sound alerts to overflow.",
+      "example": "Hearing an overflow sound while seeing liquid near the cup's brim and adjusting grip."
+    },
+    "touch_and_force_feedback": {
+      "role": "Viscosity Management",
+      "description": "Touch feels resistance from viscous liquids, while force feedback helps adjust tilt angle.",
+      "example": "Pouring honey and feeling resistance as the liquid flows slowly."
+    },
+    "vision_and depth perception": {
+      "role": "Liquid Positioning",
+      "description": "Vision and depth cues help determine the distance between the source and target.",
+      "example": "Pouring oil into a narrow bottle by gauging spout position."
+    }
+  }
+}

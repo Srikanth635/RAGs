@@ -1,0 +1,75 @@
+{
+  "task": "Pouring",
+  "variations": [
+    {
+      "type": "Technical",
+      "variation": "Precision Pouring",
+      "description": "Pouring liquids into containers with exact measurements.",
+      "examples": ["Pouring milk into a measuring cup", "Dispensing oil into a recipe"],
+      "context": "Used in cooking, baking, or scientific experiments."
+    },
+    {
+      "type": "Technical",
+      "variation": "Automated Pouring",
+      "description": "Using devices or machines to pour liquids.",
+      "examples": ["Automatic coffee makers", "Beverage dispensers"],
+      "context": "Common in kitchen appliances or smart home systems."
+    },
+    {
+      "type": "Technical",
+      "variation": "Bulk Pouring",
+      "description": "Pouring large volumes of liquids into bigger containers or reservoirs.",
+      "examples": ["Refilling a water tank", "Pouring detergent into a washing machine"],
+      "context": "Used in laundry or garden tasks."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Ceremonial Pouring",
+      "description": "Pouring liquids during cultural or religious ceremonies.",
+      "examples": ["Pouring wine during a toast", "Tea pouring in Japanese tea ceremonies"],
+      "context": "Represents tradition, respect, or celebration."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Artistic Pouring",
+      "description": "Pouring liquids for creative purposes.",
+      "examples": ["Pouring paint for fluid art", "Creating latte art with milk"],
+      "context": "Blends utility with artistic expression."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Communal Serving",
+      "description": "Pouring beverages for a group as a social activity.",
+      "examples": ["Pouring tea during family gatherings", "Serving drinks at a party"],
+      "context": "Enhances social bonding and etiquette."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Outdoor Pouring",
+      "description": "Pouring liquids in outdoor settings.",
+      "examples": ["Watering plants with a watering can", "Pouring water during outdoor cooking"],
+      "context": "Common in gardening, camping, or picnics."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Cold-Climate Pouring",
+      "description": "Handling liquids in cold conditions where freezing may occur.",
+      "examples": ["Pouring antifreeze into a vehicle", "Pouring hot drinks outdoors in winter"],
+      "context": "Requires handling liquids with different viscosities and thermal properties."
+    },
+    {
+      "type": "Environmental",
+      "variation": "High-Humidity Pouring",
+      "description": "Pouring liquids in humid environments where containers may become slippery.",
+      "examples": ["Pouring water in a bathroom", "Handling drinks in tropical climates"],
+      "context": "Requires extra care to prevent spills."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Precision Indoor Pouring",
+      "description": "Pouring liquids in confined spaces with limited room for error.",
+      "examples": ["Refilling a humidifier", "Pouring liquid into small-neck bottles"],
+      "context": "Requires tools like funnels for accuracy."
+    }
+  ]
+}

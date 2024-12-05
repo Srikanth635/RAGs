@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "object_state_detection": {
+    "steps": [
+      {
+        "step": "Capture Image",
+        "description": "Acquire an image of the object using a camera or vision sensor.",
+        "inputs": ["Lighting conditions", "Camera position"],
+        "output": "Raw image of the object"
+      },
+      {
+        "step": "Preprocess Image",
+        "description": "Enhance the image by adjusting brightness, contrast, and removing noise.",
+        "inputs": ["Raw image"],
+        "output": "Preprocessed image ready for analysis"
+      },
+      {
+        "step": "Segment Object",
+        "description": "Identify and separate the object from the background using segmentation techniques.",
+        "inputs": ["Preprocessed image"],
+        "output": "Segmented object region"
+      },
+      {
+        "step": "Analyze Liquid Surface",
+        "description": "Detect the liquid surface level within the container.",
+        "inputs": ["Segmented object region"],
+        "output": "Detected surface level"
+      },
+      {
+        "step": "Estimate Fill Level",
+        "description": "Compare the detected liquid level to the container height to calculate the fill percentage.",
+        "inputs": ["Detected surface level", "Container dimensions"],
+        "output": "Fill level estimation (e.g., empty, half-full, full)"
+      },
+      {
+        "step": "Detect Transparency",
+        "description": "Analyze transparency or opacity of the liquid to confirm the presence of contents.",
+        "inputs": ["Surface texture", "Color profile"],
+        "output": "Confirmation of liquid presence and type"
+      },
+      {
+        "step": "Track Changes in State",
+        "description": "Monitor the liquid level dynamically during pouring.",
+        "inputs": ["Sequential images or video feed"],
+        "output": "Real-time updates on the object's state"
+      },
+      {
+        "step": "Validate Final State",
+        "description": "Check if the target fill level matches the desired state.",
+        "inputs": ["Fill level estimation", "Task goal"],
+        "output": "Validation of final object state (e.g., correctly filled or needs adjustment)"
+      }
+    ]
+  }
+}

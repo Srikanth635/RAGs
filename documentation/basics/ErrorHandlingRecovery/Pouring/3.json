@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "strategies_for_recovery_from_failed_state": [
+    {
+      "strategy": "Realign the Spout",
+      "description": "Reposition the container to ensure the spout is properly aligned with the target container.",
+      "example": "Adjust the angle of the pitcher to ensure the liquid flows directly into the glass."
+    },
+    {
+      "strategy": "Slow Down Pouring Speed",
+      "description": "Reduce the speed of pouring to have better control and avoid spillage.",
+      "example": "Pour more slowly when transferring liquid from a high bottle to a small cup."
+    },
+    {
+      "strategy": "Stabilize the Container",
+      "description": "Ensure the container is stable and firmly held to prevent slipping or tilting during pouring.",
+      "example": "Place the container on a flat surface before pouring to prevent accidental tipping."
+    },
+    {
+      "strategy": "Pause and Adjust Position",
+      "description": "Stop pouring momentarily to reassess and correct the position of the container or spout.",
+      "example": "Pause the pour to ensure the bottle is at the correct angle to avoid overfilling."
+    },
+    {
+      "strategy": "Use a Funnel or Guide",
+      "description": "Use a funnel or similar tool to guide the liquid into a narrow target container, reducing the risk of spills.",
+      "example": "Use a funnel when pouring oil into a small bottle to prevent overflow."
+    },
+    {
+      "strategy": "Check Pouring Angle",
+      "description": "Adjust the angle of the container to reduce the risk of splashing or over-pouring.",
+      "example": "Adjust the angle of the teapot when pouring to avoid drips or spills."
+    },
+    {
+      "strategy": "Switch Containers",
+      "description": "Switch to a different container that is easier to control for pouring, such as using a smaller or more ergonomic vessel.",
+      "example": "Switch from a large jug to a smaller pitcher for easier pouring into glasses."
+    },
+    {
+      "strategy": "Wipe Spout After Pouring",
+      "description": "Wipe the spout after pouring to prevent drips or residual liquid from spilling outside the target container.",
+      "example": "Wipe the edge of a bottle or jug with a cloth to stop drips from falling."
+    },
+    {
+      "strategy": "Use a Measuring Cup",
+      "description": "Use a measuring cup or graduated container to pour the correct amount of liquid with precision.",
+      "example": "Use a measuring cup to pour exact quantities of milk into a recipe to avoid spillage."
+    },
+    {
+      "strategy": "Pause and Clean Spillage",
+      "description": "If spillage occurs, pause the task, clean up the mess, and reassess the pouring method to prevent further issues.",
+      "example": "Stop immediately if liquid spills, clean the area, and resume with a more controlled pouring technique."
+    }
+  ]
+}

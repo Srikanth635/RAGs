@@ -1,0 +1,47 @@
+{
+  "task": "Picking Up a Cup from the Table",
+  "steps": [
+    {
+      "step": "Identify the Cup's Location",
+      "description": "Look for the cup on the table to locate it."
+    },
+    {
+      "step": "Position Your Hand",
+      "description": "Move your hand to a comfortable position near the cup’s handle."
+    },
+    {
+      "step": "Grip the Cup",
+      "description": "Securely grasp the cup by its handle with your fingers."
+    },
+    {
+      "step": "Lift the Cup",
+      "description": "Apply upward force to lift the cup off the table."
+    },
+    {
+      "step": "Adjust Grip (if necessary)",
+      "description": "Ensure a steady grip on the cup to prevent slipping."
+    },
+    {
+      "step": "Move the Cup Away from the Table",
+      "description": "Raise the cup away from the table, ensuring it is securely held."
+    }
+  ],
+  "action_roles": [
+    {
+      "role": "Agent",
+      "description": "The person performing the action, responsible for positioning and lifting the cup."
+    },
+    {
+      "role": "Tool",
+      "description": "The cup, which is being picked up and moved."
+    },
+    {
+      "role": "Surface",
+      "description": "The table, which provides support for the cup until it is lifted."
+    },
+    {
+      "role": "Support",
+      "description": "The hand, which grasps and supports the cup during the pickup process."
+    }
+  ]
+}

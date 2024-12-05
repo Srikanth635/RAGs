@@ -1,3 +1,5 @@
+import json
+import yaml
 import os
 import fitz
 from pptx import Presentation
@@ -42,7 +44,7 @@ def get_pdf_documents(pdf_file):
                         **bbox,
                         "type": "text",
                         "page_num": i,
-                        "source": f"{pdf_file.name[:-4]}-page{i}-block{text_block_ctr}"
+                        "source": f"{pdf_file.name[:-4]}-page{i}-block{text_block_ctr}", "filetype": "pdf"
                     },
                     id_=f"{pdf_file.name[:-4]}-page{i}-block{text_block_ctr}"
                 )
@@ -162,7 +164,7 @@ def process_ppt_file(ppt_path):
             "page_num": page_num
         }
         processed_data.append(
-            Document(text="This is a slide with the text: " + slide_text + image_description, metadata=image_metadata))
+            Document(text="This is a slide with the text: " + slide_text + image_description, metadata={image_metadata :image_metadata, "filetype": "ppt"}))
 
     return processed_data
 
@@ -218,7 +220,7 @@ def load_multimodal_data(files):
             image_text = describe_image(image_content)
             print(type(image_text))
             print(image_text)
-            doc = Document(text=image_text, metadata={"source": file.name, "type": "image"})
+            doc = Document(text=image_text, metadata={"source": file.name, "type": "image", "filetype": file_extension})
             documents.append(doc)
         elif file_extension == '.pdf':
             try:
@@ -232,9 +234,17 @@ def load_multimodal_data(files):
                 documents.extend(ppt_documents)
             except Exception as e:
                 print(f"Error processing PPT {file.name}: {e}")
+        elif file_extension == '.json':
+            data = json.load(file)
+            doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "json"})
+            documents.append(doc)
+        # elif file_extension == '.yml' or file_extension == '.yaml':
+        #     data = yaml.safe_load(file)
+        #     doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "yml"})
+        #     documents.append(doc)
         else:
             text = file.read().decode("utf-8")
-            doc = Document(text=text, metadata={"source": file.name, "type": "text"})
+            doc = Document(text=text, metadata={"source": file.name, "type": "text", "filetype": "others"})
             documents.append(doc)
     return documents
 

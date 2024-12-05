@@ -1,0 +1,66 @@
+{
+  "action_designator": {
+    "action_core": "Cutting",
+    "action_roles": [
+      "Agent",
+      "Tool",
+      "Object to be Cut",
+      "Surface",
+      "Result"
+    ],
+    "required_action_roles": [
+      "Agent",
+      "Tool",
+      "Object to be Cut"
+    ],
+    "motion_phases": [
+      {
+        "phase": "Reaching",
+        "description": "The agent moves their hand toward the cutting tool and the object to be cut."
+      },
+      {
+        "phase": "Grasping",
+        "description": "The agent securely grasps the cutting tool with an appropriate grip."
+      },
+      {
+        "phase": "Positioning",
+        "description": "The agent positions the knife over the object, ensuring alignment."
+      },
+      {
+        "phase": "Initial Cut",
+        "description": "The agent applies force to the knife to begin cutting through the object."
+      },
+      {
+        "phase": "Continual Cutting",
+        "description": "The agent continues cutting with consistent pressure, maintaining control."
+      },
+      {
+        "phase": "Final Cut",
+        "description": "The agent completes the cut, separating the object into desired parts."
+      },
+      {
+        "phase": "Release",
+        "description": "The agent releases the tool and completes the action."
+      }
+    ],
+    "real_time_feedback_mechanisms": [
+      {
+        "feedback_type": "Visual",
+        "description": "Monitors the alignment of the cutting tool and checks the cut's accuracy in real time."
+      },
+      {
+        "feedback_type": "Tactile",
+        "description": "Senses resistance from the object to guide the agent in adjusting force or motion."
+      },
+      {
+        "feedback_type": "Proprioceptive",
+        "description": "Provides feedback from the agent’s hand and arm to ensure proper tool grip and cutting motion."
+      },
+      {
+        "feedback_type": "Auditory",
+        "description": "The sound of the cutting process indicates whether the tool is cutting efficiently or if adjustments are needed."
+      }
+    ],
+    "cram_plan": "(perform (an action (type cut-object) (an object (type {object_to_be_cut}){object_props})(tool (type {tool}){tool_props})(result (type {result}){result_props})) (motion (phase reaching) (phase grasping) (phase positioning) (phase initial-cut) (phase continual-cut) (phase final-cut) (phase release)) (real-time-feedback (visual) (tactile) (proprioceptive) (auditory)))"
+  }
+}
