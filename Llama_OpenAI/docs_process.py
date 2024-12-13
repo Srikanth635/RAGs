@@ -9,7 +9,8 @@ from utils import (
     describe_image, is_graph, process_graph, extract_text_around_item,
     process_text_blocks, save_uploaded_file
 )
-
+from llama_index.core.node_parser import JSONNodeParser
+from llama_index.core.schema import BaseNode, TextNode
 
 def get_pdf_documents(pdf_file):
     all_pdf_documents = []
@@ -213,13 +214,12 @@ def extract_text_and_notes_from_ppt(ppt_path):
 
 def load_multimodal_data(files):
     documents = []
+    nodes = []
     for file in files:
         file_extension = os.path.splitext(file.name.lower())[1]
         if file_extension in ('.png', '.jpg', '.jpeg'):
             image_content = file.read()
             image_text = describe_image(image_content)
-            print(type(image_text))
-            print(image_text)
             doc = Document(text=image_text, metadata={"source": file.name, "type": "image", "filetype": file_extension})
             documents.append(doc)
         elif file_extension == '.pdf':
@@ -234,20 +234,33 @@ def load_multimodal_data(files):
                 documents.extend(ppt_documents)
             except Exception as e:
                 print(f"Error processing PPT {file.name}: {e}")
-        elif file_extension == '.json':
-            data = json.load(file)
-            doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "json"})
-            documents.append(doc)
-        # elif file_extension == '.yml' or file_extension == '.yaml':
-        #     data = yaml.safe_load(file)
-        #     doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "yml"})
-        #     documents.append(doc)
+        # elif file_extension == '.json':
+            # json_data = json.load(file)
+            # json_text = json.dumps(json_data, indent=4)
+            # base_node = TextNode(text=json_text)
+            # print("Loaded Json Data")
+            # try:
+            #     parser = JSONNodeParser()
+            #     json_nodes = parser.get_nodes_from_node(base_node)
+            #     for json_node in json_nodes:
+            #         doc = Document(text=json_node.get_text(), metadata={"source": file.name, "filetype": "json"})
+            #         documents.append(doc)
+            #     # print(f"json node info : {type(json_nodes)}, {type(json_nodes[0])}, {json_nodes[0]}")
+            #     # doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "json"})
+            #     # documents.append(doc)
+            # except Exception as e:
+            #     print(f"Error processing JSON {file.name}: {e}")
         else:
             text = file.read().decode("utf-8")
             doc = Document(text=text, metadata={"source": file.name, "type": "text", "filetype": "others"})
             documents.append(doc)
     return documents
 
+
+# elif file_extension == '.yml' or file_extension == '.yaml':
+#     data = yaml.safe_load(file)
+#     doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "yml"})
+#     documents.append(doc)
 
 def load_data_from_directory(directory):
     documents = []

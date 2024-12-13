@@ -16,3 +16,4 @@ openai
 langchain
 google-search-results
 llama-index-embeddings-ollama
+llama-index-graph-stores-neo4j
