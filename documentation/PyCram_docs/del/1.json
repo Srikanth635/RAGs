@@ -1,0 +1,58 @@
+{
+  "action_designator": {
+    "action_core": "Cutting",
+    "action_roles": [
+      "Agent",
+      "Tool",
+      "Object to be Cut",
+      "Surface",
+      "Result"
+    ],
+    "required_action_roles": [
+      "Agent",
+      "Tool",
+      "Object to be Cut"
+    ],
+    "motion_phases": [
+      {
+        "phase": "Preparation",
+        "description": "Position the object (e.g., food) securely on a stable surface, ready for cutting."
+      },
+      {
+        "phase": "Tool Grip",
+        "description": "The agent grips the cutting tool (e.g., knife) firmly with the proper hand position."
+      },
+      {
+        "phase": "Initial Cut",
+        "description": "The agent applies force to the knife, moving it down and through the object with controlled precision."
+      },
+      {
+        "phase": "Continual Cutting",
+        "description": "The agent continues applying force and controlled motion, following through with the cut to divide the object into smaller parts."
+      },
+      {
+        "phase": "Completion",
+        "description": "The agent finishes the cut, lifts the knife away from the surface, and checks the result."
+      }
+    ],
+    "sensory_feedback": [
+      {
+        "type": "Vision",
+        "description": "Used to guide the agent's movements, ensuring that the knife follows the desired cut line and achieves an even division."
+      },
+      {
+        "type": "Touch",
+        "description": "Helps the agent assess the resistance of the object being cut, allowing for adjustment in force and motion."
+      },
+      {
+        "type": "Proprioception",
+        "description": "Provides feedback on the knife's position in the agent's hand and the stability of the object being cut."
+      },
+      {
+        "type": "Sound",
+        "description": "The sound of the knife cutting through the object provides feedback on the ease of cutting and the need to adjust force."
+      }
+    ],
+    "cram_plan": "(perform (an action (type cut-object) (an object (type {object_to_be_cut}){object_props})(tool (type {tool}){tool_props})(result (type {result}){result_props})) (motion (phase preparation) (phase tool-grip) (phase initial-cut) (phase continual-cut) (phase completion)))"
+  }
+}

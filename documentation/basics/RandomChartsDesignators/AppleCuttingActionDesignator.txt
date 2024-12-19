@@ -1,0 +1,185 @@
+
+(:action-designator
+  :type cutting
+  :parameters (
+    :object-type (:name apple :attributes (:material-type soft :size medium :color red :texture smooth :hardness low))
+    :tool-type (:name knife :attributes (:sharpness high :size small :weight light :ergonomics user-friendly))
+    :location (:name kitchen-table :attributes (:height 0.8 :accessibility high :surface-type stable))
+    :desired-outcome (:cut :into :pieces :shape (:type slices :size thin))
+  )
+  :contextual-attributes (
+    :environment (
+      :ambient-context (
+        :lighting-level "sufficient"
+        :noise-level "low"
+        :temperature 22.0 ;; Celsius
+      )
+      :social-context (
+        :human-presence "detected"
+        :interaction-level "passive-observer"
+      )
+      :workspace-constraints (
+        :workspace-boundary (:dimensions (1.5 1.5 1.0)) ;; meters (width x length x height)
+      )
+      :external-factors (
+        :obstacle-status "none"
+        :task-complexity "low"
+        :time-of-day "afternoon"
+      )
+    )
+    :goal-representation (
+      :primary-goal "cut-apple"
+      :sub-goals (:approach-apple :grasp-knife :position-knife :apply-force :complete-cut)
+      :priority-level "high"
+      :expected-outcome "thin, consistent slices"
+    )
+  )
+  :attributes (
+    :perception-and-attention (
+      :object-recognition (
+        :object-id "apple-123"
+        :confidence-level 0.98 ;; percentage
+      )
+      :attention-allocation (
+        :focus-area "cutting-zone"
+        :allocation-levels (:object "high" :tool "medium" :environment "low")
+      )
+      :multi-sensory-integration (
+        :vision-status "active"
+        :force-feedback-status "active"
+        :auditory-status "inactive"
+      )
+    )
+    :planning-and-control (
+      :planning-type "hierarchical-task-network" ;; High-level planning with HTN
+      :control-objectives (
+        :tracking-accuracy 0.98 ;; percentage
+        :stability (:desired-stiffness 80.0 :max-overshoot 5.0) ;; minimize oscillations
+        :trajectory-optimization (
+          :optimal-path "linear-cutting-path"
+          :collision-free-path true
+        )
+        :force-optimization (
+          :min-force 10.0 ;; Newtons
+          :max-force 15.0 ;; Newtons
+        )
+      )
+      :action-sequence (:approach-apple :grasp-knife :position-blade :initiate-cut :verify-cut)
+      :contingency-plans (
+        :apple-movement (:reposition :stabilize)
+        :tool-slippage (:reduce-force :re-align)
+      )
+    )
+    :feedback-and-adaptation (
+      :feedback-control (
+        :sensor-integration (
+          :force-sensor-feedback (:force-values (12.0 13.5 14.0)) ;; Newtons
+          :position-feedback (:position-values (:x 0.25 :y 0.35 :z 0.1)) ;; meters
+        )
+        :feedback-loop "proportional-integral" ;; PI control for stability
+      )
+      :learning-and-adaptation (
+        :learning-mode "reinforcement-learning"
+        :experience-replay (:successful-cuts 7 :unsuccessful-cuts 1)
+        :adaptation-strategy (
+          :cutting-speed-adjustment (:based-on-material-hardness "adaptive")
+          :grip-modification (:tactile-feedback "active")
+        )
+      )
+    )
+    :interaction-dynamics-and-force-application (
+      :contact-model (
+        :expected-contact-type "consistent"
+        :compliance-setting (:stiffness 100.0 :damping 0.5)
+      )
+      :force-application (
+        :desired-normal-force 12.0 ;; Newtons
+        :applied-torque (:joint1 1.0 :joint2 0.7 :joint3 0.5) ;; Nm
+      )
+      :surface-interaction (
+        :surface-type "smooth"
+        :surface-friction-coefficient 0.2 ;; friction coefficient between tool and apple
+      )
+    )
+    :human-awareness-and-safety (
+      :safety-and-risk-awareness (
+        :perceived-risk "low"
+        :risk-factors (:sharp-tool :human-presence)
+        :precautionary-measures (:maintain-safe-distance :adjust-force :reduced-speed)
+      )
+      :human-awareness (
+        :human-proximity 1.2 ;; meters - distance to human
+        :interaction-monitoring "passive-observer"
+      )
+      :safety-measures (
+        :max-permitted-force 8.0 ;; Newtons near human presence for safety
+        :max-speed 0.15 ;; meters/second during human interaction
+      )
+      :communication-intent (
+        :vocal-warning (:enabled "true" :condition "excessive-force-detected")
+      )
+    )
+    :task-execution-and-adjustment (
+      :motor-skill-coordination (
+        :fine-motor-control "active"
+        :hand-eye-coordination "high-accuracy"
+      )
+      :real-time-adjustment (
+        :velocity-adjustment 0.08 ;; meters/second based on cutting force
+        :force-adjustment (:force-level 13.0 :damping-factor 0.4)
+      )
+      :adaptive-control (
+        :material-type-adjustment (:softness "detected" :cutting-speed "adjusted")
+      )
+    )
+    :physical-constraints-and-efficiency (
+      :joint-range-limits (
+        :joint1 (:range (-45 45)) ;; degrees
+        :joint2 (:range (0 90)) ;; degrees
+      )
+      :actuator-limits (
+        :max-torque 2.0 ;; Nm
+        :max-velocity 0.25 ;; meters/second
+      )
+      :energy-consumption-optimization (
+        :target-energy-use 30.0 ;; Joules
+        :current-energy-usage 28.0 ;; Joules
+      )
+      :efficiency-priorities (
+        :time-efficiency "medium"
+        :power-usage-efficiency "high"
+      )
+    )
+    :goal-monitoring-and-evaluation (
+      :progress-assessment (
+        :goal-completion-status "40%" ;; cutting in progress
+        :sub-goals-completed (:grasp-tool :position-tool :apply-force)
+      )
+      :corrective-actions (
+        :stabilize-material "true"
+        :adjust-tool-angle "false"
+      )
+    )
+    :motion-phases ( ;; Flanagan action motion phases
+      :preparation-phase "approach-object"
+      :initial-contact-phase "position-blade"
+      :task-specific-motion-phase "apply-cutting-force"
+      :withdrawal-phase "retract-tool"
+    )
+    :framenet-elements (
+      :core-elements (
+        :agent "robot"
+        :object "apple"
+        :tool "small-sharp-knife"
+        :goal "cut-into-slices"
+      )
+      :peripheral-elements (
+        :time "afternoon"
+        :location "kitchen-table"
+        :manner "carefully"
+        :cause "prepare-snack"
+        :beneficiary "human-observer"
+      )
+    )
+  )
+)

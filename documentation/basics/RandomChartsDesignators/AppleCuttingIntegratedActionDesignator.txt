@@ -1,0 +1,134 @@
+
+(:action-designator
+  :type cutting
+  :parameters (
+    :object-type (:name apple :attributes (:material-type soft :size medium :color red :texture smooth :hardness low))
+    :tool-type (:name knife :attributes (:sharpness high :size small :weight light :ergonomics user-friendly))
+    :location (:name kitchen-table :attributes (:height 0.8 :accessibility high :surface-type stable))
+    :desired-outcome (:cut :into :pieces :shape (:type slices :size thin))
+  )
+  :motion-phases ( ;; Flanagan action motion phases as central theme
+    :preparation-phase (
+      :phase-name "approach-object"
+      :cognitive-attributes (
+        :goal-representation (
+          :primary-goal "cut-apple"
+          :sub-goals (:approach-apple :grasp-knife)
+        )
+        :attention-allocation (
+          :focus-area "apple-location"
+          :allocation-levels (:object "high" :tool "medium" :environment "low")
+        )
+        :planning-type "hierarchical-task-network"
+      )
+      :control-attributes (
+        :tracking-accuracy 0.95 ;; percentage
+        :velocity-planning (:approach-speed 0.1) ;; meters/second
+        :sensor-integration (:vision-status "active")
+      )
+      :framenet-elements (
+        :core-elements (:agent "robot" :goal "approach-apple")
+        :peripheral-elements (:location "kitchen-table" :time "afternoon" :manner "carefully")
+      )
+    )
+    :initial-contact-phase (
+      :phase-name "position-blade"
+      :cognitive-attributes (
+        :object-recognition (
+          :object-id "apple-123"
+          :confidence-level 0.98 ;; percentage
+        )
+        :perceived-risk "low"
+        :contingency-plans (:tool-slippage (:re-align :reduce-force))
+        :multi-sensory-integration (:vision-status "active" :force-feedback-status "active")
+      )
+      :control-attributes (
+        :force-application (
+          :desired-normal-force 10.0 ;; Newtons
+          :position-planning (:desired-position (:x 0.25 :y 0.35 :z 0.1))
+        )
+        :feedback-loop "proportional-integral"
+      )
+      :framenet-elements (
+        :core-elements (:agent "robot" :tool "knife" :goal "position-blade")
+        :peripheral-elements (:manner "smoothly")
+      )
+    )
+    :task-specific-motion-phase (
+      :phase-name "apply-cutting-force"
+      :cognitive-attributes (
+        :goal-representation (
+          :primary-goal "cut-apple"
+          :expected-outcome "thin, consistent slices"
+        )
+        :learning-and-adaptation (
+          :learning-mode "reinforcement-learning"
+          :experience-replay (:successful-cuts 7 :unsuccessful-cuts 1)
+        )
+        :attention-allocation (
+          :focus-area "cutting-zone"
+          :allocation-levels (:object "high" :tool "high")
+        )
+      )
+      :control-attributes (
+        :force-application (
+          :desired-normal-force 12.0 ;; Newtons
+          :applied-torque (:joint1 1.0 :joint2 0.7 :joint3 0.5) ;; Nm
+        )
+        :stability-settings (:desired-stiffness 100.0 :damping 0.5)
+        :sensor-integration (:force-sensor-feedback (:force-values (12.0 13.5 14.0)))
+      )
+      :safety-constraints (
+        :max-force 8.0 ;; Newtons near human presence
+        :velocity-adjustment 0.08 ;; meters/second based on cutting force
+      )
+      :framenet-elements (
+        :core-elements (:agent "robot" :object "apple" :tool "knife" :goal "cut-into-slices")
+        :peripheral-elements (:beneficiary "human-observer" :cause "prepare-snack")
+      )
+    )
+    :withdrawal-phase (
+      :phase-name "retract-tool"
+      :cognitive-attributes (
+        :goal-representation (:primary-goal "complete-cut" :sub-goals (:retract-knife))
+        :memory-and-evaluation (
+          :progress-assessment (:goal-completion-status "90%")
+          :corrective-actions (:stabilize-material "false" :adjust-tool-angle "false")
+        )
+      )
+      :control-attributes (
+        :smooth-withdrawal-settings (:retraction-speed 0.1) ;; meters/second
+        :stability-analysis (:overshoot "none")
+      )
+      :framenet-elements (
+        :core-elements (:agent "robot" :goal "retract-knife" :tool "knife")
+        :peripheral-elements (:time "after-completion" :manner "slowly")
+      )
+    )
+  )
+  :additional-attributes (
+    :human-awareness-and-safety (
+      :human-awareness (
+        :human-proximity 1.2 ;; meters
+        :interaction-level "passive-observer"
+      )
+      :communication-intent (
+        :vocal-warning (:enabled "true" :condition "excessive-force-detected")
+      )
+      :safety-measures (
+        :max-permitted-force 8.0 ;; Newtons near humans
+        :max-speed 0.15 ;; meters/second during human interaction
+      )
+    )
+    :energy-and-efficiency (
+      :energy-consumption-optimization (
+        :target-energy-use 30.0 ;; Joules
+        :current-energy-usage 28.0 ;; Joules
+      )
+      :efficiency-priorities (
+        :time-efficiency "medium"
+        :power-usage-efficiency "high"
+      )
+    )
+  )
+)
