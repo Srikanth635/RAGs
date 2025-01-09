@@ -1,0 +1,124 @@
+{
+  "action_designators": [
+    {
+      "id": "AD-003",
+      "task_name": "Slice tomato into rounds",
+      "task_description": "Slice the tomato into rounds exactly 0.3 centimeters thick, ensuring the knife does not compress the flesh and the slices retain their circular shape.",
+      "action_type": "slicing",
+      "parameters": {
+        "object_type": {
+          "name": "tomato",
+          "attributes": {
+            "material_type": "organic",
+            "size": "medium",
+            "color": "red",
+            "shape": "spherical",
+            "texture": "smooth"
+          }
+        },
+        "tool_type": {
+          "name": "knife",
+          "attributes": {
+            "sharpness": "very_high",
+            "size": "medium",
+            "material": "steel",
+            "weight": "light",
+            "edge": "smooth"
+          }
+        },
+        "location": {
+          "name": "cutting_board",
+          "attributes": {
+            "height": 0.9,
+            "accessibility": "high",
+            "surface_type": "stable"
+          }
+        },
+        "desired_outcome": {
+          "slice": "rounds",
+          "pieces": "shape",
+          "details": {
+            "type": "circular",
+            "thickness": 0.3,
+            "edges": "smooth"
+          }
+        }
+      },
+      "task_constraints": {
+        "slice_thickness": 0.3,
+        "retain_shape": "true",
+        "avoid_compression": "true",
+        "cut_uniformly": "true"
+      },
+      "motion_phases": [
+        {
+          "name": "approach-tomato",
+          "preconditions": {
+            "object_available": "tomato-101",
+            "tool_available": "knife"
+          },
+          "expected_effect": {
+            "robot_positioned": "near-tomato",
+            "tomato_reachable": "true"
+          }
+        },
+        {
+          "name": "position-knife",
+          "preconditions": {
+            "tomato_positioned": "stable",
+            "blade_aligned": "true"
+          },
+          "expected_effect": {
+            "tool_in_contact": "true",
+            "ready_for_slicing": "true"
+          }
+        },
+        {
+          "name": "apply_slicing_force",
+          "preconditions": {
+            "tool_in_contact": "true",
+            "stable_grip": "true"
+          },
+          "expected_effect": {
+            "object_sliced": "true"
+          }
+        },
+        {
+          "name": "retract_tool",
+          "preconditions": {
+            "slicing_complete": "true"
+          },
+          "expected_effect": {
+            "tool_removed": "true",
+            "task_completed": "true"
+          }
+        }
+      ],
+      "affordances": {
+        "object": "tomato",
+        "possible_actions": ["grasp", "slice", "cut"],
+        "tool_compatibility": ["knife"],
+        "environment_affordances": ["support", "slide"]
+      },
+      "expected_outcomes": {
+        "primary_outcome": "tomato_sliced",
+        "secondary_outcome": "knife_retracted",
+        "overall_status": "success"
+      },
+      "learning_and_evaluation": {
+        "feedback_loops": {
+          "vision_status": "active",
+          "force_feedback_status": "active"
+        },
+        "progress_monitoring": {
+          "goal_completion": "100%",
+          "errors_detected": "none"
+        },
+        "experience_replay": {
+          "successful_actions": 8,
+          "failed_actions": 1
+        }
+      }
+    }
+  ]
+}

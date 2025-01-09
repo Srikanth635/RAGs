@@ -1,23 +1,43 @@
-from graphviz import Digraph
+import inspect
 
-# Create a new directed graph
-dot = Digraph()
+from owlready2 import *
 
-# Define nodes for the flowchart
-dot.node('A', 'Start')
-dot.node('B', 'Identify Box')
-dot.node('C', 'Check Box Orientation')
-dot.node('D', 'Approach Box')
-dot.node('E', 'Pick Up Box')
-dot.node('F', 'Transport to Shelf')
-dot.node('G', 'Identify Shelf Location')
-dot.node('H', 'Place Box on Shelf')
-dot.node('I', 'Update User on Progress')
-dot.node('J', 'End')
+# Path to your OWL file
+onto_path.append("/home/malineni/PycharmProjects/Llama_index/documentation/External/KGs_OWLs/knowrob.owl")
+onto = get_ontology("file:////home/malineni/PycharmProjects/Llama_index/documentation/External/KGs_OWLs/knowrob.owl").load()
 
-# Define edges to connect the nodes
-dot.edges(['AB', 'BC', 'CD', 'DE', 'EF', 'FG', 'GH', 'HI', 'IJ'])
+from pathlib import Path
+from typing import Callable, Dict, List, Optional, Type, Tuple, Union
 
-# Render the flowchart to a file and display it
-dot.render('flowchart', format='png', cleanup=True)
-dot.view()
+from owlready2 import (Namespace, Ontology, World as OntologyWorld, Thing, EntityClass, Imp,
+                       Property, ObjectProperty, OwlReadyError, types,
+                       onto_path, default_world, get_namespace, get_ontology, destroy_entity,
+                       sync_reasoner_pellet, sync_reasoner_hermit,
+                       OwlReadyOntologyParsingError)
+from documentation.External.KGs_OWLs.ontology.ontology_common import  (OntologyConceptHolderStore, OntologyConceptHolder,
+                                        ONTOLOGY_SQL_BACKEND_FILE_EXTENSION,
+                                        ONTOLOGY_SQL_IN_MEMORY_BACKEND)
+from owlready2.class_construct import GeneralClassAxiom
+from documentation.External.KGs_OWLs.ontology.ontology import OntologyManager
+
+SOMA_HOME_ONTOLOGY_IRI = "http://www.ease-crc.org/ont/SOMA-HOME.owl"
+SOMA_ONTOLOGY_IRI = "http://www.ease-crc.org/ont/SOMA.owl"
+KNOWROB_ONTOLOGY_IRI = "https://knowrob.org/kb/knowrob.owl"
+SOMA_ONTOLOGY_NAMESPACE = "SOMA"
+DUL_ONTOLOGY_NAMESPACE = "DUL"
+KNOWROB_ONTOLOGY_NAMESPACE = "KNOWROB"
+
+om = OntologyManager(KNOWROB_ONTOLOGY_IRI)
+main_ontology = om.main_ontology
+soma = om.soma
+dul = om.dul
+
+data_props = list(main_ontology.data_properties())
+obj_props = list(main_ontology.object_properties())
+classes = list(main_ontology.classes())
+
+print(f"data props {len(data_props)}")
+print(f"obj props {len(obj_props)}")
+print(f"classes {len(classes)}")
+
+print("base iri ", main_ontology.base_iri)

@@ -5,6 +5,7 @@ from llama_index.core import VectorStoreIndex, StorageContext
 from llama_index.core.node_parser import SentenceSplitter, MarkdownNodeParser, SemanticSplitterNodeParser, JSONNodeParser
 from llama_index.vector_stores.milvus import MilvusVectorStore
 from llama_index.llms.openai import OpenAI
+from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.embeddings.ollama import OllamaEmbedding
 from llama_index.core.indices.composability.graph import ComposableGraph
@@ -21,7 +22,8 @@ def initialize_settings():
     # Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-large", embed_batch_size=100,dimensions=1024)
     Settings.embed_model = OllamaEmbedding(model_name="mxbai-embed-large:latest",ollama_additional_kwargs={"mirostat": 0})
     Settings.llm = OpenAI(model="gpt-4o", temperature=0.1,logprobs=None, default_headers={})
-    Settings.text_splitter = SentenceSplitter(chunk_size=1024, chunk_overlap=64)
+    Settings.llm = Ollama(model="llama3.2")
+    Settings.text_splitter = SentenceSplitter(chunk_size=2048, chunk_overlap=512)
     # Settings.text_splitter = MarkdownNodeParser()
 
 # Create index from documents

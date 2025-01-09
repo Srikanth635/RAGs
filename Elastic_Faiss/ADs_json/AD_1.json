@@ -1,0 +1,103 @@
+{
+  "action_designators": [
+    {
+      "id": "AD-001",
+      "task_name": "Cut carrot into matchsticks",
+      "task_description": "Cut the carrot into 7-centimeter-long matchsticks, ensuring each stick is no wider than 3 millimeters and has perfectly square edges for uniformity.",
+      "action_type": "cutting",
+      "parameters": {
+        "object_type": {
+          "name": "carrot",
+          "attributes": {
+            "material_type": "organic",
+            "size": "medium",
+            "color": "orange",
+            "shape": "cylindrical",
+            "texture": "smooth"
+          }
+        },
+        "tool_type": {
+          "name": "knife",
+          "attributes": {
+            "sharpness": "high",
+            "size": "medium",
+            "material": "steel",
+            "weight": "light",
+            "edge": "smooth"
+          }
+        },
+        "location": {
+          "name": "cutting_board",
+          "attributes": {
+            "height": 0.9,
+            "accessibility": "high",
+            "surface_type": "stable"
+          }
+        },
+        "desired_outcome": {
+          "cut": "matchsticks",
+          "pieces": "shape",
+          "details": {
+            "type": "matchstick",
+            "size": "long",
+            "length": 7,
+            "thickness": 0.3,
+            "edges": "square"
+          }
+        }
+      },
+      "task_constraints": {
+        "slice_thickness": 0.3,
+        "piece_length": 7,
+        "consistent_edges": "square",
+        "cut_uniformly": "true",
+        "remove_core": "none",
+        "remove_seeds": "none",
+        "maintain_shape_integrity": "true",
+        "minimum_piece_thickness": 0.3
+      },
+      "motion_phases": [
+        {
+          "name": "approach-carrot",
+          "preconditions": {
+            "object_available": "carrot-123",
+            "tool_available": "knife"
+          },
+          "expected_effect": {
+            "robot_positioned": "near-carrot",
+            "carrot_reachable": "true"
+          }
+        },
+        {
+          "name": "apply_cutting_force",
+          "preconditions": {
+            "tool_in_contact": "true",
+            "stable_grip": "true"
+          },
+          "expected_effect": {
+            "object_cut": "true",
+            "pieces_formed": {
+              "quantity": "matchsticks",
+              "size": {
+                "length": 7,
+                "thickness": 0.3,
+                "edges": "square"
+              }
+            }
+          }
+        }
+      ],
+      "affordances": {
+        "object": "carrot",
+        "possible_actions": ["grasp", "slice", "cut"],
+        "tool_compatibility": ["knife", "cutter"],
+        "environment_affordances": ["support", "slide"]
+      },
+      "expected_outcomes": {
+        "primary_outcome": "carrot_cut_into_matchsticks",
+        "secondary_outcome": "knife_retracted",
+        "overall_status": "success"
+      }
+    }
+  ]
+}

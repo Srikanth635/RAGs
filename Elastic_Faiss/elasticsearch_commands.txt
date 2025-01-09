@@ -1,0 +1,12 @@
+list all indexes
+curl -X GET "http://localhost:9200/_cat/indices?v"
+
+delete index
+curl -X DELETE "http://localhost:9200/<index-name>"
+
+delete all indexes
+curl -X DELETE "http://localhost:9200/_all"
+
+start elastisearch
+sudo systemctl enable elasticsearch
+sudo systemctl start elasticsearch

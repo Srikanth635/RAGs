@@ -1,0 +1,251 @@
+generate action designator for the NL instruction: cut the mango into 2 slices using the butter knife by placing it on the wooden board
+{
+    "action_designators": {
+        "task_description": "This is a template for defining action designators for tasks like cutting or slicing.",
+        "template_type": "action_designator_template",
+        "type": "cutting_or_slicing",
+        "parameters": {
+            "object_type": {
+                "name": "mango",
+                "attributes": {
+                    "material_type": "organic",
+                    "size": "medium",
+                    "color": "yellow",
+                    "shape": "oblong",
+                    "texture": "smooth"
+                }
+            },
+            "tool_type": {
+                "name": "butter knife",
+                "attributes": {
+                    "sharpness": "moderate",
+                    "size": "medium",
+                    "material": "steel",
+                    "weight": "light",
+                    "edge": "serrated"
+                }
+            },
+            "location": {
+                "name": "wooden board",
+                "attributes": {
+                    "height": "standard",
+                    "accessibility": "high",
+                    "surface_type": "stable"
+                }
+            },
+            "desired_outcome": {
+                "action_type": "cut",
+                "into": "2",
+                "pieces": {
+                    "shape": {
+                        "type": "slices",
+                        "size": "standard",
+                        "thickness": "standard",
+                        "angle": "standard"
+                    }
+                }
+            }
+        },
+        "task_constraints": {
+            "remove_core": "false",
+            "remove_seeds": "false",
+            "consistent_angle": "standard",
+            "slice_thickness": "standard",
+            "cut_uniformly": "true",
+            "maintain_shape_integrity": "true",
+            "minimum_piece_thickness": "standard"
+        },
+        "material_properties": {
+            "object": {
+                "type": "organic",
+                "hardness": "medium",
+                "density": "standard",
+                "surface_friction": "standard",
+                "elasticity": "standard"
+            },
+            "tool": {
+                "type": "steel",
+                "edge_sharpness": "moderate"
+            }
+        },
+        "affordances": {
+            "object": "mango",
+            "possible_actions": [
+                "grasp",
+                "cut",
+                "slice",
+                "none"
+            ],
+            "tool_compatibility": [
+                "butter knife",
+                "serrated knife",
+                "cutter",
+                "none"
+            ],
+            "environment_affordances": [
+                "support",
+                "slide",
+                "none"
+            ]
+        },
+        "dispositions": {
+            "object": {
+                "fragility": "low",
+                "roll_tendency": "standard",
+                "cut_resistance": "low",
+                "compressibility": "standard",
+                "flammability": "low",
+                "anatomical_parts": {
+                    "core": "none",
+                    "peel": "yes",
+                    "stem": "yes",
+                    "shell": "none"
+                },
+                "edibility": "yes"
+            },
+            "tool": {
+                "durability": "standard",
+                "deformation_resistance": "low",
+                "corrosion_prone": "low",
+                "flexibility": "standard",
+                "magnetism": "none"
+            },
+            "environment": {
+                "stability": "high",
+                "slipperiness": "standard",
+                "flammability": "low"
+            }
+        },
+        "motion_phases": [
+            {
+                "phase_name": "approach_object",
+                "preconditions": {
+                    "object_available": "mango",
+                    "tool_available": "butter knife"
+                },
+                "expected_effect": {
+                    "robot_positioned": "near_object",
+                    "object_reachable": "true"
+                }
+            },
+            {
+                "phase_name": "position_tool",
+                "preconditions": {
+                    "object_positioned": "stable",
+                    "blade_aligned": "true"
+                },
+                "expected_effect": {
+                    "tool_in_contact": "true",
+                    "ready_for_action": "true"
+                }
+            },
+            {
+                "phase_name": "apply_action_force",
+                "preconditions": {
+                    "tool_in_contact": "true",
+                    "stable_grip": "true"
+                },
+                "expected_effect": {
+                    "object_processed": "true",
+                    "pieces_formed": {
+                        "quantity": "2",
+                        "size": {
+                            "thickness": "standard",
+                            "angle": "standard",
+                            "type": "slices"
+                        }
+                    },
+                    "core_and_seeds_removed": "false"
+                }
+            },
+            {
+                "phase_name": "retract_tool",
+                "preconditions": {
+                    "action_complete": "true"
+                },
+                "expected_effect": {
+                    "tool_removed": "true",
+                    "task_completed": "true"
+                }
+            }
+        ],
+        "kinematics": {
+            "position_target": {
+                "x": "standard",
+                "y": "standard",
+                "z": "standard"
+            },
+            "velocity_planning": {
+                "approach_speed": "standard",
+                "withdrawal_speed": "standard"
+            },
+            "trajectory": {
+                "type": "linear",
+                "smoothness": "high"
+            }
+        },
+        "dynamics": {
+            "force_application": {
+                "desired_normal_force": "standard",
+                "force_tolerance": "standard"
+            },
+            "stability_settings": {
+                "stiffness": "standard",
+                "damping": "standard"
+            },
+            "sensor_feedback": {
+                "force_values": [
+                    "standard",
+                    "standard",
+                    "standard"
+                ],
+                "stability_monitoring": "active"
+            }
+        },
+        "safety_and_awareness": {
+            "human_awareness": {
+                "human_proximity": "standard",
+                "interaction_level": "passive_observer"
+            },
+            "safety_limits": {
+                "max_force": "standard",
+                "max_speed": "standard"
+            }
+        },
+        "learning_and_evaluation": {
+            "feedback_loops": {
+                "vision_status": "active",
+                "force_feedback_status": "active"
+            },
+            "progress_monitoring": {
+                "goal_completion": "100%",
+                "errors_detected": "none"
+            },
+            "experience_replay": {
+                "successful_actions": "8",
+                "failed_actions": "1"
+            }
+        },
+        "expected_outcomes": {
+            "primary_outcome": "mango_sliced",
+            "secondary_outcome": "knife_retracted",
+            "overall_status": "success"
+        },
+        "framenet_elements": {
+            "action_core": "cutting",
+            "core_elements": {
+                "agent": "robot",
+                "object": "mango",
+                "tool": "butter knife",
+                "result": "2 slices"
+            },
+            "peripheral_elements": {
+                "location": "wooden board",
+                "time": "standard",
+                "manner": "standard",
+                "cause": "standard",
+                "beneficiary": "none"
+            }
+        }
+    }
+}

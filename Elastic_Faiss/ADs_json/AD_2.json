@@ -1,0 +1,126 @@
+{
+  "action_designators": [
+    {
+      "id": "AD-002",
+      "task_name": "Chop parsley finely",
+      "task_description": "Chop the parsley leaves finely into pieces no larger than 1 millimeter, avoiding any inclusion of stems in the cut.",
+      "action_type": "chopping",
+      "parameters": {
+        "object_type": {
+          "name": "parsley",
+          "attributes": {
+            "material_type": "organic",
+            "size": "small",
+            "color": "green",
+            "shape": "irregular",
+            "texture": "leafy"
+          }
+        },
+        "tool_type": {
+          "name": "knife",
+          "attributes": {
+            "sharpness": "high",
+            "size": "small",
+            "material": "steel",
+            "weight": "light",
+            "edge": "smooth"
+          }
+        },
+        "location": {
+          "name": "cutting_board",
+          "attributes": {
+            "height": 0.9,
+            "accessibility": "high",
+            "surface_type": "stable"
+          }
+        },
+        "desired_outcome": {
+          "chop": "fine_pieces",
+          "pieces": "shape",
+          "details": {
+            "type": "small",
+            "size": "<=1",
+            "stems_removed": "true"
+          }
+        }
+      },
+      "task_constraints": {
+        "piece_size": "<=1",
+        "remove_stems": "true",
+        "cut_uniformly": "true",
+        "maintain_fineness": "true",
+        "remove_core": "none",
+        "remove_seeds": "none"
+      },
+      "motion_phases": [
+        {
+          "name": "approach-parsley",
+          "preconditions": {
+            "object_available": "parsley-789",
+            "tool_available": "knife"
+          },
+          "expected_effect": {
+            "robot_positioned": "near-parsley",
+            "parsley_reachable": "true"
+          }
+        },
+        {
+          "name": "position-knife",
+          "preconditions": {
+            "parsley_positioned": "stable",
+            "blade_aligned": "true"
+          },
+          "expected_effect": {
+            "tool_in_contact": "true",
+            "ready_for_chopping": "true"
+          }
+        },
+        {
+          "name": "apply_chopping_force",
+          "preconditions": {
+            "tool_in_contact": "true",
+            "stable_grip": "true"
+          },
+          "expected_effect": {
+            "object_chopped": "true"
+          }
+        },
+        {
+          "name": "retract_tool",
+          "preconditions": {
+            "chopping_complete": "true"
+          },
+          "expected_effect": {
+            "tool_removed": "true",
+            "task_completed": "true"
+          }
+        }
+      ],
+      "affordances": {
+        "object": "parsley",
+        "possible_actions": ["grasp", "chop", "slice"],
+        "tool_compatibility": ["knife"],
+        "environment_affordances": ["support", "slide"]
+      },
+      "expected_outcomes": {
+        "primary_outcome": "parsley_chopped_finely",
+        "secondary_outcome": "knife_retracted",
+        "overall_status": "success"
+      },
+      "learning_and_evaluation": {
+        "feedback_loops": {
+          "vision_status": "active",
+          "force_feedback_status": "active"
+        },
+        "progress_monitoring": {
+          "goal_completion": "100%",
+          "errors_detected": "none"
+        },
+        "experience_replay": {
+          "successful_actions": 15,
+          "failed_actions": 2
+        }
+      }
+    }
+  ]
+}
