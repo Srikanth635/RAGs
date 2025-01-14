@@ -9,6 +9,7 @@ import json,os
 import dotenv
 dotenv.load_dotenv()
 import ollama
+from ollama import chat,ChatResponse
 from llama_index.llms.openai import OpenAI
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.openai import OpenAIEmbedding
@@ -188,6 +189,25 @@ def generate_response_with_rag(query_text, ind_name, top_k=5):
                  "content": query_text}
             ],
         )
+
+        # resp = ollama.chat(
+        #     model="llama3.2",
+        #     messages=[
+        #         {"role": "system",
+        #          "content": "You will read in all the context provided and generate appropriate, accurate and precise"
+        #                     "response for the user query without any additional explanation."},
+        #         # "content": "You are a CRAM action designator generator, you read in the template action designator provided as context"
+        #         #            " and generalise it to newer user query and also consider other example designators provided as context"},
+        #         {"role": "assistant",
+        #          "content": "Template action designator: \n" + template + "Use this template as reference when generating"
+        #                                                                   "action designator and replace the attribute values according to the user query"},
+        #         {"role": "assistant",
+        #          "content": "additional context including example action designators and other info: \n" + context},
+        #         {"role": "user",
+        #          "content": query_text}
+        #     ],
+        # )
+
         return resp
     except Exception as e:
         print("Error in generating response:", e)
@@ -198,16 +218,17 @@ def generate_response_with_rag(query_text, ind_name, top_k=5):
 if __name__ == "__main__":
 
     initialize_settings()
-
+    AD_instruction = input("Enter query: ")
     index_name = "action-designators"  # Elasticsearch index name
 
-    AD_instruction = "cut the mango into 2 slices using the butter knife by placing it on the wooden board"
+    # AD_instruction = "cut the mango into 2 slices using the butter knife by placing it on the wooden board"
     # query = "what is cram plan syntax for pouring"
     query = f"generate action designator for the NL instruction: {AD_instruction}"
 
     # Generate response
     response = generate_response_with_rag(query, index_name, top_k=1)
     ans = response.choices[0].message.content
+    # ans = response.message.content
     print("Generated Response:")
     print(ans)
     with open("query_response.txt", "w") as f:

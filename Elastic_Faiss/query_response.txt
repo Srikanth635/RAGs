@@ -1,75 +1,75 @@
-generate action designator for the NL instruction: cut the mango into 2 slices using the butter knife by placing it on the wooden board
+generate action designator for the NL instruction: cut the apple
 {
     "action_designators": {
         "task_description": "This is a template for defining action designators for tasks like cutting or slicing.",
         "template_type": "action_designator_template",
-        "type": "cutting_or_slicing",
+        "type": "cutting",
         "parameters": {
             "object_type": {
-                "name": "mango",
+                "name": "apple",
                 "attributes": {
                     "material_type": "organic",
                     "size": "medium",
-                    "color": "yellow",
-                    "shape": "oblong",
+                    "color": "red",
+                    "shape": "spherical",
                     "texture": "smooth"
                 }
             },
             "tool_type": {
-                "name": "butter knife",
+                "name": "knife",
                 "attributes": {
-                    "sharpness": "moderate",
+                    "sharpness": "medium",
                     "size": "medium",
                     "material": "steel",
                     "weight": "light",
-                    "edge": "serrated"
+                    "edge": "smooth"
                 }
             },
             "location": {
-                "name": "wooden board",
+                "name": "cutting_board",
                 "attributes": {
-                    "height": "standard",
+                    "height": 0.9,
                     "accessibility": "high",
                     "surface_type": "stable"
                 }
             },
             "desired_outcome": {
                 "action_type": "cut",
-                "into": "2",
+                "into": "2 pieces",
                 "pieces": {
                     "shape": {
-                        "type": "slices",
-                        "size": "standard",
-                        "thickness": "standard",
-                        "angle": "standard"
+                        "type": "halves",
+                        "size": "equal",
+                        "thickness": "medium",
+                        "angle": "straight"
                     }
                 }
             }
         },
         "task_constraints": {
-            "remove_core": "false",
-            "remove_seeds": "false",
-            "consistent_angle": "standard",
-            "slice_thickness": "standard",
+            "remove_core": "none",
+            "remove_seeds": "none",
+            "consistent_angle": "straight",
+            "slice_thickness": "medium",
             "cut_uniformly": "true",
             "maintain_shape_integrity": "true",
-            "minimum_piece_thickness": "standard"
+            "minimum_piece_thickness": "medium"
         },
         "material_properties": {
             "object": {
                 "type": "organic",
                 "hardness": "medium",
-                "density": "standard",
-                "surface_friction": "standard",
-                "elasticity": "standard"
+                "density": "medium",
+                "surface_friction": "low",
+                "elasticity": "medium"
             },
             "tool": {
                 "type": "steel",
-                "edge_sharpness": "moderate"
+                "edge_sharpness": "medium"
             }
         },
         "affordances": {
-            "object": "mango",
+            "object": "apple",
             "possible_actions": [
                 "grasp",
                 "cut",
@@ -77,8 +77,8 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
                 "none"
             ],
             "tool_compatibility": [
-                "butter knife",
-                "serrated knife",
+                "knife",
+                "serrated_knife",
                 "cutter",
                 "none"
             ],
@@ -91,9 +91,9 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
         "dispositions": {
             "object": {
                 "fragility": "low",
-                "roll_tendency": "standard",
+                "roll_tendency": "medium",
                 "cut_resistance": "low",
-                "compressibility": "standard",
+                "compressibility": "medium",
                 "flammability": "low",
                 "anatomical_parts": {
                     "core": "none",
@@ -104,15 +104,15 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
                 "edibility": "yes"
             },
             "tool": {
-                "durability": "standard",
-                "deformation_resistance": "low",
+                "durability": "high",
+                "deformation_resistance": "high",
                 "corrosion_prone": "low",
-                "flexibility": "standard",
+                "flexibility": "medium",
                 "magnetism": "none"
             },
             "environment": {
                 "stability": "high",
-                "slipperiness": "standard",
+                "slipperiness": "low",
                 "flammability": "low"
             }
         },
@@ -120,12 +120,12 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
             {
                 "phase_name": "approach_object",
                 "preconditions": {
-                    "object_available": "mango",
-                    "tool_available": "butter knife"
+                    "object_available": "apple-123",
+                    "tool_available": "knife"
                 },
                 "expected_effect": {
-                    "robot_positioned": "near_object",
-                    "object_reachable": "true"
+                    "robot_positioned": "near_apple",
+                    "apple_reachable": "true"
                 }
             },
             {
@@ -150,12 +150,12 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
                     "pieces_formed": {
                         "quantity": "2",
                         "size": {
-                            "thickness": "standard",
-                            "angle": "standard",
-                            "type": "slices"
+                            "thickness": "medium",
+                            "angle": "straight",
+                            "type": "halves"
                         }
                     },
-                    "core_and_seeds_removed": "false"
+                    "core_and_seeds_removed": "none"
                 }
             },
             {
@@ -171,13 +171,13 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
         ],
         "kinematics": {
             "position_target": {
-                "x": "standard",
-                "y": "standard",
-                "z": "standard"
+                "x": "0.5",
+                "y": "0.3",
+                "z": "0.9"
             },
             "velocity_planning": {
-                "approach_speed": "standard",
-                "withdrawal_speed": "standard"
+                "approach_speed": "medium",
+                "withdrawal_speed": "medium"
             },
             "trajectory": {
                 "type": "linear",
@@ -186,30 +186,30 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
         },
         "dynamics": {
             "force_application": {
-                "desired_normal_force": "standard",
-                "force_tolerance": "standard"
+                "desired_normal_force": "15N",
+                "force_tolerance": "2N"
             },
             "stability_settings": {
-                "stiffness": "standard",
-                "damping": "standard"
+                "stiffness": "medium",
+                "damping": "low"
             },
             "sensor_feedback": {
                 "force_values": [
-                    "standard",
-                    "standard",
-                    "standard"
+                    "12N",
+                    "14N",
+                    "13N"
                 ],
                 "stability_monitoring": "active"
             }
         },
         "safety_and_awareness": {
             "human_awareness": {
-                "human_proximity": "standard",
+                "human_proximity": "safe_distance",
                 "interaction_level": "passive_observer"
             },
             "safety_limits": {
-                "max_force": "standard",
-                "max_speed": "standard"
+                "max_force": "20N",
+                "max_speed": "medium"
             }
         },
         "learning_and_evaluation": {
@@ -222,12 +222,12 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
                 "errors_detected": "none"
             },
             "experience_replay": {
-                "successful_actions": "8",
+                "successful_actions": "10",
                 "failed_actions": "1"
             }
         },
         "expected_outcomes": {
-            "primary_outcome": "mango_sliced",
+            "primary_outcome": "apple_cut_into_halves",
             "secondary_outcome": "knife_retracted",
             "overall_status": "success"
         },
@@ -235,16 +235,16 @@ generate action designator for the NL instruction: cut the mango into 2 slices u
             "action_core": "cutting",
             "core_elements": {
                 "agent": "robot",
-                "object": "mango",
-                "tool": "butter knife",
-                "result": "2 slices"
+                "object": "apple",
+                "tool": "knife",
+                "result": "halves"
             },
             "peripheral_elements": {
-                "location": "wooden board",
-                "time": "standard",
-                "manner": "standard",
-                "cause": "standard",
-                "beneficiary": "none"
+                "location": "cutting_board",
+                "time": "now",
+                "manner": "carefully",
+                "cause": "instruction",
+                "beneficiary": "user"
             }
         }
     }
