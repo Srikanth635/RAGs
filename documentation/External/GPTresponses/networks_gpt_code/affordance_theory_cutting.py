@@ -69,7 +69,7 @@ dot.edge("5", "6")
 dot.edge("6", "7")
 
 # Render the flowchart
-dot.render("/mnt/data/Cutting_Apple_Affordance")
+dot.render("/mnt/new_logs/Cutting_Apple_Affordance")
 
 # Provide the file location to the user
-"/mnt/data/Cutting_Apple_Affordance.png"
+"/mnt/new_logs/Cutting_Apple_Affordance.png"

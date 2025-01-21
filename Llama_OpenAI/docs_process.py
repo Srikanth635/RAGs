@@ -246,7 +246,7 @@ def load_multimodal_data(files):
             #         doc = Document(text=json_node.get_text(), metadata={"source": file.name, "filetype": "json"})
             #         documents.append(doc)
             #     # print(f"json node info : {type(json_nodes)}, {type(json_nodes[0])}, {json_nodes[0]}")
-            #     # doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "json"})
+            #     # doc = Document(text=json.dumps(new_logs), metadata={"source": file.name, "filetype": "json"})
             #     # documents.append(doc)
             # except Exception as e:
             #     print(f"Error processing JSON {file.name}: {e}")
@@ -258,8 +258,8 @@ def load_multimodal_data(files):
 
 
 # elif file_extension == '.yml' or file_extension == '.yaml':
-#     data = yaml.safe_load(file)
-#     doc = Document(text=json.dumps(data), metadata={"source": file.name, "filetype": "yml"})
+#     new_logs = yaml.safe_load(file)
+#     doc = Document(text=json.dumps(new_logs), metadata={"source": file.name, "filetype": "yml"})
 #     documents.append(doc)
 
 def load_data_from_directory(directory):

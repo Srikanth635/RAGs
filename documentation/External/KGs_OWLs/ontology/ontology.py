@@ -351,7 +351,7 @@ class OntologyManager(object):
             else:
                 print(f"Main ontology {self.main_ontology.name} has been saved to {save_filename}")
 
-            # Commit the whole graph data of the current ontology world, saving it into SQLite3, to be reused the next time
+            # Commit the whole graph new_logs of the current ontology world, saving it into SQLite3, to be reused the next time
             # the ontologies are loaded
             main_ontology_sql_filename = self.main_ontology_world.filename
             self.main_ontology_world.save()

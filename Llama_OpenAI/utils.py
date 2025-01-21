@@ -97,7 +97,7 @@ def describe_image_openai(image_content):
                     {
                         "type": "image_url",
                         "image_url": {
-                            "url": f"data:image/jpeg;base64,{image_b64}"
+                            "url": f"new_logs:image/jpeg;base64,{image_b64}"
                         }
                     }
                 ]
@@ -132,12 +132,12 @@ def process_graph_deplot(image_content):
                 "content": [
                     {
                         "type": "text",
-                        "text": "Generate underlying data table of the figure below"
+                        "text": "Generate underlying new_logs table of the figure below"
                     },
                     {
                         "type": "image_url",
                         "image_url": {
-                            "url": f"data:image/jpeg;base64,{image_b64}"
+                            "url": f"new_logs:image/jpeg;base64,{image_b64}"
                         }
                     }
                 ]

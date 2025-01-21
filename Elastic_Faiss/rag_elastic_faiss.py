@@ -164,7 +164,7 @@ def generate_response_with_rag(query_text, ind_name, top_k=5):
     retrieved_docs = combined_retrieval(query_text, ind_name, top_k)
 
     template = json.dumps(AD_template,indent=4)
-
+    cram_syntax = "CRAM PLAN SYNTAX for CUTTING task : (perform (an action (type cut-object) (an object (type {object_to_be_cut}){object_props})(tool (type {tool}){tool_props})(result (type {result}){result_props})) (motion (phase preparation) (phase tool-grip) (phase initial-cut) (phase continual-cut) (phase completion)))"
     context = ""
     for doc in retrieved_docs:
         context = context + "\n" + json.dumps(doc,indent=4)
@@ -185,6 +185,8 @@ def generate_response_with_rag(query_text, ind_name, top_k=5):
                             "action designator and replace the attribute values according to the user query"},
                 {"role": "assistant",
                  "content": "additional context including example action designators and other info: \n" + context},
+                {"role": "assistant",
+                 "content": "CRAM plan syntax: \n" + cram_syntax},
                 {"role": "user",
                  "content": query_text}
             ],

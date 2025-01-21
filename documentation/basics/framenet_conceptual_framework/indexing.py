@@ -11,7 +11,7 @@ with open("framenet_action_designators.json", "r") as file:
 #
 # # Flatten and index each dictionary
 # index_name = "designators_framenet_cram"
-# for key, value in data["action_designators"].items():
+# for key, value in new_logs["action_designators"].items():
 #     es.index(index=index_name, id=key, document=value)
 #     print(f"Indexed {key}")
 
@@ -26,7 +26,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 dimension = 384
 faiss_index = faiss.IndexFlatL2(dimension)
 
-# Prepare data
+# Prepare new_logs
 keys = []
 embeddings = []
 key_to_data = {}

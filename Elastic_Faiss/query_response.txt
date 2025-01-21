@@ -1,251 +1,192 @@
 generate action designator for the NL instruction: cut the apple
 {
-    "action_designators": {
-        "task_description": "This is a template for defining action designators for tasks like cutting or slicing.",
-        "template_type": "action_designator_template",
-        "type": "cutting_or_slicing",
-        "parameters": {
-            "object_type": {
-                "name": "apple",
-                "attributes": {
-                    "material_type": "organic",
-                    "size": "medium",
-                    "color": "red/yellow/green",
-                    "shape": "round",
-                    "texture": "smooth"
-                }
-            },
-            "tool_type": {
-                "name": "knife",
-                "attributes": {
-                    "sharpness": "high",
-                    "size": "medium",
-                    "material": "steel",
-                    "weight": "light",
-                    "edge": "smooth"
-                }
-            },
-            "location": {
-                "name": "cutting_board",
-                "attributes": {
-                    "height": "standard",
-                    "accessibility": "high",
-                    "surface_type": "stable"
-                }
-            },
-            "desired_outcome": {
-                "action_type": "cut",
-                "into": "2 halves",
-                "pieces": {
-                    "shape": {
-                        "type": "half",
-                        "size": "standard",
-                        "thickness": "varies",
-                        "angle": "straight"
-                    }
-                }
+    "task_description": "This action designator template is for cutting the apple.",
+    "template_type": "action_designator_template",
+    "type": "cutting",
+    "parameters": {
+        "object_type": {
+            "name": "apple",
+            "attributes": {
+                "material_type": "organic",
+                "size": "medium",
+                "color": "red/yellow/green",
+                "shape": "round",
+                "texture": "smooth"
             }
         },
-        "task_constraints": {
-            "remove_core": "true",
-            "remove_seeds": "true",
-            "consistent_angle": "straight",
-            "slice_thickness": "varies",
-            "cut_uniformly": "true",
-            "maintain_shape_integrity": "true",
-            "minimum_piece_thickness": "varies"
-        },
-        "material_properties": {
-            "object": {
-                "type": "organic",
-                "hardness": "moderate",
-                "density": "varies",
-                "surface_friction": "smooth",
-                "elasticity": "medium"
-            },
-            "tool": {
-                "type": "steel",
-                "edge_sharpness": "high"
+        "tool_type": {
+            "name": "knife",
+            "attributes": {
+                "sharpness": "high",
+                "size": "medium",
+                "material": "steel",
+                "weight": "light",
+                "edge": "sharp"
             }
         },
-        "affordances": {
-            "object": "apple",
-            "possible_actions": [
-                "grasp",
-                "cut",
-                "slice",
-                "none"
-            ],
-            "tool_compatibility": [
-                "knife",
-                "serrated_knife",
-                "cutter",
-                "none"
-            ],
-            "environment_affordances": [
-                "support",
-                "slide",
-                "none"
-            ]
-        },
-        "dispositions": {
-            "object": {
-                "fragility": "moderate",
-                "roll_tendency": "low",
-                "cut_resistance": "moderate",
-                "compressibility": "medium",
-                "flammability": "low",
-                "anatomical_parts": {
-                    "core": "yes",
-                    "peel": "yes",
-                    "stem": "yes",
-                    "shell": "none"
-                },
-                "edibility": "yes"
-            },
-            "tool": {
-                "durability": "high",
-                "deformation_resistance": "high",
-                "corrosion_prone": "low",
-                "flexibility": "low",
-                "magnetism": "none"
-            },
-            "environment": {
-                "stability": "high",
-                "slipperiness": "low",
-                "flammability": "low"
+        "location": {
+            "name": "cutting_board",
+            "attributes": {
+                "height": "standard",
+                "accessibility": "easy",
+                "surface_type": "stable"
             }
         },
-        "motion_phases": [
-            {
-                "phase_name": "approach_object",
-                "preconditions": {
-                    "object_available": "apple-1",
-                    "tool_available": "knife-1"
-                },
-                "expected_effect": {
-                    "robot_positioned": "near_object",
-                    "object_reachable": "true"
-                }
-            },
-            {
-                "phase_name": "position_tool",
-                "preconditions": {
-                    "object_positioned": "stable",
-                    "blade_aligned": "true"
-                },
-                "expected_effect": {
-                    "tool_in_contact": "true",
-                    "ready_for_action": "true"
-                }
-            },
-            {
-                "phase_name": "apply_action_force",
-                "preconditions": {
-                    "tool_in_contact": "true",
-                    "stable_grip": "true"
-                },
-                "expected_effect": {
-                    "object_processed": "true",
-                    "pieces_formed": {
-                        "quantity": "2 halves",
-                        "size": {
-                            "thickness": "varies",
-                            "angle": "straight",
-                            "type": "half"
-                        }
-                    },
-                    "core_and_seeds_removed": "true"
-                }
-            },
-            {
-                "phase_name": "retract_tool",
-                "preconditions": {
-                    "action_complete": "true"
-                },
-                "expected_effect": {
-                    "tool_removed": "true",
-                    "task_completed": "true"
+        "desired_outcome": {
+            "action_type": "cut",
+            "into": "pieces",
+            "pieces": {
+                "shape": {
+                    "type": "variable",
+                    "size": "variable",
+                    "thickness": "consistent",
+                    "angle": "general"
                 }
             }
+        }
+    },
+    "task_constraints": {
+        "remove_core": "none",
+        "remove_seeds": "none",
+        "consistent_angle": "n/a",
+        "slice_thickness": "n/a",
+        "cut_uniformly": "true",
+        "maintain_shape_integrity": "true",
+        "minimum_piece_thickness": "n/a"
+    },
+    "material_properties": {
+        "object": {
+            "type": "organic",
+            "hardness": "soft",
+            "density": "medium",
+            "surface_friction": "low",
+            "elasticity": "average"
+        },
+        "tool": {
+            "type": "steel",
+            "edge_sharpness": "high"
+        }
+    },
+    "affordances": {
+        "object": "apple",
+        "possible_actions": [
+            "grasp",
+            "cut",
+            "slice",
+            "none"
         ],
-        "kinematics": {
-            "position_target": {
-                "x": "varies",
-                "y": "varies",
-                "z": "varies"
+        "tool_compatibility": [
+            "knife",
+            "serrated knife",
+            "cutter",
+            "none"
+        ],
+        "environment_affordances": [
+            "support",
+            "slide",
+            "none"
+        ]
+    },
+    "dispositions": {
+        "object": {
+            "fragility": "low",
+            "roll_tendency": "low",
+            "cut_resistance": "low",
+            "compressibility": "moderate",
+            "flammability": "low",
+            "anatomical_parts": {
+                "core": "yes",
+                "peel": "yes",
+                "stem": "yes",
+                "shell": "no"
             },
-            "velocity_planning": {
-                "approach_speed": "medium",
-                "withdrawal_speed": "medium"
+            "edibility": "yes"
+        },
+        "tool": {
+            "durability": "high",
+            "deformation_resistance": "high",
+            "corrosion_prone": "low",
+            "flexibility": "low",
+            "magnetism": "non-magnetic"
+        },
+        "environment": {
+            "stability": "stable",
+            "slipperiness": "low",
+            "flammability": "low"
+        }
+    },
+    "motion_phases": [
+        {
+            "phase_name": "approach_object",
+            "preconditions": {
+                "object_available": "apple",
+                "tool_available": "knife"
             },
-            "trajectory": {
-                "type": "linear",
-                "smoothness": "high"
+            "expected_effect": {
+                "robot_positioned": "near_object",
+                "object_reachable": "true"
             }
         },
-        "dynamics": {
-            "force_application": {
-                "desired_normal_force": "varies",
-                "force_tolerance": "low"
+        {
+            "phase_name": "position_tool",
+            "preconditions": {
+                "object_positioned": "stable",
+                "blade_aligned": "true"
             },
-            "stability_settings": {
-                "stiffness": "high",
-                "damping": "medium"
-            },
-            "sensor_feedback": {
-                "force_values": [
-                    "varies",
-                    "varies",
-                    "varies"
-                ],
-                "stability_monitoring": "active"
+            "expected_effect": {
+                "tool_in_contact": "true",
+                "ready_for_action": "true"
             }
         },
-        "safety_and_awareness": {
-            "human_awareness": {
-                "human_proximity": "medium",
-                "interaction_level": "passive_observer"
+        {
+            "phase_name": "apply_action_force",
+            "preconditions": {
+                "tool_in_contact": "true",
+                "stable_grip": "true"
             },
-            "safety_limits": {
-                "max_force": "high",
-                "max_speed": "high"
+            "expected_effect": {
+                "object_processed": "true",
+                "pieces_formed": {
+                    "quantity": "pieces",
+                    "size": {
+                        "thickness": "consistent",
+                        "angle": "general",
+                        "type": "variable"
+                    }
+                },
+                "core_and_seeds_removed": "false"
             }
         },
-        "learning_and_evaluation": {
-            "feedback_loops": {
-                "vision_status": "active",
-                "force_feedback_status": "active"
+        {
+            "phase_name": "retract_tool",
+            "preconditions": {
+                "action_complete": "true"
             },
-            "progress_monitoring": {
-                "goal_completion": "100%",
-                "errors_detected": "low"
-            },
-            "experience_replay": {
-                "successful_actions": "varies",
-                "failed_actions": "varies"
+            "expected_effect": {
+                "tool_removed": "true",
+                "task_completed": "true"
             }
+        }
+    ],
+    "expected_outcomes": {
+        "primary_outcome": "apple_cut",
+        "secondary_outcome": "none",
+        "overall_status": "success"
+    },
+    "framenet_elements": {
+        "action_core": "Cutting",
+        "core_elements": {
+            "agent": "robot",
+            "object": "apple",
+            "tool": "knife",
+            "result": "pieces"
         },
-        "expected_outcomes": {
-            "primary_outcome": "apple_cut",
-            "secondary_outcome": "knife_retracted",
-            "overall_status": "success"
-        },
-        "framenet_elements": {
-            "action_core": "Cutting",
-            "core_elements": {
-                "agent": "robot",
-                "object": "apple",
-                "tool": "knife",
-                "result": "2 halves"
-            },
-            "peripheral_elements": {
-                "location": "cutting_board",
-                "time": "start",
-                "manner": "carefully",
-                "cause": "instruction",
-                "beneficiary": "none"
-            }
+        "peripheral_elements": {
+            "location": "cutting_board",
+            "time": "now",
+            "manner": "carefully",
+            "cause": "instruction",
+            "beneficiary": "none"
         }
     }
 }

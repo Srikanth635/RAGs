@@ -1,0 +1,5 @@
+INSTANCE_NAME    HOST_NAME                 TIME                  METRIC_NAME                    VALUE
+LINCXP21         londhosp7e.uk.db.com     08-JAN-2025 15:40:00  Buffer Cache Hit Ratio         99.61
+LINCXP21         londhosp7e.uk.db.com     08-JAN-2025 15:40:00  Memory Sorts Ratio             59.61
+LINCXP22         londhosp7e.uk.db.com     08-JAN-2025 15:40:00  Redo Allocation Hit Ratio      100.00
+LINCXP22         londhosp7e.uk.db.com     08-JAN-2025 15:40:00  User Transaction Per Sec       78.64

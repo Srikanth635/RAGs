@@ -1,0 +1,5 @@
+INSTANCE_NAME    HOST_NAME                 TIME                  METRIC_NAME                    VALUE
+LINCXP21         londhosp7e.uk.db.com     08-JAN-2025 15:45:00  Physical Reads Per Sec         358.34
+LINCXP21         londhosp7e.uk.db.com     08-JAN-2025 15:45:00  Physical Writes Per Sec        139.54
+LINCXP23         londhosp7e.uk.db.com     08-JAN-2025 15:45:00  Logical Reads Per Sec          39404.52
+LINCXP23         londhosp7e.uk.db.com     08-JAN-2025 15:45:00  Redo Writes Per Sec            87.10

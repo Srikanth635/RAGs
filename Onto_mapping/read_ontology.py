@@ -38,7 +38,7 @@ def extract_object_properties(ontology):
     return object_properties
 
 def extract_data_properties(ontology):
-    """Extract all data properties in the ontology as a list of dictionaries."""
+    """Extract all new_logs properties in the ontology as a list of dictionaries."""
     data_properties = []
     for prop in ontology.data_properties():
         prop_info = {'name': prop.name}

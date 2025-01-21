@@ -9,7 +9,7 @@ class CustomJsonLoader(BaseReader):
         self.input_dir = input_dir
 
     def _extract_data_and_metadata(self, json_obj:dict, path: str = "", metadata={}) -> List[Dict[str, any]]:
-        """Recursively extract text from JSON, including the path to the data, keeping metadata"""
+        """Recursively extract text from JSON, including the path to the new_logs, keeping metadata"""
         data = []
 
         if isinstance(json_obj, dict):
