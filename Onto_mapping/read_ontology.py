@@ -1,4 +1,9 @@
 from owlready2 import *
+from openai import OpenAI
+import dotenv
+dotenv.load_dotenv()
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 def extract_metadata(entity):
     """
@@ -68,14 +73,58 @@ data_properties = extract_data_properties(onto)
 annotation_properties = extract_annotation_properties(onto)
 
 # Print results
-print("Classes:", len(classes))
-print("Object Properties:", len(object_properties))
-print("Data Properties:", len(data_properties))
-print("Annotation Properties:", len(annotation_properties))
+# print("Classes:", len(classes))
+# print("Object Properties:", len(object_properties))
+# print("Data Properties:", len(data_properties))
+# print("Annotation Properties:", len(annotation_properties))
+#
+# print("Class:", classes[0].items())
+# print("Object Property:", object_properties[2].items())
+# print("Data Property:", data_properties[2].items())
+# print("Annotation Property:", annotation_properties[2].items())
 
-print("Class:", classes[0].items())
-print("Object Property:", object_properties[2].items())
-print("Data Property:", data_properties[2].items())
-print("Annotation Property:", annotation_properties[2].items())
+def gpt_call(concept_names, attributes):
+    resp = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {
+                "role": "system",
+                "content": "You are an expert mapper from attributes to SOMA concepts. Your task is to map each provided "
+                           "attribute to semantically most relevant and specific SOMA concept name strictly. stick the"
+                           "concept names provided strictly, dont create new concept names by yourself"
+            },
+            {
+                "role": "assistant",
+                "content": f"Available SOMA concept names : \n\n  {concept_names}"
+            },
+            {
+                "role": "user",
+                "content": f"Attributes to be mapped are \n\n {attributes} \n\n "
+                           f"Output: Give out the updated mapped list of attributes"
+            },
+        ]
+    )
+    return resp
+
+
+if __name__ == "__main__":
+    i = 2
+    concepts = extract_classes(onto)
+    print(len(concepts), concepts[i].keys())
+    # print(concepts[i]['name'])
+    # print(concepts[i]['comment'])
+    # print(concepts[i]['label'])
+    # print(concepts[i]['defined_by'])
+    # print(concepts[i]['iri'])
+    # print(concepts[i]['subclasses'])
+
+    concept_names = [concept["name"] for concept in concepts]
+    attributes = ['shape','size','colour']
+
+    response = gpt_call(concept_names, attributes)
+    print(response.choices[0].message.content)
+
+
+
 
 
