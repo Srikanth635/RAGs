@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/carrot_cutting.owl"
+         xmlns="http://example.org/carrot_cutting.owl#">
+
+<owl:Ontology rdf:about="http://example.org/carrot_cutting.owl"/>
+
+<owl:Class rdf:about="#Action">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Object">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tool">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Location">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MotionPhase">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Affordance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Outcome">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#has_object">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#has_tool">
+  <rdfs:subClassOf rdf:resource="#Tool"/>
+</owl:Class>
+
+<owl:Class rdf:about="#has_location">
+  <rdfs:subClassOf rdf:resource="#Location"/>
+</owl:Class>
+
+<owl:Class rdf:about="#has_motion_phase">
+  <rdfs:subClassOf rdf:resource="#MotionPhase"/>
+</owl:Class>
+
+<owl:Class rdf:about="#has_affordance">
+  <rdfs:subClassOf rdf:resource="#Affordance"/>
+</owl:Class>
+
+<owl:Class rdf:about="#has_outcome">
+  <rdfs:subClassOf rdf:resource="#Outcome"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#CutCarrotIntoMatchsticks">
+  <rdf:type rdf:resource="#Action"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Carrot">
+  <rdf:type rdf:resource="#Object"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Knife">
+  <rdf:type rdf:resource="#Tool"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CuttingBoard">
+  <rdf:type rdf:resource="#Location"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ApproachCarrot">
+  <rdf:type rdf:resource="#MotionPhase"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ApplyCuttingForce">
+  <rdf:type rdf:resource="#MotionPhase"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CarrotAffordances">
+  <rdf:type rdf:resource="#Affordance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CarrotCutIntoMatchsticks">
+  <rdf:type rdf:resource="#Outcome"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

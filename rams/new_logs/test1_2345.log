@@ -1,4 +1,0 @@
-DB_NAME    HOST_NAME                 SYS_DATE             DB_SIZE_MB    USED_MB    FREE_MB    PERCENT_USED    EXTRA_COLUMN
-LINCXP21   londhosp7e.uk.db.com     14-JAN-2025 07:37:59  2194821.00    1600000.00  594821.00  73.45           Extra_Info_1
-LINCXP22   londhosp7e.uk.db.com     14-JAN-2025 07:37:59  1194821.00    1000000.00  194821.00  83.67           Extra_Info_2
-LINCXP24   londhosp7e.uk.db.com     14-JAN-2025 07:37:59  2094821.00    1800000.00  294821.00  85.67           Extra_Info_3

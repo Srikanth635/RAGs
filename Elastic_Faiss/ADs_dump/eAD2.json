@@ -1,0 +1,433 @@
+{
+  "action_designators": [
+    {
+      "id": "AD-002",
+      "task_name": "Cut mango into slices",
+      "task_description": "Cut the mango into slices, ensuring each slice is approximately 1 centimeter thick and has smooth edges for uniformity.",
+      "action_type": "cutting",
+      "parameters": {
+        "object_type": {
+          "name": "mango",
+          "attributes": {
+            "material_type": "organic",
+            "size": "medium",
+            "color": "yellow",
+            "shape": "oval",
+            "texture": "smooth"
+          }
+        },
+        "tool_type": {
+          "name": "serrated knife",
+          "attributes": {
+            "sharpness": "high",
+            "size": "medium",
+            "material": "steel",
+            "weight": "light",
+            "edge": "serrated"
+          }
+        },
+        "location": {
+          "name": "desk",
+          "attributes": {
+            "height": 0.75,
+            "accessibility": "high",
+            "surface_type": "stable"
+          }
+        },
+        "desired_outcome": {
+          "cut": "slices",
+          "pieces": "shape",
+          "details": {
+            "type": "slice",
+            "thickness": 1,
+            "edges": "smooth"
+          }
+        }
+      },
+      "task_constraints": {
+        "slice_thickness": 1,
+        "consistent_edges": "smooth",
+        "cut_uniformly": "true",
+        "remove_core": "none",
+        "remove_seeds": "none",
+        "maintain_shape_integrity": "true",
+        "minimum_piece_thickness": 1
+      },
+      "motion_phases": {
+        "pre-motion-phase": {
+          "predictive-model": {
+            "expected-trajectory": "smooth downward cut",
+            "force-model": {
+              "initial-force": 1.2,
+              "resistance-range": [
+                0.8,
+                2.0
+              ]
+            },
+            "tool-model": {
+              "sharpness": "high",
+              "length": 18
+            }
+          },
+          "motion-planning": {
+            "trajectory": "linear cut downward",
+            "obstacle-avoidance": "none",
+            "energy-efficiency": "optimized"
+          }
+        },
+        "initiation-phase": {
+          "initial-state": {
+            "robot-position": [
+              0,
+              0,
+              0
+            ],
+            "object-position": [
+              0.5,
+              0,
+              0.1
+            ],
+            "tool-position": [
+              0.5,
+              -0.2,
+              0.3
+            ]
+          },
+          "motion-initialization": {
+            "joint-activation": {
+              "joint1": 45,
+              "joint2": 30
+            },
+            "velocity-profile": "linear ramp-up"
+          }
+        },
+        "execution-phase": {
+          "feedforward-control": {
+            "predicted-forces": {
+              "initial-force": 1.2,
+              "cutting-force-range": [
+                0.8,
+                2.0
+              ]
+            },
+            "predicted-positions": {
+              "start": [
+                0.5,
+                -0.2,
+                0.3
+              ],
+              "end": [
+                0.5,
+                -0.2,
+                0.1
+              ]
+            },
+            "error-tolerance": {
+              "position-error": 0.01,
+              "force-error": 0.1
+            }
+          },
+          "feedback-control": {
+            "corrective-actions": {
+              "adjust-trajectory": true,
+              "increase-force": true
+            },
+            "sensor-feedback": {
+              "force": 1.5,
+              "position-error": 0.02,
+              "slip-detected": false
+            }
+          },
+          "sensory-integration": {
+            "tactile": {
+              "gripper-force": 3.5,
+              "cutting-force": 1.5
+            },
+            "visual": {
+              "object-center": [
+                0.5,
+                0.2,
+                0.1
+              ],
+              "knife-position": [
+                0.5,
+                -0.2,
+                0.28
+              ]
+            },
+            "proprioceptive": {
+              "joint-positions": [
+                45,
+                30
+              ],
+              "joint-velocities": [
+                0.2,
+                0.1
+              ]
+            }
+          }
+        },
+        "interaction-phase": {
+          "force-adaptation": {
+            "grip-force": {
+              "initial-grip": 3.5,
+              "adjusted-grip": 4.0
+            },
+            "cutting-force": {
+              "initial-cut": 1.2,
+              "adaptive-cut": 1.5
+            }
+          },
+          "object-modeling": {
+            "deformation-model": {
+              "elasticity": 0.3,
+              "strain-limit": 0.5,
+              "current-deformation": 0.4
+            },
+            "material-properties": {
+              "hardness": 0.7,
+              "friction-coefficient": 0.4
+            }
+          }
+        },
+        "termination-phase": {
+          "end-effector-stabilization": {
+            "final-position": {
+              "knife-position": [
+                0.5,
+                -0.2,
+                0.0
+              ]
+            },
+            "reset-trajectory": "linear reset to neutral position"
+          },
+          "success-verification": {
+            "outcome-check": {
+              "object-cut": true,
+              "pieces-separated": true
+            },
+            "error-analysis": {
+              "cut-quality": "smooth",
+              "deviation-from-center": 0.01
+            }
+          }
+        },
+        "post-motion-phase": {
+          "learning-update": {
+            "model-refinement": {
+              "force-model-update": {
+                "cutting-force": 1.8
+              },
+              "trajectory-model-update": {
+                "deviation-correction": 0.01
+              }
+            },
+            "reinforcement": {
+              "successful-cut": true,
+              "reinforce-parameters": {
+                "grip-force": 4.0
+              }
+            }
+          },
+          "error-correction": {
+            "deviation-analysis": {
+              "position-error": 0.02,
+              "force-error": 0.1,
+              "slip-event": false
+            },
+            "parameter-update": {
+              "cutting-force-range": [
+                1.0,
+                1.8
+              ],
+              "grip-force-range": [
+                3.8,
+                4.2
+              ]
+            }
+          }
+        }
+      },
+      "motion_constraints": {
+        "task": {
+          "name": "cut_mango",
+          "object": {
+            "type": "mango",
+            "dimensions": {
+              "length": 150,
+              "width": 80,
+              "height": 80
+            },
+            "weight": 300,
+            "material-properties": {
+              "surface-friction": 0.5,
+              "rigidity": 0.6
+            }
+          },
+          "tool": {
+            "type": "serrated knife",
+            "dimensions": {
+              "length": 200,
+              "width": 20
+            },
+            "properties": {
+              "sharpness": 0.85,
+              "grip-friction": 0.6
+            }
+          }
+        },
+        "kinematic-constraints": {
+          "degrees-of-freedom": 6,
+          "workspace": {
+            "boundaries": {
+              "x-min": 0,
+              "x-max": 1000,
+              "y-min": 0,
+              "y-max": 1000,
+              "z-min": 0,
+              "z-max": 500
+            },
+            "singularity-tolerance": 0.01
+          },
+          "path-constraints": {
+            "trajectory-smoothness": 0.95,
+            "collision-avoidance": {
+              "enabled": true,
+              "proximity-threshold": 20
+            }
+          },
+          "joint-limits": {
+            "joint-1": {
+              "angle-min": -90,
+              "angle-max": 90
+            },
+            "joint-2": {
+              "angle-min": -45,
+              "angle-max": 135
+            },
+            "velocity-limits": {
+              "max-linear": 500,
+              "max-angular": 2
+            }
+          }
+        },
+        "dynamic-constraints": {
+          "force-control": {
+            "normal-force": 15,
+            "shearing-force": 8
+          },
+          "vibration-control": {
+            "damping-coefficient": 0.7
+          },
+          "torque-limits": {
+            "joint-1": {
+              "max-torque": 12
+            },
+            "joint-2": {
+              "max-torque": 18
+            }
+          },
+          "inertia-compensation": {
+            "object-inertia": {
+              "x": 0.004,
+              "y": 0.004,
+              "z": 0.002
+            }
+          }
+        },
+        "control-constraints": {
+          "motion-control": {
+            "control-mode": "hybrid_force_position",
+            "gain-tuning": {
+              "proportional-gain": 1.0,
+              "derivative-gain": 0.6
+            }
+          },
+          "trajectory-execution": {
+            "sampling-rate": 1000,
+            "jerk-limit": 50
+          }
+        },
+        "environmental-constraints": {
+          "surface": {
+            "material": "wood",
+            "friction-coefficient": 0.5,
+            "flatness-tolerance": 0.02
+          },
+          "obstacle-avoidance": {
+            "obstacles": [
+              {
+                "type": "cup",
+                "position": {
+                  "x": 300,
+                  "y": 300,
+                  "z": 0
+                },
+                "dimensions": {
+                  "radius": 50
+                }
+              },
+              {
+                "type": "sponge",
+                "position": {
+                  "x": 200,
+                  "y": 400,
+                  "z": 0
+                },
+                "dimensions": {
+                  "length": 50,
+                  "width": 30
+                }
+              }
+            ],
+            "avoidance-radius": 20
+          }
+        },
+        "feedback-constraints": {
+          "sensors": {
+            "force-sensor": {
+              "sensitivity": 0.1,
+              "range": 50
+            },
+            "camera": {
+              "resolution": {
+                "width": 1920,
+                "height": 1080
+              },
+              "field-of-view": 90,
+              "frame-rate": 30
+            },
+            "tactile-sensor": {
+              "resolution": 0.01,
+              "sensitivity": 0.05
+            }
+          },
+          "latency": {
+            "control-loop": 5,
+            "sensor-update-rate": 20
+          }
+        },
+        "safety-constraints": {
+          "force-limits": {
+            "max-interaction-force": 20,
+            "human-contact-force-threshold": 5
+          },
+          "tool-safety": {
+            "tool-storage-position": {
+              "x": 0,
+              "y": 0,
+              "z": 50
+            },
+            "disable-tool-when-idle": true
+          },
+          "collision-safety": {
+            "emergency-stop": {
+              "trigger-force": 12,
+              "response-time": 0.1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

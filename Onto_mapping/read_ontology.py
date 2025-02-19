@@ -4,6 +4,7 @@ import dotenv
 dotenv.load_dotenv()
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 client = OpenAI(api_key=OPENAI_API_KEY)
+import ollama
 
 def extract_metadata(entity):
     """
@@ -106,23 +107,119 @@ def gpt_call(concept_names, attributes):
     )
     return resp
 
+def get_semantic_match(attribute, classes):
+    """
+    Use the OpenAI ChatGPT API to find the most semantically similar class for the attribute.
+    """
+    # Prepare the prompt
+    prompt = f"""
+    You are an ontology matching assistant. Your task is to find the most semantically similar class for the attribute: "{attribute}".
+
+    Here is a list of ontology classes with their names and descriptions:
+    {classes}
+
+    Return the name of the most semantically similar class for the attribute "{attribute}". If no suitable match is found, return "None".
+    """
+
+    # Call the OpenAI API
+    response = ollama.chat(
+        model="llama3.2",
+        messages=[
+            {"role": "system", "content": "You are an ontology matching assistant."},
+            {"role": "user", "content": prompt}
+        ],
+        # max_tokens=100,
+        # temperature=0.2  # Lower temperature for more deterministic responses
+    )
+    print(f"Ollama Called and the response is {response}")
+    # Extract the matched class from the response
+    matched_class = response["message"]["content"].strip()
+    return matched_class
+
+def map_attributes_to_ontology(cram_action, ontology_file, threshold=0.7):
+    """
+    Map the attributes of the CRAM action designator to the ontology concepts using an LLM.
+    Returns a dictionary where each attribute is mapped to:
+    - The closest match (most semantically similar class).
+    - A list of all matches that exceed the similarity threshold.
+    """
+    # Load the ontology
+    # graph = load_ontology(ontology_file)
+    onto = get_ontology(ontology_file).load()
+
+    # Extract all entities (classes/concepts) and their hierarchy
+    # concepts = extract_concepts(graph)
+    concepts = extract_classes(onto)
+    # classes = extract_classes()
+
+    # Iterate over the CRAM action designator attributes
+    mapped_action = {}
+    for attr, value in cram_action.items():
+        # Prepare the list of classes for the LLM
+        classes_for_llm = "\n".join(
+            [
+                f"- Name: {concept['name']}, Description: {concept['comment'][0] if concept['comment'] else 'No description'}"
+                for concept in concepts]
+        )
+
+        # Get the most semantically similar class using the LLM
+        matched_class = get_semantic_match(attr, classes_for_llm)
+
+        if matched_class and matched_class.lower() != "none":
+            # Find the matched concept dictionary
+            matched_concept = next((concept for concept in concepts if concept["name"] == matched_class), None)
+            if matched_concept:
+                mapped_action[attr] = {
+                    "closest_match": matched_concept["name"],
+                    "value": value
+                }
+            else:
+                mapped_action[attr] = {
+                    "closest_match": None,
+                    "value": value
+                }
+        else:
+            mapped_action[attr] = {
+                "closest_match": None,
+                "value": value
+            }
+
+    return mapped_action
+    # return concepts, classes_for_llm
 
 if __name__ == "__main__":
-    i = 2
-    concepts = extract_classes(onto)
-    print(len(concepts), concepts[i].keys())
-    # print(concepts[i]['name'])
-    # print(concepts[i]['comment'])
-    # print(concepts[i]['label'])
-    # print(concepts[i]['defined_by'])
-    # print(concepts[i]['iri'])
-    # print(concepts[i]['subclasses'])
+    cram_action = {
+        "cutting": "cup",
+        "length": 15,
+        "sharpness": "high",
+        "initial-force": 2.0
+    }
+    ontology_file = "OWLs/SOMA.owl"
 
-    concept_names = [concept["name"] for concept in concepts]
-    attributes = ['shape','size','colour']
+    mapped_action = map_attributes_to_ontology(cram_action, ontology_file)
 
-    response = gpt_call(concept_names, attributes)
-    print(response.choices[0].message.content)
+    print("Original CRAM Action:", cram_action)
+    print("Mapped CRAM Action with LLM Semantic Matching:")
+    for attr, details in mapped_action.items():
+        print(f"Attribute: {attr}")
+        print(f"  Closest Match: {details['closest_match']}")
+        print(f"  Value: {details['value']}")
+        print()
+    # i = 2
+    # concepts = extract_classes(onto)
+    # print(len(concepts), concepts[i].keys())
+    # # print(concepts[i]['name'])
+    # # print(concepts[i]['comment'])
+    # # print(concepts[i]['label'])
+    # # print(concepts[i]['defined_by'])
+    # # print(concepts[i]['iri'])
+    # # print(concepts[i]['subclasses'])
+    #
+    # concept_names = [concept["name"] for concept in concepts]
+    # attributes = ['shape','size','colour']
+    #
+    # response = gpt_call(concept_names, attributes)
+    # print(response.choices[0].message.content)
 
 
 

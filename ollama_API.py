@@ -15,7 +15,6 @@ models = [model["name"] for model in ollama.list()["models"]]
 st.session_state["model"] = st.selectbox("Choose your model", models)
 
 def model_res_generator():
-
     stream = ollama.chat(
         model=st.session_state["model"],
         messages=st.session_state["messages"],

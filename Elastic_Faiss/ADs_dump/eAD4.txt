@@ -1,0 +1,214 @@
+(action-designator
+  (an action
+    (type slicing)
+    (object (an object
+              (type avocado)
+              (name "ripe-avocado")
+              (properties (size "medium")
+                          (texture "smooth")
+                          (ripeness "ripe"))))
+    (tool (a tool
+            (type knife)
+            (name "sharp-black-knife")
+            (properties (sharpness "very-high")
+                        (color "black")
+                        (size "medium")
+                        (material "steel")
+                        (weight "light")
+                        (edge "smooth"))))
+    (location (a location
+                (type cutting-board)
+                (name "wooden-cutting-board")
+                (properties (material "wood")
+                            (height 0.5)
+                            (accessibility "high")
+                            (surface-type "stable"))))
+    (goal (for-object (an object
+                        (type avocado)
+                        (to be-cut-into-pieces
+                          (details (type "half")
+                                   (size "equal")
+                                   (quantity 2))))))
+    (task-constraints
+      (cut-type "single-slice")
+      (cut-uniformly "true")
+      (remove-core "true")
+      (remove-seeds "true")
+      (maintain-shape-integrity "true"))
+    (framenet
+      (frame "Cutting")
+      (core-elements
+        (agent "robot")
+        (patient "avocado")
+        (instrument "sharp-black-knife")
+        (result "two halves"))
+      (peripheral-elements
+        (location "cutting-board")
+        (manner "smoothly")
+        (purpose "prepare-food")
+        (time "now")
+        (degree "completely")))
+    (motion-constraints
+      (kinematic-constraints
+        (degrees-of-freedom 6)
+        (workspace (boundaries (x-min 0)
+                              (x-max 1000)
+                              (y-min 0)
+                              (y-max 1000)
+                              (z-min 500)))
+                   (singularity-tolerance 0.01))
+        (path-constraints (trajectory-smoothness 0.95)
+                          (collision-avoidance (enabled true)
+                                              (proximity-threshold 20))))
+      (dynamic-constraints
+        (force-control (normal-force 6)
+                       (shearing-force 3))
+        (vibration-control (damping-coefficient 0.7))
+        (torque-limits (joint-1 (max-torque 8))
+                       (joint-2 (max-torque 12)))
+        (inertia-compensation (object-inertia (x 0.004)
+                                            (y 0.004)
+                                            (z 0.003))))
+      (control-constraints
+        (motion-control (control-mode "hybrid_force-position")
+                        (gain-tuning (proportional-gain 1.0)
+                                     (derivative-gain 0.6)))
+        (trajectory-execution (sampling-rate 1000)
+                              (jerk-limit 20)))
+      (environmental-constraints
+        (surface (material "wood")
+                 (friction-coefficient 0.5)
+                 (flatness-tolerance 0.02))
+        (obstacle-avoidance (obstacles (type "bowl")
+                                      (position (x 300)
+                                                (y 250)
+                                                (z 0))
+                                      (dimensions (length 100)
+                                                  (width 80)))
+                            (type "knife-block")
+                            (position (x 100)
+                                      (y 400)
+                                      (z 0))
+                            (dimensions (length 80)
+                                        (width 50)))
+                           (avoidance-radius 20)))
+      (feedback-constraints
+        (sensors (force-sensor (sensitivity 0.1)
+                               (range 20))
+                 (camera (resolution (width 1920)
+                                    (height 1080))
+                         (field-of-view 90)
+                         (frame-rate 30))
+                 (tactile-sensor (resolution 0.01)
+                                 (sensitivity 0.05)))
+        (latency (control-loop 5)
+                 (sensor-update-rate 20)))
+      (safety-constraints
+        (force-limits (max-interaction-force 10)
+                      (human-contact-force-threshold 3))
+        (tool-safety (tool-storage-position (x 0)
+                                           (y 0)
+                                           (z 50))
+                      (disable-tool-when-idle true))
+        (collision-safety (emergency-stop (trigger-force 8)
+                                         (response-time 0.1))))))
+  (flanagan-motion-phases
+    (pre-motion-phase
+      (predictive-model
+        (expected-trajectory "smooth downward slice")
+        (force-model
+          (initial-force 1.0)
+          (resistance-range))
+        (tool-model
+          (sharpness "very-high")
+          (length 15)))
+      (motion-planning
+        (trajectory "linear downward slice")
+        (obstacle-avoidance "enabled")
+        (energy-efficiency "optimized")))
+    (initiation-phase
+      (initial-state
+        (robot-position)
+        (object-position '(0.4 0 0.05))
+        (tool-position '(0.5 -0.2 0.3)))
+      (motion-initialization
+        (joint-activation
+          (joint1 35)
+          (joint2 20))
+        (velocity-profile "linear ramp-up")))
+    (execution-phase
+      (feedforward-control
+        (predicted-forces
+          (initial-force 1.0)
+          (cutting-force-range))
+        (predicted-positions
+          (start '(0.5 -0.2 0.3))
+          (end '(0.5 -0.2 0.05)))
+        (error-tolerance
+          (position-error 0.01)
+          (force-error 0.04)))
+      (feedback-control
+        (corrective-actions
+          (adjust-trajectory true)
+          (increase-force true))
+        (sensor-feedback
+          (force 1.2)
+          (position-error 0.01)
+          (slip-detected false)))
+      (sensory-integration
+        (tactile
+          (gripper-force 3.2)
+          (cutting-force 1.1))
+        (visual
+          (object-center)
+          (knife-position '(0.5 -0.2 0.2)))
+        (proprioceptive
+          (joint-positions)
+          (joint-velocities))))
+    (interaction-phase
+      (force-adaptation
+        (grip-force
+          (initial-grip 3.0)
+          (adjusted-grip 3.5))
+        (cutting-force
+          (initial-cut 1.0)
+          (adaptive-cut 1.2)))
+      (object-modeling
+        (deformation-model
+          (elasticity 0.4)
+          (strain-limit 0.5)
+          (current-deformation 0.3))
+        (material-properties
+          (hardness 0.3)
+          (friction-coefficient 0.3))))
+    (termination-phase
+      (end-effector-stabilization
+        (final-position
+          (knife-position '(0.5 -0.2 0.0)))
+        (reset-trajectory "linear reset to neutral position"))
+      (success-verification
+        (outcome-check
+          (object-cut true)
+          (pieces-separated true))
+        (error-analysis
+          (cut-quality "smooth")
+          (deviation-from-center 0.02))))
+    (post-motion-phase
+      (learning-update
+        (model-refinement
+          (force-model-update
+            (cutting-force 1.3))
+          (trajectory-model-update
+            (deviation-correction 0.02)))
+        (reinforcement
+          (successful-cut true)
+          (reinforce-parameters
+            (grip-force 3.5))))
+      (error-correction
+        (deviation-analysis
+          (position-error 0.01)
+          (force-error 0.04)
+          (slip-event false))
+        (parameter-update
+          (cutting-force-range)
+          (grip-force-range)))))))
