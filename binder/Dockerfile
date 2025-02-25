@@ -6,4 +6,10 @@ COPY --chown=${NB_USER}:users ./ /home/${NB_USER}/llama/
 
 WORKDIR /home/${NB_USER}/llama/
 
-RUN pip3 install -r req.txt
+RUN pip3 install -r requirements.txt
+
+USER root
+
+RUN systemctl start elasticsearch
+
+USER ${NB_USER}
