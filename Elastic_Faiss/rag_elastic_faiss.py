@@ -160,16 +160,16 @@ def generate_response_with_rag(query_text, f_ind_name, e_ind_name, top_k=5):
         )
 
         # resp = ollama.chat(
-        #     model="llama3.2",
+        #     model="deepseek-r1:8b",
         #     messages=[
         #         {"role": "system",
         #          "content": "You will read in all the context provided and generate appropriate, accurate and precise"
         #                     "response for the user query without any additional explanation."},
         #         # "content": "You are a CRAM action designator generator, you read in the template action designator provided as context"
         #         #            " and generalise it to newer user query and also consider other example designators provided as context"},
-        #         {"role": "assistant",
-        #          "content": "Template action designator: \n" + template + "Use this template as reference when generating"
-        #                                                                   "action designator and replace the attribute values according to the user query"},
+        #         # {"role": "assistant",
+        #         #  "content": "Template action designator: \n" + template + "Use this template as reference when generating"
+        #         #                                                           "action designator and replace the attribute values according to the user query"},
         #         {"role": "assistant",
         #          "content": "additional context including example action designators and other info: \n" + context},
         #         {"role": "user",
@@ -183,24 +183,50 @@ def generate_response_with_rag(query_text, f_ind_name, e_ind_name, top_k=5):
         return e
 
 
+#------------------- below functions only for GenAD.ipynb -------------------------
+def index_settings():
+    f_ind_name = faiss_index  # Faiss index name
+    e_ind_name = "action-designators"
+    models = ["comprehensive", "flanagan motion phases", "motion constraints", "framenet", "task constraints", "object",
+             "tool", "location", "goal"]
+    return f_ind_name, e_ind_name, models
+
+def query(AD_instruction,model):
+    f_ind_name, e_ind_name, models = index_settings()
+    if model == "comprehensive" or model == "":
+        query = f"generate action designator for the NL instruction: {AD_instruction}"
+    else:
+        query = f"generate only {model} part of action designator for the NL instruction: {AD_instruction}"
+    response = generate_response_with_rag(query, f_ind_name, e_ind_name, top_k=1)
+    ans = response.choices[0].message.content
+    return ans
+
+
 # Main workflow
 if __name__ == "__main__":
 
     initialize_settings()
-    # AD_instruction = input("Enter query: ")
-    AD_instruction = "cut the mango"
+    AD_instruction = input("Enter query: ")
+    # AD_instruction = "cut the apple using orange sharp knife"
     f_ind_name = faiss_index # Faiss index name
     e_ind_name = "action-designators"  # Elasticsearch index name
 
     # AD_instruction = "cut the mango into 2 slices using the butter knife by placing it on the wooden board"
     # query = "what is cram plan syntax for pouring"
-    query = f"generate action designator for the NL instruction: {AD_instruction}"
+    parts = ["comprehensive","flanagan motion phases", "motion constraints", "framenet", "task constraints", "object", "tool", "location", "goal"]
+    print("Models : ",parts)
+    model = input("Enter specific model: ")
+    if model == "comprehensive" or model == "":
+        query = f"generate action designator for the NL instruction: {AD_instruction}"
+    else:
+        query = f"generate only {model} part of action designator for the NL instruction: {AD_instruction}"
 
     # Generate response
     response = generate_response_with_rag(query,f_ind_name, e_ind_name, top_k=1)
 
     ans = response.choices[0].message.content
-    # ans = response.message.content
+    # ans = response.message.content  # For Ollama Models
+
     print("Generated Response:")
     print(ans)
     with open("query_response.txt", "w") as f:
