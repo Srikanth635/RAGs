@@ -25,3 +25,4 @@ llama-index-agent-openai==0.4.0
 llama-index-cli==0.4.0
 llama-index-core==0.12.5
 elasticsearch==8.17.0
+sentence_transformers
