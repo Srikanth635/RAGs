@@ -1,0 +1,75 @@
+{
+  "task": "Picking_Up",
+  "steps": {
+    "physical_steps": [
+      {
+        "step": "Approaching the object",
+        "description": "Move toward the object to be picked up.",
+        "required_inputs": ["object_location", "agent_position"],
+        "output": "Agent positioned near the object"
+      },
+      {
+        "step": "Reaching for the object",
+        "description": "Extend hand or tool toward the object.",
+        "required_inputs": ["object_distance", "agent_reach"],
+        "output": "Hand or tool positioned near the object"
+      },
+      {
+        "step": "Grasping the object",
+        "description": "Grip the object securely.",
+        "required_inputs": ["grip_strength", "object_shape"],
+        "output": "Object held securely"
+      },
+      {
+        "step": "Lifting the object",
+        "description": "Lift the object from its resting position.",
+        "required_inputs": ["object_weight", "lifting_force"],
+        "output": "Object lifted off the surface"
+      },
+      {
+        "step": "Transporting the object",
+        "description": "Move the object to the desired location.",
+        "required_inputs": ["target_location", "path_clearance"],
+        "output": "Object moved to target location"
+      },
+      {
+        "step": "Placing the object",
+        "description": "Set the object down at the intended location.",
+        "required_inputs": ["placement_stability", "alignment"],
+        "output": "Object placed securely"
+      }
+    ],
+    "cognitive_steps": [
+      {
+        "step": "Identifying the object to pick up",
+        "description": "Recognize and confirm the object to be picked up.",
+        "required_inputs": ["visual_information", "task_goal"],
+        "output": "Object identified for pickup"
+      },
+      {
+        "step": "Assessing object properties",
+        "description": "Evaluate the size, weight, and fragility of the object.",
+        "required_inputs": ["object_features"],
+        "output": "Object properties assessed"
+      },
+      {
+        "step": "Planning the pickup motion",
+        "description": "Determine the approach, grip, and lifting strategy.",
+        "required_inputs": ["object_position", "agent_capabilities"],
+        "output": "Pickup plan established"
+      },
+      {
+        "step": "Monitoring the pickup process",
+        "description": "Observe and adjust grip or motion as necessary.",
+        "required_inputs": ["visual_feedback", "haptic_feedback"],
+        "output": "Pickup process monitored and controlled"
+      },
+      {
+        "step": "Evaluating the result",
+        "description": "Check if the object has been picked up successfully.",
+        "required_inputs": ["task_goal", "object_status"],
+        "output": "Pickup task evaluated as complete or incomplete"
+      }
+    ]
+  }
+}

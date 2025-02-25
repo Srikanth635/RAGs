@@ -1,0 +1,75 @@
+{
+  "task": "Household Cutting Actions",
+  "dynamic_adjustments_for_task_failures_and_sensory_feedback": [
+    {
+      "failure_trigger": "Tool Misalignment",
+      "condition": "The knife or cutting tool is not aligned with the object properly.",
+      "adjustment_strategies": [
+        {
+          "strategy": "Reposition the Tool",
+          "description": "The agent adjusts the position of the tool to realign with the object and ensure an accurate cut."
+        },
+        {
+          "strategy": "Check Alignment Using Visual Feedback",
+          "description": "Use visual feedback to adjust the tool’s alignment before continuing the cutting process."
+        }
+      ]
+    },
+    {
+      "failure_trigger": "Excessive Force or Resistance",
+      "condition": "The object is too tough or the agent applies too much force while cutting.",
+      "adjustment_strategies": [
+        {
+          "strategy": "Reduce Cutting Speed",
+          "description": "The agent slows down the cutting motion to apply more controlled force and prevent damage to the object or tool."
+        },
+        {
+          "strategy": "Switch to a Different Tool",
+          "description": "If resistance is high, the agent uses a more suitable tool, such as a serrated knife for tougher items."
+        }
+      ]
+    },
+    {
+      "failure_trigger": "Uneven or Inaccurate Cut",
+      "condition": "The agent’s cut is uneven or not aligned as planned.",
+      "adjustment_strategies": [
+        {
+          "strategy": "Reassess and Adjust the Angle",
+          "description": "The agent stops the cutting process, reassesses the angle of the tool, and adjusts to correct the path."
+        },
+        {
+          "strategy": "Use a Guide or Template",
+          "description": "The agent uses a guide (e.g., ruler or cutting guide) to ensure more accurate and even cuts."
+        }
+      ]
+    },
+    {
+      "failure_trigger": "Slippage or Dropped Object",
+      "condition": "The object being cut slips or is dropped during the cutting process.",
+      "adjustment_strategies": [
+        {
+          "strategy": "Stabilize the Object",
+          "description": "The agent places the object on a non-slip surface or uses a hand to hold it steady before resuming cutting."
+        },
+        {
+          "strategy": "Reposition Hands or Tool",
+          "description": "The agent adjusts their hand position or the grip on the tool to ensure better control during the cut."
+        }
+      ]
+    },
+    {
+      "failure_trigger": "Injury or Nicks",
+      "condition": "The agent injures themselves or experiences discomfort during the cutting process.",
+      "adjustment_strategies": [
+        {
+          "strategy": "Pause and Assess",
+          "description": "The agent stops, applies first aid if necessary, and reassesses their approach before continuing."
+        },
+        {
+          "strategy": "Wear Protective Gear",
+          "description": "The agent uses gloves or other protective equipment to reduce the risk of injury during subsequent attempts."
+        }
+      ]
+    }
+  ]
+}

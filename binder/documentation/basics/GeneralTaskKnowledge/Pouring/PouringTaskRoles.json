@@ -1,0 +1,35 @@
+{
+  "task": "Pouring",
+  "key_action_roles": {
+    "Agent": {
+      "description": "The entity performing the pouring action.",
+      "example": "The chef pours water into the pot.",
+      "attributes": ["Grip strength", "Dexterity", "Control"]
+    },
+    "Object": {
+      "description": "The substance being poured.",
+      "example": "The chef pours water into the pot.",
+      "attributes": ["Viscosity", "Volume", "Temperature"]
+    },
+    "Tool": {
+      "description": "The container or implement used to pour the substance.",
+      "example": "The chef pours water from the jug.",
+      "attributes": ["Spout shape", "Capacity", "Handle design"]
+    },
+    "Location": {
+      "description": "The place where the pouring action occurs.",
+      "example": "The chef pours water into the pot on the countertop.",
+      "attributes": ["Surface stability", "Proximity to agent", "Cleanliness"]
+    },
+    "Goal": {
+      "description": "The target or receptacle for the substance being poured.",
+      "example": "The chef pours water into the pot.",
+      "attributes": ["Capacity", "Shape", "Position relative to agent"]
+    },
+    "Manner": {
+      "description": "The way the pouring action is performed.",
+      "example": "The chef pours water slowly into the pot.",
+      "attributes": ["Speed", "Angle of pour", "Consistency"]
+    }
+  }
+}

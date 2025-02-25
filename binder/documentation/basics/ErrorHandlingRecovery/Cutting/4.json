@@ -1,0 +1,95 @@
+{
+  "task": "Cutting",
+  "alternate_strategies_for_dynamic_selection": [
+    {
+      "trigger": "Uneven Cut",
+      "condition": "The cut deviates from the intended path.",
+      "strategy_options": [
+        {
+          "strategy": "Realign the Tool",
+          "description": "Reposition the cutting tool to restore alignment and continue the cut accurately."
+        },
+        {
+          "strategy": "Use a Guide",
+          "description": "Place a guide, such as a ruler or stencil, to ensure a straight line."
+        },
+        {
+          "strategy": "Slow Down and Focus",
+          "description": "Reduce speed and focus on more controlled movements to stay on track."
+        }
+      ]
+    },
+    {
+      "trigger": "Slipping Knife",
+      "condition": "The cutting tool slips or moves unexpectedly.",
+      "strategy_options": [
+        {
+          "strategy": "Increase Grip Stability",
+          "description": "Apply more pressure to the grip or switch to a tool with a better handle."
+        },
+        {
+          "strategy": "Stabilize the Object",
+          "description": "Secure the object with a non-slip mat or other stabilizing tool."
+        },
+        {
+          "strategy": "Switch to a Different Tool",
+          "description": "Use a different cutting tool that offers more control, like a serrated knife or a smaller blade."
+        }
+      ]
+    },
+    {
+      "trigger": "Injury or Nicks",
+      "condition": "The user accidentally cuts themselves or risks injury.",
+      "strategy_options": [
+        {
+          "strategy": "Pause and Reassess",
+          "description": "Stop cutting and assess the situation for potential risks."
+        },
+        {
+          "strategy": "Apply Bandage or First Aid",
+          "description": "Stop and treat the injury to prevent further harm."
+        },
+        {
+          "strategy": "Use Protective Gear",
+          "description": "Switch to using gloves or other protective equipment to prevent further injury."
+        }
+      ]
+    },
+    {
+      "trigger": "Object Movement",
+      "condition": "The object being cut shifts during the task.",
+      "strategy_options": [
+        {
+          "strategy": "Stabilize the Object",
+          "description": "Secure the object with clamps or a non-slip mat."
+        },
+        {
+          "strategy": "Reposition the Object",
+          "description": "Move the object into a more stable or accessible position."
+        },
+        {
+          "strategy": "Slow Down and Focus",
+          "description": "Slow the cutting process to ensure more careful control of both the object and tool."
+        }
+      ]
+    },
+    {
+      "trigger": "Dull Blade",
+      "condition": "The blade loses sharpness and struggles to cut effectively.",
+      "strategy_options": [
+        {
+          "strategy": "Sharpen the Blade",
+          "description": "Pause and sharpen the cutting tool to restore its effectiveness."
+        },
+        {
+          "strategy": "Switch to a Different Tool",
+          "description": "Switch to a sharper or more appropriate tool for the material."
+        },
+        {
+          "strategy": "Reduce Cutting Force",
+          "description": "Use less pressure and rely on a more controlled, precise cutting motion."
+        }
+      ]
+    }
+  ]
+}

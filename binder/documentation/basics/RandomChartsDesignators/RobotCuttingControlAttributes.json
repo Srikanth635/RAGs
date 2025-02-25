@@ -1,0 +1,194 @@
+{
+    "ControlSystemAttributes": {
+        "SystemDynamics": {
+            "StateVariables": {
+                "Position": [
+                    0.25,
+                    0.35,
+                    0.15
+                ],
+                "Velocity": [
+                    0.1,
+                    0.08,
+                    0.05
+                ],
+                "Acceleration": [
+                    0.02,
+                    0.015,
+                    0.01
+                ]
+            },
+            "NonLinearity": true
+        },
+        "ForceAndTorqueControl": {
+            "ForceApplication": 15.5,
+            "TorqueControl": [
+                1.2,
+                1.5,
+                0.8
+            ],
+            "Compliance": {
+                "Stiffness": 100.0,
+                "Damping": 0.5
+            },
+            "ContactDynamics": {
+                "NormalForce": 20.0,
+                "FrictionCoefficient": 0.3
+            }
+        },
+        "FeedbackControl": {
+            "SensorIntegration": {
+                "ForceSensorFeedback": [
+                    15.0,
+                    14.8,
+                    15.2
+                ],
+                "TactileSensorFeedback": [
+                    0.05,
+                    0.04,
+                    0.06
+                ]
+            },
+            "ErrorMinimization": {
+                "PositionError": [
+                    0.005,
+                    0.004,
+                    0.003
+                ],
+                "ForceError": 0.2
+            },
+            "Stability": {
+                "Overshoot": 5.0,
+                "SettlingTime": 0.75
+            }
+        },
+        "FeedforwardControl": {
+            "PredictiveModeling": {
+                "PredictedForce": 16.0,
+                "PredictedPath": "Smooth linear path"
+            },
+            "TrajectoryPlanning": {
+                "Speed": 0.12,
+                "AccelerationProfile": "Constant acceleration"
+            }
+        },
+        "HybridPositionForceControl": {
+            "PositionControl": {
+                "DesiredPosition": [
+                    0.3,
+                    0.4,
+                    0.2
+                ],
+                "CurrentPosition": [
+                    0.28,
+                    0.38,
+                    0.19
+                ]
+            },
+            "ForceControl": {
+                "DesiredForce": 16.5,
+                "CurrentForce": 15.8
+            }
+        },
+        "StabilityAnalysis": {
+            "LyapunovFunction": "Quadratic function",
+            "EnergyBasedStability": {
+                "EnergyInput": 50.0,
+                "MaxAllowableEnergy": 60.0
+            }
+        },
+        "ImpedanceAndAdmittanceControl": {
+            "ImpedanceControl": {
+                "Stiffness": 120.0,
+                "DampingRatio": 0.6
+            },
+            "AdmittanceControl": {
+                "VelocityAdjustment": 0.1,
+                "ForceFeedbackGain": 1.2
+            }
+        },
+        "ControlObjectives": {
+            "TrackingAccuracy": 0.98,
+            "ForceOptimization": {
+                "MinForceRequired": 14.5,
+                "CurrentForceUsage": 16.0
+            },
+            "TimeMinimization": {
+                "TargetTime": 5.0,
+                "ActualTimeTaken": 5.5
+            }
+        },
+        "ComplianceAndAdaptation": {
+            "AdaptiveControl": {
+                "MaterialHardnessAdjustment": "High",
+                "CurrentStiffnessSetting": 110.0
+            },
+            "RobustControl": {
+                "UncertaintyHandling": "Medium",
+                "DisturbanceRejectionLevel": 0.75
+            }
+        },
+        "PhysicalConstraints": {
+            "ActuatorLimits": {
+                "MaxForce": 25.0,
+                "MaxSpeed": 0.3
+            },
+            "JointLimits": {
+                "Joint1Range": [
+                    -45,
+                    45
+                ],
+                "Joint2Range": [
+                    0,
+                    90
+                ]
+            },
+            "EnvironmentalConstraints": "Workspace boundaries"
+        },
+        "TrajectoryPlanningAndExecution": {
+            "OptimalPathGeneration": "Generated optimal linear path",
+            "SmoothMotion": true,
+            "KinematicRedundancy": {
+                "RedundancyUsage": "Avoid obstacle at 0.25m",
+                "ExtraDOF": 1
+            }
+        },
+        "InteractionModeling": {
+            "ContactTransition": {
+                "FreeMotionPhase": 1.0,
+                "ContactPhase": 4.0
+            },
+            "SurfaceInteraction": {
+                "SurfaceType": "Rough",
+                "SpeedAdjustment": 0.08
+            }
+        },
+        "SafetyConstraints": {
+            "CollisionAvoidance": {
+                "MinDistanceToObstacle": 0.05,
+                "CurrentDistance": 0.07
+            },
+            "HumanRobotSafety": "Ensured with max force limit of 10.0 N near humans"
+        },
+        "DisturbanceRejection": {
+            "ExternalDisturbances": {
+                "ForceMagnitude": 3.0,
+                "Frequency": 2.0
+            },
+            "VibrationControl": {
+                "VibrationFrequency": 5.0,
+                "DampingApplied": 0.4
+            }
+        },
+        "ControlArchitecture": {
+            "HierarchicalControl": {
+                "HighLevelPlanning": "Deciding cut path",
+                "LowLevelControl": "Force control in cutting motion"
+            },
+            "RealTimeImplementation": {
+                "ControlLoopFrequency": 1000,
+                "Latency": 0.002
+            }
+        }
+    }
+}

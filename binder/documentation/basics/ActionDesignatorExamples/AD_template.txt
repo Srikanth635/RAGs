@@ -1,0 +1,155 @@
+(:action-designator
+  :type <cutting_or_slicing>
+  :parameters (
+    :object_type (:name <object_name> :attributes (:material_type <material_type> :size <size> :color <color> :shape <shape> :texture <texture>))
+    :tool_type (:name <tool_name> :attributes (:sharpness <sharpness> :size <size> :material <tool_material> :weight <weight> :edge <edge_type>))
+    :location (:name <location_name> :attributes (:height <height> :accessibility <accessibility> :surface_type <surface_type>))
+    :desired_outcome (:action_type :into <number_of_pieces> :pieces :shape (:type <shape_type> :size <size_description> :thickness <thickness> :angle <angle>))
+  )
+  :task_constraints (
+    :remove_core <true_or_false>
+    :remove_seeds <true_or_false>
+    :consistent_angle <angle_value>
+    :slice_thickness <thickness_value>
+    :cut_uniformly <true_or_false>
+    :maintain_shape_integrity <true_or_false>
+    :minimum_piece_thickness <thickness_value>
+  )
+  :material_properties (
+    :object (:type <material_type> :hardness <hardness> :density <density> :surface_friction <friction_coefficient> :elasticity <elasticity>)
+    :tool (:type <tool_material> :edge_sharpness <sharpness>)
+  )
+  :affordances (
+    :object <object_name>
+    :possible_actions (:grasp :cut :slice :none)
+    :tool_compatibility (:knife :serrated_knife :cutter :none)
+    :environment_affordances (:support :slide :none)
+  )
+  :dispositions (
+    :object (
+      :fragility <fragility>
+      :roll_tendency <tendency_to_roll>
+      :cut_resistance <resistance>
+      :compressibility <compressibility>
+      :flammability <flammability>
+      :anatomical_parts (
+        :core <yes_or_none>
+        :peel <yes_or_none>
+        :stem <yes_or_none>
+        :shell <yes_or_none>
+      )
+      :edibility <yes_or_none>
+    )
+    :tool (
+      :durability <durability>
+      :deformation_resistance <resistance>
+      :corrosion_prone <corrosion>
+      :flexibility <flexibility>
+      :magnetism <magnetism>
+    )
+    :environment (
+      :stability <stability>
+      :slipperiness <slipperiness>
+      :flammability <flammability>
+    )
+  )
+  :motion_phases (
+    :preparation_phase (
+      :phase_name "approach_object"
+      :preconditions (
+        :object_available <object_identifier>
+        :tool_available <tool_identifier>
+      )
+      :expected_effect (
+        :robot_positioned "near_object"
+        :object_reachable "true"
+      )
+    )
+    :initial_contact_phase (
+      :phase_name "position_tool"
+      :preconditions (
+        :object_positioned "stable"
+        :blade_aligned "true"
+      )
+      :expected_effect (
+        :tool_in_contact "true"
+        :ready_for_action "true"
+      )
+    )
+    :task_specific_phase (
+      :phase_name "apply_action_force"
+      :preconditions (
+        :tool_in_contact "true"
+        :stable_grip "true"
+      )
+      :expected_effect (
+        :object_processed "true"
+        :pieces_formed (:quantity <number_of_pieces> :size (:thickness <thickness> :angle <angle> :type <shape_type>))
+        :core_and_seeds_removed <true_or_false>
+      )
+    )
+    :withdrawal_phase (
+      :phase_name "retract_tool"
+      :preconditions (
+        :action_complete "true"
+      )
+      :expected_effect (
+        :tool_removed "true"
+        :task_completed "true"
+      )
+    )
+  )
+  :kinematics (
+    :position_target (:x <x_coordinate> :y <y_coordinate> :z <z_coordinate>)
+    :velocity_planning (:approach_speed <approach_speed> :withdrawal_speed <withdrawal_speed>)
+    :trajectory (:type "linear" :smoothness "high")
+  )
+  :dynamics (
+    :force_application (:desired_normal_force <force> :force_tolerance <tolerance>)
+    :stability_settings (:stiffness <stiffness> :damping <damping>)
+    :sensor_feedback (
+      :force_values (<force_value_1> <force_value_2> <force_value_3>)
+      :stability_monitoring "active"
+    )
+  )
+  :safety_and_awareness (
+    :human_awareness (
+      :human_proximity <proximity_distance>
+      :interaction_level "passive_observer"
+    )
+    :safety_limits (
+      :max_force <max_force>
+      :max_speed <max_speed>
+    )
+  )
+  :learning_and_evaluation (
+    :feedback_loops (:vision_status "active" :force_feedback_status "active")
+    :progress_monitoring (:goal_completion "100%" :errors_detected <error_count>)
+    :experience_replay (
+      :successful_actions <success_count>
+      :failed_actions <failure_count>
+    )
+  )
+  :expected_outcomes (
+    :primary_outcome <outcome>
+    :secondary_outcome <secondary_outcome>
+    :overall_status <status>
+  )
+  :framenet_elements (
+    :action_core <cutting_or_slicing>
+    :core_elements (
+      :agent "robot"
+      :object <object_name>
+      :tool <tool_name>
+      :result <result_description>
+    )
+    :peripheral_elements (
+      :location <location_name>
+      :time <time>
+      :manner <manner>
+      :cause <cause>
+      :beneficiary <beneficiary>
+    )
+  )
+)
+

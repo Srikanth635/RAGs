@@ -1,0 +1,55 @@
+{
+  "task": "Cutting",
+  "typical_locations": [
+    {
+      "location": "Kitchen Countertop",
+      "description": "A stable, flat surface used for food preparation.",
+      "features": ["Non-slip surface", "Proximity to cutting tools", "Easy to clean"]
+    },
+    {
+      "location": "Cutting Board",
+      "description": "A designated board placed on a surface to provide stability and protect countertops.",
+      "features": ["Non-slip feet", "Grooves to catch liquids", "Variety of materials (wood, plastic, bamboo)"]
+    },
+    {
+      "location": "Dining Table",
+      "description": "Occasionally used for light cutting tasks like bread or fruits.",
+      "features": ["Flat surface", "Usually requires a cutting board for protection"]
+    },
+    {
+      "location": "Workshop Bench",
+      "description": "Used for cutting materials like wood, metal, or plastic.",
+      "features": ["Sturdy build", "Integrated clamps", "Proximity to heavy-duty tools"]
+    },
+    {
+      "location": "Garden or Outdoor Area",
+      "description": "Used for cutting plants, branches, or gardening-related tasks.",
+      "features": ["Open space", "Proximity to garden tools", "Varied surface conditions"]
+    },
+    {
+      "location": "Office Desk",
+      "description": "Used for light cutting tasks like paper or craft materials.",
+      "features": ["Flat surface", "Often includes a cutting mat for protection"]
+    },
+    {
+      "location": "Classroom or Craft Room",
+      "description": "Used for educational or artistic cutting tasks.",
+      "features": ["Flat workstations", "Proximity to craft tools", "Safety features for children"]
+    },
+    {
+      "location": "Warehouse or Storage Area",
+      "description": "Used for cutting packaging materials or opening boxes.",
+      "features": ["Sturdy surfaces", "Access to box cutters and utility blades"]
+    },
+    {
+      "location": "Bathroom or Vanity Counter",
+      "description": "Used for personal grooming tasks like cutting hair or trimming nails.",
+      "features": ["Flat surface", "Access to grooming tools", "Well-lit area"]
+    },
+    {
+      "location": "Construction Site",
+      "description": "Used for heavy-duty cutting tasks involving wood, metal, or concrete.",
+      "features": ["Open space", "Proximity to power tools", "Safety equipment available"]
+    }
+  ]
+}

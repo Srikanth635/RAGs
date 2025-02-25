@@ -1,0 +1,55 @@
+{
+  "task": "Cutting an Apple with a Sharp Knife",
+  "steps": [
+    {
+      "step": "Prepare the Object",
+      "description": "Place the apple on a stable, flat surface, such as a cutting board."
+    },
+    {
+      "step": "Grip the Knife",
+      "description": "Hold the knife firmly with the dominant hand, ensuring a secure grip on the handle."
+    },
+    {
+      "step": "Align the Knife",
+      "description": "Position the knife over the apple, aligning the blade with the desired cutting line or the middle of the apple."
+    },
+    {
+      "step": "Apply Cutting Force",
+      "description": "Begin cutting by applying downward pressure with the knife, guiding it through the apple."
+    },
+    {
+      "step": "Slice Through the Apple",
+      "description": "Continue applying steady pressure, moving the knife through the apple to complete the cut."
+    },
+    {
+      "step": "Remove the Knife",
+      "description": "Lift the knife away from the apple once the cut is complete, ensuring the apple pieces remain intact."
+    },
+    {
+      "step": "Check the Cut",
+      "description": "Inspect the cut apple to ensure it was done evenly and without excessive pressure."
+    }
+  ],
+  "action_roles": [
+    {
+      "role": "Agent",
+      "description": "The person performing the cutting task, responsible for holding the knife and applying pressure."
+    },
+    {
+      "role": "Tool",
+      "description": "The sharp knife used to cut the apple."
+    },
+    {
+      "role": "Object to be Cut",
+      "description": "The apple, which is being cut into pieces."
+    },
+    {
+      "role": "Surface",
+      "description": "The cutting board or stable surface that supports the apple during the cutting process."
+    },
+    {
+      "role": "Result",
+      "description": "The sliced apple pieces after the knife has cut through the object."
+    }
+  ]
+}

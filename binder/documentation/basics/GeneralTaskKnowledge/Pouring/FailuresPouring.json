@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "common_failures": [
+    {
+      "failure": "Substance spills outside the target",
+      "cause": "Incorrect positioning of container or target",
+      "resolution": "Align the container and target carefully before pouring and use a funnel if needed."
+    },
+    {
+      "failure": "Excessive substance poured",
+      "cause": "Lack of control over flow or tilting angle",
+      "resolution": "Tilt the container gradually and monitor the target's fill level."
+    },
+    {
+      "failure": "Insufficient substance poured",
+      "cause": "Pouring stopped prematurely or container not fully tilted",
+      "resolution": "Ensure complete tilting of the container and monitor the target's level."
+    },
+    {
+      "failure": "Target overflows",
+      "cause": "Target's capacity exceeded",
+      "resolution": "Measure the amount to be poured beforehand or monitor the target during pouring."
+    },
+    {
+      "failure": "Spillage due to unstable surface",
+      "cause": "Container or target placed on an uneven or slippery surface",
+      "resolution": "Ensure both the container and target are placed on a stable, non-slip surface."
+    },
+    {
+      "failure": "Substance dribbles along container edge",
+      "cause": "Improper container design or pouring technique",
+      "resolution": "Use a container with a well-designed spout and tilt smoothly while pouring."
+    },
+    {
+      "failure": "Substance splashes out of target",
+      "cause": "Pouring too quickly or from too great a height",
+      "resolution": "Pour slowly and reduce the height between the container and target."
+    },
+    {
+      "failure": "Container becomes too heavy to control",
+      "cause": "Container is overfilled or too large for the user",
+      "resolution": "Use a smaller or partially filled container and consider decanting into a more manageable vessel."
+    },
+    {
+      "failure": "Wrong substance poured",
+      "cause": "Misidentification of substance or container",
+      "resolution": "Verify the container and substance before starting the pouring task."
+    },
+    {
+      "failure": "Substance hardens or clogs the spout",
+      "cause": "High-viscosity substance or improper storage",
+      "resolution": "Clear the spout before use and store the substance properly to prevent hardening."
+    }
+  ]
+}

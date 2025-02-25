@@ -1,0 +1,124 @@
+{
+  "task": "Cutting",
+  "requirements": {
+    "typical_objects": [
+      {
+        "object": "Fruits",
+        "examples": ["Apple", "Orange", "Banana", "Pineapple", "Mango"],
+        "properties": ["Soft or firm texture", "Varied shapes"]
+      },
+      {
+        "object": "Vegetables",
+        "examples": ["Carrot", "Potato", "Onion", "Tomato", "Bell Pepper"],
+        "properties": ["Firm or soft texture", "Various shapes"]
+      },
+      {
+        "object": "Meat",
+        "examples": ["Chicken breast", "Beef steak", "Fish fillet", "Pork chop", "Turkey"],
+        "properties": ["Raw or cooked", "Fibrous or soft texture"]
+      },
+      {
+        "object": "Bread and Pastries",
+        "examples": ["Loaf of bread", "Bagel", "Croissant", "Cake", "Muffins"],
+        "properties": ["Soft or crusty texture", "Often delicate"]
+      },
+      {
+        "object": "Cheese",
+        "examples": ["Cheddar", "Mozzarella", "Parmesan", "Brie", "Swiss Cheese"],
+        "properties": ["Soft or hard texture", "Different levels of firmness"]
+      },
+      {
+        "object": "Plastic and Packaging",
+        "examples": ["Plastic sheets", "Cling wrap", "Cardboard boxes", "Bubble wrap"],
+        "properties": ["Thin, flexible, or rigid materials"]
+      },
+      {
+        "object": "Wood",
+        "examples": ["Plywood", "Small branches", "Wooden blocks"],
+        "properties": ["Hard and rigid", "Various thicknesses"]
+      },
+      {
+        "object": "Metal Sheets",
+        "examples": ["Aluminum sheets", "Tin plates", "Thin steel"],
+        "properties": ["Thin but strong", "Cut into precise shapes"]
+      },
+      {
+        "object": "Fabric and Textiles",
+        "examples": ["Cotton cloth", "Denim", "Silk", "Leather"],
+        "properties": ["Flexible and soft", "Cut into patterns"]
+      },
+      {
+        "object": "Rope and String",
+        "examples": ["Twine", "Nylon rope", "Cotton thread"],
+        "properties": ["Flexible strands", "Cut to specific lengths"]
+      }
+    ],
+    "typical_tools": [
+      {
+        "tool": "Knife",
+        "types": ["Chef's knife", "Paring knife", "Serrated knife", "Boning knife", "Bread knife"],
+        "usage": "For cutting fruits, vegetables, meat, bread, and cheese."
+      },
+      {
+        "tool": "Scissors",
+        "types": ["Kitchen scissors", "Fabric scissors", "Heavy-duty scissors"],
+        "usage": "For cutting paper, cardboard, fabric, and packaging."
+      },
+      {
+        "tool": "Utility Blade",
+        "types": ["Box cutter", "Razor blade", "Craft knife"],
+        "usage": "For precise cuts on cardboard, plastic, or thin materials."
+      },
+      {
+        "tool": "Chopper",
+        "types": ["Vegetable chopper", "Meat cleaver"],
+        "usage": "For heavy-duty cutting of hard vegetables or bones."
+      },
+      {
+        "tool": "Mandoline Slicer",
+        "types": ["Adjustable slicer", "Julienne slicer", "Spiralizer"],
+        "usage": "For uniform slices or shapes of fruits and vegetables."
+      },
+      {
+        "tool": "Pizza Cutter",
+        "types": ["Wheel cutter", "Rocker blade"],
+        "usage": "For cutting pizzas and flatbreads."
+      },
+      {
+        "tool": "Shears",
+        "types": ["Pruning shears", "Metal shears"],
+        "usage": "For cutting small branches, rope, or thin metal sheets."
+      },
+      {
+        "tool": "Saw",
+        "types": ["Hand saw", "Hacksaw", "Jigsaw"],
+        "usage": "For cutting wood, metal, or thick materials."
+      },
+      {
+        "tool": "Rotary Cutter",
+        "types": ["Quilting cutter", "Fabric rotary cutter"],
+        "usage": "For cutting fabric, leather, and other textiles with precision."
+      },
+      {
+        "tool": "Wire Cutters",
+        "types": ["Diagonal cutters", "Needle-nose cutters"],
+        "usage": "For cutting wire, rope, or thin metal strands."
+      },
+      {
+        "tool": "Cutting Board",
+        "types": ["Wooden board", "Plastic board"],
+        "usage": "Used as a stable surface for cutting various objects."
+      },
+      {
+        "tool": "Table Saw",
+        "types": ["Circular saw", "Panel saw"],
+        "usage": "For cutting large wooden or plastic sheets precisely."
+      },
+      {
+        "tool": "Metal Snips",
+        "types": ["Straight snips", "Compound snips"],
+        "usage": "For cutting through metal sheets or wires."
+      }
+    ]
+  }
+}

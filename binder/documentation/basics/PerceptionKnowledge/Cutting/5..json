@@ -1,0 +1,45 @@
+{
+  "task": "Cutting",
+  "multisensory_integration": {
+    "vision_and_touch": {
+      "role": "Tool Alignment",
+      "description": "Vision helps position the tool correctly, while touch ensures proper grip and stability.",
+      "example": "Seeing the knife align with the cutting mark and feeling its handle securely in hand."
+    },
+    "vision_and_force_feedback": {
+      "role": "Pressure Control",
+      "description": "Vision monitors the cutting progress, while force feedback adjusts the applied pressure.",
+      "example": "Seeing a tomato being sliced thinly and reducing pressure to avoid squishing it."
+    },
+    "vision_and_sound": {
+      "role": "Material Identification",
+      "description": "Vision identifies the material being cut, and sound confirms the cutting action.",
+      "example": "Seeing a carrot and hearing the crisp sound as it is sliced."
+    },
+    "touch_and_force_feedback": {
+      "role": "Cut Completion",
+      "description": "Touch senses the resistance change, while force feedback confirms when the cut is complete.",
+      "example": "Feeling the knife pass through the last layer of an onion and hitting the cutting board."
+    },
+    "vision_and_balance": {
+      "role": "Object Stability",
+      "description": "Vision checks the object's position, while touch stabilizes it during cutting.",
+      "example": "Holding an apple steady with one hand while slicing with the other."
+    },
+    "vision_and_depth_perception": {
+      "role": "Cut Depth Control",
+      "description": "Vision gauges the depth of the cut, ensuring it doesn’t go too deep or shallow.",
+      "example": "Watching the knife slice halfway through a loaf of bread for even cuts."
+    },
+    "touch_and_sound": {
+      "role": "Texture Feedback",
+      "description": "Touch assesses the texture, while sound provides clues about material consistency.",
+      "example": "Feeling the toughness of raw meat and hearing the slight tearing sound as it’s cut."
+    },
+    "vision, touch, and proprioception": {
+      "role": "Motion Coordination",
+      "description": "Vision guides the movement, touch provides grip feedback, and proprioception ensures smooth motion.",
+      "example": "Slicing a cucumber in a straight line while maintaining a consistent speed."
+    }
+  }
+}

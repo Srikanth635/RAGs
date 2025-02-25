@@ -1,0 +1,49 @@
+{
+  "task": "Pouring",
+  "requirements": {
+    "typical_objects": [
+      {
+        "object": "Liquids",
+        "examples": ["Water", "Milk", "Juice", "Oil", "Soup"],
+        "properties": ["Viscous or free-flowing", "Measured in volume"]
+      },
+      {
+        "object": "Granular Substances",
+        "examples": ["Sugar", "Salt", "Flour", "Rice", "Grains"],
+        "properties": ["Small particles", "Flow when tilted"]
+      },
+      {
+        "object": "Viscous Materials",
+        "examples": ["Honey", "Syrup", "Molasses", "Glue"],
+        "properties": ["High viscosity", "Thicker flow"]
+      }
+    ],
+    "typical_tools": [
+      {
+        "tool": "Pouring Containers",
+        "types": ["Jug", "Bottle", "Pitcher", "Teapot", "Ladle"],
+        "usage": "For holding and pouring liquids or substances."
+      },
+      {
+        "tool": "Funnels",
+        "types": ["Wide-mouthed funnel", "Narrow-mouthed funnel"],
+        "usage": "For guiding liquids or granules into a smaller opening."
+      },
+      {
+        "tool": "Measuring Cups",
+        "types": ["Glass measuring cup", "Plastic measuring cup"],
+        "usage": "For measuring and pouring precise quantities."
+      },
+      {
+        "tool": "Spouted Containers",
+        "types": ["Oil dispenser", "Syrup bottle"],
+        "usage": "For controlled and targeted pouring."
+      },
+      {
+        "tool": "Scoops",
+        "types": ["Plastic scoop", "Metal scoop"],
+        "usage": "For granular substances that need pouring."
+      }
+    ]
+  }
+}

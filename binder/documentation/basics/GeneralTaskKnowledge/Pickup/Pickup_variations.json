@@ -1,0 +1,75 @@
+{
+  "task": "Picking_Up",
+  "variations": [
+    {
+      "type": "Technical",
+      "variation": "Manual Pickup",
+      "description": "Picking up objects by hand.",
+      "examples": ["Picking up toys from the floor", "Grabbing a book from a shelf"],
+      "context": "Common in most household settings without assistance."
+    },
+    {
+      "type": "Technical",
+      "variation": "Tool-Assisted Pickup",
+      "description": "Using tools to assist in picking up objects.",
+      "examples": ["Using tongs to pick up small items", "Using a gripper for hard-to-reach objects"],
+      "context": "Used for objects that are hot, heavy, or difficult to grasp."
+    },
+    {
+      "type": "Technical",
+      "variation": "Automated Pickup",
+      "description": "Using robotic systems to pick up objects.",
+      "examples": ["Robotic vacuum picking up debris", "Smart robot arm organizing objects"],
+      "context": "Employed in smart homes or advanced automation."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Organizational Pickup",
+      "description": "Picking up objects to adhere to cultural norms of tidiness.",
+      "examples": ["Cleaning up toys after playtime", "Picking up clothes to avoid clutter"],
+      "context": "Varies based on cultural expectations of cleanliness and order."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Ceremonial Pickup",
+      "description": "Picking up objects as part of a ritual or tradition.",
+      "examples": ["Picking up ceremonial items during a prayer", "Handling artifacts during cultural events"],
+      "context": "Linked to specific cultural or religious practices."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Outdoor Pickup",
+      "description": "Picking up objects in outdoor settings.",
+      "examples": ["Picking up garden tools", "Collecting trash during yard cleaning"],
+      "context": "Common in gardening, picnics, or outdoor cleanup tasks."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Cold-Environment Pickup",
+      "description": "Handling objects in cold conditions.",
+      "examples": ["Picking up frozen items from a freezer", "Handling tools in a cold garage"],
+      "context": "Requires consideration of grip and material brittleness."
+    },
+    {
+      "type": "Environmental",
+      "variation": "High-Humidity Pickup",
+      "description": "Picking up objects in humid conditions where surfaces may be slippery.",
+      "examples": ["Handling wet towels in the bathroom", "Picking up wet items from a laundry room"],
+      "context": "Requires careful handling to avoid slips."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Heavy-Item Pickup",
+      "description": "Lifting large or heavy objects.",
+      "examples": ["Moving furniture", "Picking up a large box"],
+      "context": "Requires strength or assistance to avoid strain or injury."
+    },
+    {
+      "type": "Environmental",
+      "variation": "High-Dust Pickup",
+      "description": "Picking up objects in a dusty or debris-filled environment.",
+      "examples": ["Cleaning up a dusty storage area", "Picking up items in a workshop"],
+      "context": "May require gloves or tools to avoid contact with dirt."
+    }
+  ]
+}

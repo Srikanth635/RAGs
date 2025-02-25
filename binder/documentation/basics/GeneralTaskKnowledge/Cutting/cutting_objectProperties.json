@@ -1,0 +1,95 @@
+{
+  "task": "Cutting",
+  "household_objects_physical_properties": [
+    {
+      "object": "Knife",
+      "properties": {
+        "material": "Metal (stainless steel, carbon steel)",
+        "shape": "Blade with a sharp edge, pointed tip",
+        "size": "Varies (6-12 inches typical)",
+        "weight": "Light to moderate",
+        "special_features": ["Ergonomic handle", "Non-slip grip"]
+      }
+    },
+    {
+      "object": "Scissors",
+      "properties": {
+        "material": "Metal blades with plastic or metal handles",
+        "shape": "Two blades joined at a pivot point",
+        "size": "Varies (4-8 inches typical)",
+        "weight": "Light",
+        "special_features": ["Serrated blades for grip", "Comfort handles"]
+      }
+    },
+    {
+      "object": "Cutting Board",
+      "properties": {
+        "material": "Wood, plastic, or bamboo",
+        "shape": "Flat surface, rectangular or circular",
+        "size": "Varies (12x18 inches typical)",
+        "weight": "Light to moderate",
+        "special_features": ["Non-slip feet", "Grooves to catch liquids"]
+      }
+    },
+    {
+      "object": "Mandoline Slicer",
+      "properties": {
+        "material": "Metal frame with adjustable blade (stainless steel or ceramic)",
+        "shape": "Flat surface with blade slot",
+        "size": "Compact (10-14 inches typical)",
+        "weight": "Light",
+        "special_features": ["Adjustable thickness", "Safety guard"]
+      }
+    },
+    {
+      "object": "Chopper",
+      "properties": {
+        "material": "Metal blade with plastic or wooden handle",
+        "shape": "Flat blade or cylindrical with sharp edges",
+        "size": "Varies (small handheld to larger tabletop models)",
+        "weight": "Moderate to heavy",
+        "special_features": ["Lever mechanism", "Easy-grip handle"]
+      }
+    },
+    {
+      "object": "Pizza Cutter",
+      "properties": {
+        "material": "Metal blade with plastic or wooden handle",
+        "shape": "Circular blade mounted on a handle",
+        "size": "6-10 inches typical",
+        "weight": "Light",
+        "special_features": ["Rotating blade", "Ergonomic handle"]
+      }
+    },
+    {
+      "object": "Peeler",
+      "properties": {
+        "material": "Metal blade with plastic or metal handle",
+        "shape": "Y-shaped or straight blade",
+        "size": "6-8 inches typical",
+        "weight": "Light",
+        "special_features": ["Swivel blade", "Grip handle"]
+      }
+    },
+    {
+      "object": "Utility Blade",
+      "properties": {
+        "material": "Metal blade with plastic or metal casing",
+        "shape": "Rectangular blade, retractable design",
+        "size": "4-6 inches typical",
+        "weight": "Light",
+        "special_features": ["Retractable blade", "Replaceable blade"]
+      }
+    },
+    {
+      "object": "Grater",
+      "properties": {
+        "material": "Metal (stainless steel)",
+        "shape": "Flat or box design with multiple holes",
+        "size": "Varies (6-12 inches typical)",
+        "weight": "Light to moderate",
+        "special_features": ["Non-slip base", "Multiple grating surfaces"]
+      }
+    }
+  ]
+}

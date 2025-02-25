@@ -1,0 +1,83 @@
+{
+  "task": "Cutting",
+  "semantic_roles": {
+    "core_roles": [
+      {
+        "role": "Agent",
+        "description": "The entity performing the cutting action.",
+        "example": "The cook cuts the onion.",
+        "frame_element": "Cutter"
+      },
+      {
+        "role": "Theme",
+        "description": "The object being cut.",
+        "example": "The cook cuts the onion.",
+        "frame_element": "Item"
+      },
+      {
+        "role": "Instrument",
+        "description": "The tool used to perform the cutting.",
+        "example": "The cook cuts the onion with a knife.",
+        "frame_element": "Instrument"
+      }
+    ],
+    "peripheral_roles": [
+      {
+        "role": "Source",
+        "description": "The initial location or configuration of the object before cutting.",
+        "example": "The cook cuts the onion from the basket.",
+        "frame_element": "Source"
+      },
+      {
+        "role": "Goal",
+        "description": "The end state or result of the cutting action.",
+        "example": "The onion is cut into slices.",
+        "frame_element": "Goal"
+      },
+      {
+        "role": "Manner",
+        "description": "How the cutting is performed.",
+        "example": "The cook cuts the onion carefully.",
+        "frame_element": "Manner"
+      },
+      {
+        "role": "Place",
+        "description": "The location where the cutting occurs.",
+        "example": "The cook cuts the onion on the cutting board.",
+        "frame_element": "Place"
+      },
+      {
+        "role": "Time",
+        "description": "When the cutting occurs.",
+        "example": "The cook cuts the onion in the morning.",
+        "frame_element": "Time"
+      },
+      {
+        "role": "Extent",
+        "description": "The extent or degree of the cutting action.",
+        "example": "The onion is cut halfway through.",
+        "frame_element": "Extent"
+      }
+    ],
+    "additional_roles": [
+      {
+        "role": "Cause",
+        "description": "The reason or motivation for the cutting action.",
+        "example": "The cook cuts the onion to prepare a salad.",
+        "frame_element": "Cause"
+      },
+      {
+        "role": "Result",
+        "description": "The outcome or product of the cutting action.",
+        "example": "The cook cuts the onion into fine slices.",
+        "frame_element": "Result"
+      },
+      {
+        "role": "Co-Agent",
+        "description": "A secondary entity assisting in the cutting action.",
+        "example": "The chef and the assistant cut the vegetables together.",
+        "frame_element": "Co-Agent"
+      }
+    ]
+  }
+}

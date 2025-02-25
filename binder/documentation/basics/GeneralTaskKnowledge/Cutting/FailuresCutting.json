@@ -1,0 +1,55 @@
+{
+  "task": "Cutting",
+  "common_failures": [
+    {
+      "failure": "Object slips during cutting",
+      "cause": "Object not properly stabilized or surface is slippery",
+      "resolution": "Use a non-slip cutting board or stabilize the object with a fork or claw grip."
+    },
+    {
+      "failure": "Uneven cuts",
+      "cause": "Inconsistent pressure or improper technique",
+      "resolution": "Apply steady pressure and use a guided motion or a cutting tool with adjustable guides."
+    },
+    {
+      "failure": "Cutting tool becomes dull",
+      "cause": "Tool not maintained or used improperly",
+      "resolution": "Sharpen the tool regularly and avoid cutting hard, non-intended materials."
+    },
+    {
+      "failure": "Injury to hand or fingers",
+      "cause": "Improper grip or lack of attention",
+      "resolution": "Use proper cutting techniques, such as the claw grip, and keep fingers clear of the blade."
+    },
+    {
+      "failure": "Tool breaks during use",
+      "cause": "Using the wrong tool for the object or applying excessive force",
+      "resolution": "Select an appropriate tool for the material and ensure the tool is in good condition before use."
+    },
+    {
+      "failure": "Object is not cut fully",
+      "cause": "Insufficient force applied or wrong cutting angle",
+      "resolution": "Adjust the cutting angle and apply consistent force."
+    },
+    {
+      "failure": "Damage to the surface below",
+      "cause": "Cutting through the object onto the surface",
+      "resolution": "Use a cutting board or protective layer beneath the object."
+    },
+    {
+      "failure": "Material frays or splinters",
+      "cause": "Inappropriate cutting tool or technique",
+      "resolution": "Use a sharp tool suitable for the material and cut in a single, smooth motion."
+    },
+    {
+      "failure": "Cuts are not to the desired size or shape",
+      "cause": "Lack of pre-planning or measurement",
+      "resolution": "Measure and mark the object before cutting, or use a template for guidance."
+    },
+    {
+      "failure": "Difficulty in cutting through tough materials",
+      "cause": "Inadequate tool or insufficient force",
+      "resolution": "Use a heavier-duty cutting tool or pre-score the material to make cutting easier."
+    }
+  ]
+}

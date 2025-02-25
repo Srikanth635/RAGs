@@ -1,0 +1,47 @@
+{
+  "task": "Grasping a Bottle from the Refrigerator",
+  "key_actions": [
+    {
+      "action": "Open Refrigerator",
+      "description": "Open the refrigerator door to access the bottle."
+    },
+    {
+      "action": "Locate the Bottle",
+      "description": "Visually scan the contents of the refrigerator to find the bottle."
+    },
+    {
+      "action": "Position Your Hand",
+      "description": "Move your hand to the bottle’s location, preparing to grasp it."
+    },
+    {
+      "action": "Grip the Bottle",
+      "description": "Securely grasp the bottle with your fingers, using your palm to support it."
+    },
+    {
+      "action": "Lift the Bottle",
+      "description": "Apply upward force to lift the bottle from its position in the refrigerator."
+    },
+    {
+      "action": "Close the Refrigerator Door",
+      "description": "After removing the bottle, close the refrigerator door to ensure it remains sealed."
+    }
+  ],
+  "sensory_inputs": [
+    {
+      "input": "Vision",
+      "description": "Used to visually locate the bottle in the refrigerator and ensure a proper grip."
+    },
+    {
+      "input": "Touch",
+      "description": "Used to feel the bottle's shape, temperature, and grip for secure handling."
+    },
+    {
+      "input": "Proprioception",
+      "description": "Provides feedback from the hands and arms to adjust grip strength and lifting motion."
+    },
+    {
+      "input": "Temperature Sensation",
+      "description": "Senses the cool temperature of the bottle to adjust handling, especially when it has been in the refrigerator."
+    }
+  ]
+}

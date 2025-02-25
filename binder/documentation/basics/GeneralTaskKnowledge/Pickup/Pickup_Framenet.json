@@ -1,0 +1,77 @@
+{
+  "task": "Picking_Up",
+  "semantic_roles": {
+    "core_roles": [
+      {
+        "role": "Agent",
+        "description": "The entity performing the pickup action.",
+        "example": "The robot picks up the box.",
+        "frame_element": "Picker"
+      },
+      {
+        "role": "Theme",
+        "description": "The object being picked up.",
+        "example": "The robot picks up the box.",
+        "frame_element": "Object"
+      },
+      {
+        "role": "Instrument",
+        "description": "The tool or device used to assist in picking up the object.",
+        "example": "The robot picks up the box using a gripper.",
+        "frame_element": "Instrument"
+      }
+    ],
+    "peripheral_roles": [
+      {
+        "role": "Source",
+        "description": "The location where the object is picked up from.",
+        "example": "The robot picks up the box from the table.",
+        "frame_element": "Source"
+      },
+      {
+        "role": "Goal",
+        "description": "The intended location or purpose after the object is picked up.",
+        "example": "The robot picks up the box to place it on the shelf.",
+        "frame_element": "Goal"
+      },
+      {
+        "role": "Manner",
+        "description": "The way in which the pickup action is performed.",
+        "example": "The robot carefully picks up the fragile vase.",
+        "frame_element": "Manner"
+      },
+      {
+        "role": "Time",
+        "description": "The time when the pickup action occurs.",
+        "example": "The robot picks up the box in the morning.",
+        "frame_element": "Time"
+      },
+      {
+        "role": "Place",
+        "description": "The location where the pickup action occurs.",
+        "example": "The robot picks up the box in the warehouse.",
+        "frame_element": "Place"
+      }
+    ],
+    "additional_roles": [
+      {
+        "role": "Cause",
+        "description": "The reason or motivation for the pickup action.",
+        "example": "The robot picks up the box to fulfill an order.",
+        "frame_element": "Cause"
+      },
+      {
+        "role": "Extent",
+        "description": "The extent or degree of the pickup action.",
+        "example": "The robot picks up half of the stack of plates.",
+        "frame_element": "Extent"
+      },
+      {
+        "role": "Co-Agent",
+        "description": "A secondary entity assisting in the pickup action.",
+        "example": "The worker and the robot pick up the heavy box together.",
+        "frame_element": "Co-Agent"
+      }
+    ]
+  }
+}

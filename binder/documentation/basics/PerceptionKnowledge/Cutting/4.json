@@ -1,0 +1,53 @@
+{
+  "task": "Cutting",
+  "ideal_force_range": [
+    {
+      "object_type": "Soft Foods",
+      "examples": ["Bread", "Tomatoes", "Cheese"],
+      "force_range": "5-10 N",
+      "description": "Minimal force required to slice or cut without deforming the object."
+    },
+    {
+      "object_type": "Firm Vegetables",
+      "examples": ["Carrots", "Potatoes", "Cucumbers"],
+      "force_range": "10-20 N",
+      "description": "Moderate force needed to cut through firm but not hard textures."
+    },
+    {
+      "object_type": "Hard Foods",
+      "examples": ["Raw Meat", "Frozen Foods", "Squash"],
+      "force_range": "20-30 N",
+      "description": "Significant force required to penetrate and slice through tough materials."
+    },
+    {
+      "object_type": "Bones or Hard Materials",
+      "examples": ["Chicken Bones", "Frozen Meat with Bones"],
+      "force_range": "30-50 N",
+      "description": "High force necessary for cutting through dense and hard structures."
+    },
+    {
+      "object_type": "Paper or Cardboard",
+      "examples": ["A4 Paper", "Cardboard Sheets"],
+      "force_range": "5-15 N",
+      "description": "Light to moderate force needed depending on thickness and tool sharpness."
+    },
+    {
+      "object_type": "Fabric or Textiles",
+      "examples": ["Cloth", "Denim", "Leather"],
+      "force_range": "10-25 N",
+      "description": "Moderate force required to cut flexible materials with clean edges."
+    },
+    {
+      "object_type": "Plastic Materials",
+      "examples": ["Plastic Wrap", "Plastic Sheets"],
+      "force_range": "10-20 N",
+      "description": "Moderate force sufficient for slicing or cutting thin, flexible plastic."
+    },
+    {
+      "object_type": "Soft Wood or Foam",
+      "examples": ["Balsa Wood", "Foam Blocks"],
+      "force_range": "15-30 N",
+      "description": "Higher force required for clean and precise cuts without splintering."
+    }
+  ]
+}

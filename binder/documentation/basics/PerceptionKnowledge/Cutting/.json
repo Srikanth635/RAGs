@@ -1,0 +1,55 @@
+{
+  "task": "Cutting",
+  "visual_cues": [
+    {
+      "cue": "Shape",
+      "description": "Identifies the object's overall form to determine how it should be cut.",
+      "examples": ["Round shape of an onion", "Rectangular loaf of bread"]
+    },
+    {
+      "cue": "Size",
+      "description": "Determines the dimensions of the object to select an appropriate cutting tool and technique.",
+      "examples": ["Large watermelon", "Small garlic clove"]
+    },
+    {
+      "cue": "Texture",
+      "description": "Helps identify whether the object is hard, soft, or slippery, influencing cutting pressure and tool choice.",
+      "examples": ["Smooth texture of an apple", "Rough texture of bread crust"]
+    },
+    {
+      "cue": "Color",
+      "description": "Distinguishes objects visually and identifies areas to be cut.",
+      "examples": ["Green stalk of celery", "Brown crust of a cake"]
+    },
+    {
+      "cue": "Surface Markings",
+      "description": "Visible patterns or markings that indicate where cuts should be made.",
+      "examples": ["Pre-marked portions on a cake", "Grain direction in meat"]
+    },
+    {
+      "cue": "Edge or Boundary",
+      "description": "The visible edge of the object to ensure precise cutting along boundaries.",
+      "examples": ["Edge of a pizza", "Boundary between fat and meat"]
+    },
+    {
+      "cue": "Opacity",
+      "description": "Transparency or translucency helps assess the object's interior properties.",
+      "examples": ["Opaque cheese block", "Transparent gelatin"]
+    },
+    {
+      "cue": "Volume or Thickness",
+      "description": "The perceived bulk of the object helps adjust cutting depth and force.",
+      "examples": ["Thin carrot slice", "Thick loaf of bread"]
+    },
+    {
+      "cue": "Position",
+      "description": "The location of the object relative to the cutting tool and surface.",
+      "examples": ["Object centered on a cutting board", "Edge of a vegetable hanging off the board"]
+    },
+    {
+      "cue": "Contrast with Background",
+      "description": "Visual distinction between the object and its surroundings to enhance visibility.",
+      "examples": ["Bright red tomato on a white cutting board", "Dark chocolate on a light counter"]
+    }
+  ]
+}

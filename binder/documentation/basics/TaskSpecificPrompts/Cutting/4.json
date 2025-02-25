@@ -1,0 +1,43 @@
+{
+  "task": "Dicing Potato into Small Pieces",
+  "physical_requirements": [
+    {
+      "requirement": "Stable Surface",
+      "description": "A flat, stable surface such as a cutting board is required to secure the potato and ensure precision."
+    },
+    {
+      "requirement": "Sharp Knife",
+      "description": "A sharp knife or chef’s knife is essential for cutting through the potato without excessive force."
+    },
+    {
+      "requirement": "Proper Grip",
+      "description": "A firm grip on both the knife and the potato is necessary for control and to prevent slips or accidents."
+    },
+    {
+      "requirement": "Cutting Motion",
+      "description": "A consistent, downward cutting motion with controlled force is required to achieve even dice."
+    },
+    {
+      "requirement": "Cutting Technique",
+      "description": "Using a rocking motion or straight cuts to ensure even pieces of the diced potato."
+    }
+  ],
+  "sensory_requirements": [
+    {
+      "input": "Vision",
+      "description": "Used to monitor the alignment of the knife, the size of the pieces, and to check the potato's position for even cuts."
+    },
+    {
+      "input": "Touch",
+      "description": "Used to feel the texture of the potato's skin and flesh, ensuring the knife cuts smoothly and evenly through the material."
+    },
+    {
+      "input": "Proprioception",
+      "description": "Feedback from the hands and arms to gauge the pressure applied during the cut and ensure accuracy in the knife's motion."
+    },
+    {
+      "input": "Sound",
+      "description": "The sound of the knife cutting through the potato helps to assess whether the knife is cutting smoothly or encountering resistance."
+    }
+  ]
+}

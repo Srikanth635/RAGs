@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "strategies_for_sensory_noise_or_uncertainty": [
+    {
+      "strategy": "Improve Lighting",
+      "description": "Ensure the pouring area is well-lit to reduce visual noise and enhance visibility.",
+      "example": "Install a task lamp to illuminate the pouring surface."
+    },
+    {
+      "strategy": "Use Transparent Containers",
+      "description": "Opt for clear containers to visually track the liquid level and flow.",
+      "example": "Use a transparent measuring cup for accurate liquid measurements."
+    },
+    {
+      "strategy": "Employ Volume Markings",
+      "description": "Use containers with visible measurement markings to reduce uncertainty.",
+      "example": "Pour milk into a measuring jug with graduated markings."
+    },
+    {
+      "strategy": "Add Physical Stabilization",
+      "description": "Use non-slip mats or clamps to stabilize containers during pouring.",
+      "example": "Place a non-slip mat under the target container to prevent movement."
+    },
+    {
+      "strategy": "Monitor Sound Feedback",
+      "description": "Listen to the sound of the liquid filling the target to gauge progress.",
+      "example": "Stop pouring when the sound of liquid filling diminishes."
+    },
+    {
+      "strategy": "Adjust Pouring Angle Gradually",
+      "description": "Tilt the container slowly to maintain control and avoid splashing.",
+      "example": "Pour oil from a bottle by tilting it slightly at first, then increasing the angle."
+    },
+    {
+      "strategy": "Use Funnels or Guides",
+      "description": "Employ a funnel or similar tool to guide the liquid into the target.",
+      "example": "Place a funnel in a narrow-neck bottle to ensure precision."
+    },
+    {
+      "strategy": "Pre-Measure Liquids",
+      "description": "Measure the required liquid amount beforehand to minimize over-pouring.",
+      "example": "Pre-fill a smaller container to pour into a tight space."
+    },
+    {
+      "strategy": "Calibrate Grip and Force",
+      "description": "Adjust grip strength and force based on container weight and liquid viscosity.",
+      "example": "Hold a heavy jug with both hands to control the tilt angle."
+    },
+    {
+      "strategy": "Pause and Reassess",
+      "description": "Pause pouring to check the liquid level and adjust alignment if needed.",
+      "example": "Stop pouring halfway to verify the target container is not overfilled."
+    }
+  ]
+}

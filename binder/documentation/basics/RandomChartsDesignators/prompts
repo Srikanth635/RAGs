@@ -1,0 +1,47 @@
+Describe the key action roles for performing the task of pickup (e.g., agent, object, tool, location, goal) in detail. respond in json and no additional explanation is needed
+What are the typical objects and tools required to perform the task of pickup? respond in json and no additional explanation is needed
+What are the physical and cognitive steps required to perform the task of pickup? respond in json and no additional explanation is needed
+Provide semantic role mappings for the task of pickup, aligning with FrameNet or similar frameworks. respond in json and no additional explanation is needed
+List common failures or errors during the task of pickup and their resolutions. respond in json and no additional explanation is needed
+
+Describe the physical properties of common household objects used in pickup tasks. respond in json and no additional explanation is needed
+What are the typical locations or settings where pickup task is performed household? respond in json and no additional explanation is needed
+How do environmental factors (e.g., temperature, light) affect the execution of pickup task in household? respond in json and no additional explanation is needed
+List variations of the task pickup task based on technical , cultural or environmental differences in household. respond in json and no additional explanation is needed
+Describe how the pickup task changes when performed manually versus with robotic assistance in household. respond in json and no additional explanation is needed
+
+What visual cues are necessary to identify objects for the household pickup tasks? respond in json and no additional explanation is needed
+Describe the process of detecting the state of an object (e.g., filled, empty) using vision for household pickup tasks. respond in json and no additional explanation is needed
+What are common visual feedback mechanisms during the household pickup tasks? respond in json and no additional explanation is needed
+What tactile feedback is essential during the household pickup tasks? respond in json and no additional explanation is needed
+Describe the ideal force range for handling objects in household pickup tasks. respond in json and no additional explanation is needed
+How do multiple sensory inputs (e.g., vision, touch) work together to perform household pickup tasks? respond in json and no additional explanation is needed
+List strategies for dealing with sensory noise or uncertainty during household pickup tasks. respond in json and no additional explanation is needed
+
+What are common errors or failures encountered during household pickup tasks, and how can they be detected? respond in json and no additional explanation is needed
+Describe the thresholds or metrics for detecting anomalies during household pickup tasks. respond in json and no additional explanation is needed
+What are effective strategies for recovering from a failed state of household pickup tasks? respond in json and no additional explanation is needed
+How can alternate strategies be dynamically selected during a failed attempt at household pickup tasks? respond in json and no additional explanation is needed
+
+
+Describe the steps and action roles involved in cutting an apple with a sharp knife. respond in json and no additional explanation is needed
+List the required tools and conditions for slicing objects like cake into medium-sized pieces. respond in json and no additional explanation is needed
+What are the key actions and sensory inputs required for cutting chicken with machette. respond in json and no additional explanation is needed
+What are the physical and sensory requirements for dicing potato into small pieces. respond in json and no additional explanation is needed
+
+Describe the steps and action roles involved in pouring a liquid from bottle to cup. respond in json and no additional explanation is needed
+List the required tools and conditions for pouring whisky into glasses. respond in json and no additional explanation is needed
+What are the key actions and sensory inputs required for pouring honey onto the salad. respond in json and no additional explanation is needed
+What are the physical and sensory requirements for pouring milk into bowl. respond in json and no additional explanation is needed
+
+Describe the steps and action roles involved in picking up a cup from the table. respond in json and no additional explanation is needed
+List the required tools and conditions for grabbing a mug from the countertop. respond in json and no additional explanation is needed
+What are the key actions and sensory inputs required for grasping bottle from the refreigerator. respond in json and no additional explanation is needed
+What are the physical and sensory requirements for grasping an object like wine glass from the shelf. respond in json and no additional explanation is needed
+
+
+Generate a CRAM plan action designator for a household cutting tasks with roles, motion phases, and sensory feedback included. respond in json and no additional explanation is needed
+Describe how motion phases (e.g., reaching, grasping) are represented in CRAM plans for cutting tasks. respond in json and no additional explanation is needed
+Generate an action designator for household cutting action that integrates real-time feedback mechanisms. respond in json and no additional explanation is needed
+How can CRAM plans be adjusted dynamically for task failures or sensory feedback during household cutting actions? respond in json and no additional explanation is needed
+Generate CRAM plan with action designator by integrating kinematics,dynamics,motionphases,forces,physical properties for a cutting task like cutting an apple.

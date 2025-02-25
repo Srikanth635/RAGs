@@ -1,0 +1,49 @@
+{
+  "task": "Cutting",
+  "object_state_detection": {
+    "steps": [
+      {
+        "step": "Capture Image",
+        "description": "Acquire an image of the object using a camera or vision sensor.",
+        "inputs": ["Lighting conditions", "Camera position"],
+        "output": "Raw image of the object"
+      },
+      {
+        "step": "Preprocess Image",
+        "description": "Enhance the image for better analysis by adjusting brightness, contrast, and removing noise.",
+        "inputs": ["Raw image"],
+        "output": "Preprocessed image ready for analysis"
+      },
+      {
+        "step": "Segment Object",
+        "description": "Identify the object and separate it from the background using segmentation techniques.",
+        "inputs": ["Preprocessed image"],
+        "output": "Segmented object region"
+      },
+      {
+        "step": "Analyze Texture and Color",
+        "description": "Examine the texture and color patterns of the object to determine its state.",
+        "inputs": ["Segmented object region"],
+        "output": "Information on surface characteristics"
+      },
+      {
+        "step": "Estimate Volume or Contents",
+        "description": "Use shape and size analysis to infer if the object is filled, partially filled, or empty.",
+        "inputs": ["3D shape reconstruction", "Volume estimation algorithms"],
+        "output": "State of the object (e.g., filled, empty)"
+      },
+      {
+        "step": "Compare with Reference",
+        "description": "Compare detected state with known reference states to validate the object's condition.",
+        "inputs": ["Detected state", "Reference dataset"],
+        "output": "Validated object state"
+      },
+      {
+        "step": "Highlight Cutting Area",
+        "description": "Determine appropriate areas for cutting based on the detected state and task requirements.",
+        "inputs": ["Validated object state", "Task parameters"],
+        "output": "Cutting area marked"
+      }
+    ]
+  }
+}

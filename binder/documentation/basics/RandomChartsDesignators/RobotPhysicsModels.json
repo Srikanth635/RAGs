@@ -1,0 +1,173 @@
+{
+    "PhysicsAttributesModels": {
+        "NewtonianMechanicsModels": [
+            {
+                "ModelType": "Rigid Body Dynamics",
+                "Description": "Models robot joints, linkages, and tools as rigid entities.",
+                "ToolsUsed": [
+                    "PyBullet",
+                    "Gazebo",
+                    "MuJoCo"
+                ]
+            },
+            {
+                "ModelType": "Kinematic Chains",
+                "Description": "Represents sequence of joints and links to adhere to physics-based constraints.",
+                "ToolsUsed": [
+                    "Denavit-Hartenberg Parameters"
+                ]
+            }
+        ],
+        "ForceAndTorqueControlModels": [
+            {
+                "ModelType": "Impedance Control",
+                "Description": "Modulates the relationship between position and force for adapting compliance and stiffness."
+            },
+            {
+                "ModelType": "Admittance Control",
+                "Description": "Force measurements dictate position adjustments, used where environment affects robot movement."
+            },
+            {
+                "ModelType": "Inverse Dynamics Models",
+                "Description": "Computes required joint torques to achieve desired motion.",
+                "ToolsUsed": [
+                    "Recursive Newton-Euler Algorithm"
+                ]
+            }
+        ],
+        "FrictionAndContactModels": [
+            {
+                "ModelType": "Coulomb and Viscous Friction Models",
+                "Description": "Models friction between the tool and material during cutting."
+            },
+            {
+                "ModelType": "Contact Dynamics Models",
+                "Description": "Models contact surface and force distribution.",
+                "ToolsUsed": [
+                    "Hertzian Contact Theory"
+                ]
+            }
+        ],
+        "MaterialDeformationAndCuttingModels": [
+            {
+                "ModelType": "Finite Element Analysis (FEA)",
+                "Description": "Predicts material deformation during cutting."
+            },
+            {
+                "ModelType": "Brittleness vs. Ductility Models",
+                "Description": "Classifies materials as brittle or ductile to adjust cutting technique."
+            }
+        ],
+        "TrajectoryOptimizationAndPathPlanningModels": [
+            {
+                "ModelType": "Optimal Control Models",
+                "Description": "Finds trajectories that minimize physical properties like time or energy.",
+                "ToolsUsed": [
+                    "Direct Collocation",
+                    "Sequential Quadratic Programming (SQP)"
+                ]
+            },
+            {
+                "ModelType": "Dynamic Movement Primitives (DMP)",
+                "Description": "Represents complex movements dynamically to adapt to variations during cutting."
+            }
+        ],
+        "SimulationBasedModelsForPhysicalInteraction": [
+            {
+                "ModelType": "Physics Engines",
+                "Description": "Simulate real-world interactions involving rigid bodies, forces, and torques.",
+                "ToolsUsed": [
+                    "Bullet",
+                    "MuJoCo",
+                    "Gazebo",
+                    "Open Dynamics Engine (ODE)"
+                ]
+            },
+            {
+                "ModelType": "Hybrid Dynamics Simulation",
+                "Description": "Combines rigid-body and deformable object dynamics for cutting tasks."
+            }
+        ],
+        "LearningBasedPhysicsModels": [
+            {
+                "ModelType": "Physics-Informed Neural Networks (PINNs)",
+                "Description": "Predicts force dynamics and deformation using neural networks trained with physics laws."
+            },
+            {
+                "ModelType": "Reinforcement Learning with Physical Constraints",
+                "Description": "Uses reward functions to incorporate physical aspects like energy and force."
+            }
+        ],
+        "SystemIdentificationModels": [
+            {
+                "ModelType": "Parameter Estimation Models",
+                "Description": "Estimates physical parameters like stiffness, mass, and friction.",
+                "ToolsUsed": [
+                    "Kalman Filters",
+                    "Least Squares Estimation"
+                ]
+            },
+            {
+                "ModelType": "Gaussian Process Regression (GPR)",
+                "Description": "Models uncertainties in material properties to adjust robotic behavior."
+            }
+        ],
+        "HybridMotionAndForceControlModels": [
+            {
+                "ModelType": "Hybrid Position/Force Control",
+                "Description": "Controls both tool movement and the applied force for adaptive cutting."
+            }
+        ],
+        "ComplianceAndSafetyModels": [
+            {
+                "ModelType": "Virtual Fixtures",
+                "Description": "Creates virtual boundaries to guide and restrict robot movements."
+            },
+            {
+                "ModelType": "Energy-Based Stability Models",
+                "Description": "Ensures energy transfer between robot, tool, and object is stable during cutting."
+            }
+        ],
+        "DynamicGraspAndReleaseModels": [
+            {
+                "ModelType": "Grasp Stability Models",
+                "Description": "Ensures robot maintains stable grip during cutting.",
+                "ToolsUsed": [
+                    "Grasp Wrench Space (GWS)",
+                    "Friction Cone Analysis"
+                ]
+            },
+            {
+                "ModelType": "Slip Detection Models",
+                "Description": "Detects micro-slips to predict improper cutting due to resistance.",
+                "ToolsUsed": [
+                    "Machine Learning Models",
+                    "Tactile Sensors"
+                ]
+            }
+        ],
+        "SoftRoboticsModelsForCompliance": [
+            {
+                "ModelType": "Soft Actuator Models",
+                "Description": "Models soft actuators and grippers for compliant tool handling."
+            },
+            {
+                "ModelType": "Continuum Mechanics",
+                "Description": "Models deformation in flexible parts of robots for gentle cutting."
+            }
+        ],
+        "DataDrivenModelingApproaches": [
+            {
+                "ModelType": "Neural Networks for Force Prediction",
+                "Description": "Uses LSTM networks to predict force profile during cutting."
+            },
+            {
+                "ModelType": "Sensor Fusion Models",
+                "Description": "Combines data from multiple sensors to estimate material properties.",
+                "ToolsUsed": [
+                    "Bayesian Networks"
+                ]
+            }
+        ]
+    }
+}

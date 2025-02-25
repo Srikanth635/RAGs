@@ -1,0 +1,31 @@
+{
+  "task": "Grabbing a Mug from the Countertop",
+  "required_tools": [
+    {
+      "tool": "Mug",
+      "description": "The mug that needs to be picked up from the countertop."
+    },
+    {
+      "tool": "Countertop",
+      "description": "A stable surface on which the mug is placed, allowing for easy access."
+    }
+  ],
+  "required_conditions": [
+    {
+      "condition": "Stable Mug",
+      "description": "The mug should be placed upright on the countertop to allow for easy gripping."
+    },
+    {
+      "condition": "Clear Path",
+      "description": "There should be no obstructions around the mug, allowing for easy hand access."
+    },
+    {
+      "condition": "Proper Hand Position",
+      "description": "The hand should be in a comfortable position to reach and grip the mug handle securely."
+    },
+    {
+      "condition": "Stable Surface",
+      "description": "The countertop should be stable and flat to ensure the mug is steady and doesn’t tip over."
+    }
+  ]
+}

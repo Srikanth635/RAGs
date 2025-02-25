@@ -1,0 +1,31 @@
+# Cutting
+
+## Environmental Factors
+- **Temperature**: 
+  - Positive Effect: Optimal temperature maintains the material properties of objects and tools, ensuring precise cuts.
+  - Negative Effect: Extreme cold makes materials brittle and difficult to cut; heat may soften objects, reducing stability.
+  - Recommendation: Perform cutting tasks in a moderate temperature environment suitable for the material being cut.
+- **Light**: 
+  - Positive Effect: Adequate lighting improves visibility, allowing for precise and safe cutting.
+  - Negative Effect: Insufficient lighting increases the risk of errors or accidents.
+  - Recommendation: Ensure the cutting area is well-lit, using focused task lighting if necessary.
+- **Humidity**: 
+  - Positive Effect: Low humidity prevents moisture from affecting tools and materials.
+  - Negative Effect: High humidity may cause tools to rust and some materials (e.g., paper, wood) to warp, affecting cut quality.
+  - Recommendation: Store tools in a dry environment and wipe down materials before cutting if moisture is present.
+- **Surface Stability**: 
+  - Positive Effect: A stable surface ensures safe and controlled cutting.
+  - Negative Effect: Uneven or slippery surfaces lead to imprecise cuts and increase the risk of accidents.
+  - Recommendation: Use a stable, non-slip surface for cutting tasks, and secure cutting boards if necessary.
+- **Airflow**: 
+  - Positive Effect: Proper ventilation prevents accumulation of dust or debris during cutting tasks.
+  - Negative Effect: Strong airflow can displace lightweight materials or spread debris, disrupting the task.
+  - Recommendation: Ensure adequate ventilation without excessive airflow that could interfere with the task.
+- **Noise**: 
+  - Positive Effect: Quiet environments help with focus and precision during delicate cuts.
+  - Negative Effect: Loud noise may distract the user, leading to errors or unsafe handling of tools.
+  - Recommendation: Perform cutting tasks in a noise-controlled environment, especially for precision work.
+- **Dust and Debris**: 
+  - Positive Effect: A clean workspace ensures unobstructed cutting and safe tool handling.
+  - Negative Effect: Dust or debris on the surface can cause uneven cuts or damage to tools.
+  - Recommendation: Keep the cutting area clean and remove debris regularly during the task.

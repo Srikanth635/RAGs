@@ -1,0 +1,533 @@
+{
+  "action_designators": {
+    "Cutting": {
+      "action_core": "Cutting",
+      "action_roles": ["action_verb", "amount", "obj_to_be_cut", "unit", "utensil"],
+      "required_action_roles": ["obj_to_be_cut", "utensil", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type cut-object) (an object (type {obj_to_be_cut}){obj_to_be_cut_props})(count (unit {unit}){unit_props}(number {amount}){amount_props})(utensil (an object (type {utensil})))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Cutting",
+        "CoreElements": ["Agent", "Theme", "Instrument", "Goal", "Parts"],
+        "PeripheralElements": ["Manner", "Purpose", "Time", "Place", "Reason"]
+      }
+    },
+    "Adding": {
+      "action_core": "Adding",
+      "action_roles": ["action_verb", "ingredient", "target", "amount", "unit", "instrument"],
+      "required_action_roles": ["ingredient", "target", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type add-object) (an object (type {ingredient}){ingredient_props})(target (an object (type {target}){target_props}))(count (unit {unit}){unit_props}(number {amount}){amount_props})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Addition",
+        "CoreElements": ["Agent", "Theme", "Goal", "Source", "Recipient"],
+        "PeripheralElements": ["Instrument", "Manner", "Purpose", "Degree", "Time", "Place"]
+      }
+    },
+    "Mixing": {
+      "action_core": "Mixing",
+      "action_roles": ["action_verb", "mixture", "ingredients", "utensil", "location", "manner"],
+      "required_action_roles": ["mixture", "ingredients", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type mix-objects) (mixture (an object (type {mixture}){mixture_props}))(ingredients (list (type {ingredients}){ingredients_props}))(instrument (an object (type {utensil})))(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Mixing",
+        "CoreElements": ["Agent", "Mixture", "Ingredients"],
+        "PeripheralElements": ["Instrument", "Manner", "Time", "Place", "Reason", "Purpose"]
+      }
+    },
+    "Pouring": {
+      "action_core": "Pouring",
+      "action_roles": ["action_verb", "liquid", "source", "target", "amount", "unit", "instrument"],
+      "required_action_roles": ["liquid", "source", "target", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type pour-object) (liquid (an object (type {liquid}){liquid_props}))(source (an object (type {source}){source_props}))(target (an object (type {target}){target_props}))(count (unit {unit}){unit_props}(number {amount}){amount_props})(instrument (an object (type {instrument})))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Pouring",
+        "CoreElements": ["Agent", "Liquid", "Goal", "Source"],
+        "PeripheralElements": ["Instrument", "Manner", "Time", "Place", "Purpose", "Reason"]
+      }
+    },
+    "Opening": {
+      "action_core": "Opening",
+      "action_roles": ["action_verb", "object", "tool", "location"],
+      "required_action_roles": ["object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type open-object) (an object (type {object}){object_props})(tool (an object (type {tool}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Opening",
+        "CoreElements": ["Agent", "Entity", "Goal"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "Serving": {
+      "action_core": "Serving",
+      "action_roles": ["action_verb", "food", "recipient", "utensil", "location", "manner"],
+      "required_action_roles": ["food", "recipient", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type serve-object) (food (an object (type {food}){food_props}))(recipient (an object (type {recipient}){recipient_props}))(instrument (an object (type {utensil}))(location (an object (type {location})))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Bringing",
+        "CoreElements": ["Agent", "Theme", "Recipient", "Goal"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Stirring": {
+      "action_core": "Stirring",
+      "action_roles": ["action_verb", "mixture", "utensil", "speed", "location"],
+      "required_action_roles": ["mixture", "utensil", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type stir-object) (mixture (an object (type {mixture}){mixture_props}))(instrument (an object (type {utensil})))(speed {speed})(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Stirring",
+        "CoreElements": ["Agent", "Mixture", "Instrument"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Rolling": {
+      "action_core": "Rolling",
+      "action_roles": ["action_verb", "object", "surface", "direction", "utensil"],
+      "required_action_roles": ["object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type roll-object) (object (an object (type {object}){object_props}))(surface (an object (type {surface}){surface_props}))(direction {direction})(instrument (an object (type {utensil}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Rolling",
+        "CoreElements": ["Agent", "Theme", "Surface"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Taking": {
+      "action_core": "Taking",
+      "action_roles": ["action_verb", "object", "source", "recipient", "tool"],
+      "required_action_roles": ["object", "source", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type take-object) (object (an object (type {object}){object_props}))(source (an object (type {source}){source_props}))(recipient (an object (type {recipient})))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Taking",
+        "CoreElements": ["Agent", "Theme", "Source"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Waiting": {
+      "action_core": "Waiting",
+      "action_roles": ["action_verb", "activity", "goal", "duration", "reason"],
+      "required_action_roles": ["activity", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type wait-action) (activity (an object (type {activity}){activity_props}))(goal (an object (type {goal}){goal_props}))(duration {duration}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Waiting",
+        "CoreElements": ["Waiter", "Activity", "Goal"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Arranging": {
+      "action_core": "Arranging",
+      "action_roles": ["action_verb", "object", "arrangement", "location", "instrument"],
+      "required_action_roles": ["object", "arrangement", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type arrange-objects) (objects (list (type {object}){object_props}))(arrangement {arrangement})(location (an object (type {location})))(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Arranging",
+        "CoreElements": ["Agent", "Theme", "Configuration", "Location"],
+        "PeripheralElements": ["Manner", "Purpose", "Time", "Place", "Reason"]
+      }
+    },
+    "Baking": {
+      "action_core": "Baking",
+      "action_roles": ["action_verb", "ingredient", "result", "temperature", "duration", "oven"],
+      "required_action_roles": ["ingredient", "result", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type bake-object) (ingredient (list (type {ingredient}){ingredient_props}))(result (an object (type {result}){result_props}))(temperature {temperature})(duration {duration})(oven (an object (type {oven}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Cooking_creation",
+        "CoreElements": ["Cook", "Food", "Ingredient", "Result"],
+        "PeripheralElements": ["HeatSource", "Temperature", "Duration", "Place", "Time", "Manner"]
+      }
+    },
+    "Cooling": {
+      "action_core": "Cooling",
+      "action_roles": ["action_verb", "object", "target_temperature", "location", "instrument"],
+      "required_action_roles": ["object", "target_temperature", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type cool-object) (object (an object (type {object}){object_props}))(target_temperature {target_temperature})(location (an object (type {location})))(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Cooling",
+        "CoreElements": ["Agent", "Entity", "TargetTemperature"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "Evaluating": {
+      "action_core": "Evaluating",
+      "action_roles": ["action_verb", "object", "criteria", "result", "method"],
+      "required_action_roles": ["object", "criteria", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type evaluate-object) (object (an object (type {object}){object_props}))(criteria {criteria})(result {result})(method {method}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Evaluation",
+        "CoreElements": ["Evaluator", "Item", "Criterion", "Result"],
+        "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "Filling": {
+      "action_core": "Filling",
+      "action_roles": ["action_verb", "container", "content", "source", "amount", "unit"],
+      "required_action_roles": ["container", "content", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type fill-container) (container (an object (type {container}){container_props}))(content (an object (type {content}){content_props}))(source (an object (type {source}){source_props}))(count (unit {unit}){unit_props}(number {amount}){amount_props}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Filling",
+        "CoreElements": ["Agent", "Container", "Content", "Source"],
+        "PeripheralElements": ["Instrument", "Manner", "Purpose", "Time", "Place"]
+      }
+    },
+    "Flavouring": {
+      "action_core": "Flavouring",
+      "action_roles": ["action_verb", "ingredient", "food", "amount", "unit", "instrument"],
+      "required_action_roles": ["ingredient", "food", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type flavor-object) (ingredient (an object (type {ingredient}){ingredient_props}))(food (an object (type {food}){food_props}))(count (unit {unit}){unit_props}(number {amount}){amount_props})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Flavoring",
+        "CoreElements": ["Cook", "Ingredient", "Food", "Result"],
+        "PeripheralElements": ["Amount", "Time", "Place", "Purpose", "Manner"]
+      }
+    },
+    "Grabbing": {
+      "action_core": "Grabbing",
+      "action_roles": ["action_verb", "object", "source", "hand", "location"],
+      "required_action_roles": ["object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type grab-object) (object (an object (type {object}){object_props}))(source (an object (type {source}){source_props}))(hand {hand})(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Grabbing",
+        "CoreElements": ["Agent", "Object", "Source"],
+        "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "Lifting": {
+      "action_core": "Lifting",
+      "action_roles": ["action_verb", "object", "height", "location", "instrument"],
+      "required_action_roles": ["object", "height", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type lift-object) (object (an object (type {object}){object_props}))(height {height})(location (an object (type {location})))(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Raising",
+        "CoreElements": ["Agent", "Theme", "Goal"],
+        "PeripheralElements": ["Height", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "Neutralizing": {
+      "action_core": "Neutralizing",
+      "action_roles": ["action_verb", "substance", "target_state", "method", "location"],
+      "required_action_roles": ["substance", "target_state", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type neutralize-object) (substance (an object (type {substance}){substance_props}))(target_state {target_state})(method {method})(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Neutralization",
+        "CoreElements": ["Agent", "Substance", "TargetState"],
+        "PeripheralElements": ["Instrument", "Manner", "Purpose", "Time", "Place", "Reason"]
+      }
+    },
+    "Preheating": {
+      "action_core": "Preheating",
+      "action_roles": ["action_verb", "device", "target_temperature", "duration", "location"],
+      "required_action_roles": ["device", "target_temperature", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type preheat-device) (device (an object (type {device}){device_props}))(target_temperature {target_temperature})(duration {duration})(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Preheating",
+        "CoreElements": ["Agent", "Device", "TargetTemperature"],
+        "PeripheralElements": ["Time", "Place", "Purpose", "Manner", "Reason"]
+      }
+    },
+    "Shaking": {
+      "action_core": "Shaking",
+      "action_roles": ["action_verb", "object", "intensity", "duration", "location", "instrument"],
+      "required_action_roles": ["object", "intensity", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type shake-object) (object (an object (type {object}){object_props}))(intensity {intensity})(duration {duration})(location (an object (type {location})))(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Shaking",
+        "CoreElements": ["Agent", "Theme"],
+        "PeripheralElements": ["Manner", "Time", "Place", "Purpose", "Reason"]
+      }
+    },
+    "Spreading": {
+      "action_core": "Spreading",
+      "action_roles": ["action_verb", "substance", "target_surface", "amount", "instrument"],
+      "required_action_roles": ["substance", "target_surface", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type spread-object) (substance (an object (type {substance}){substance_props}))(target_surface (an object (type {target_surface}){target_surface_props}))(count (amount {amount}){amount_props})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Spreading",
+        "CoreElements": ["Agent", "Theme", "Goal"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Purpose", "Manner", "Reason"]
+      }
+    },
+    "Unscrewing": {
+      "action_core": "Unscrewing",
+      "action_roles": ["action_verb", "object", "tool", "location"],
+      "required_action_roles": ["object", "tool", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type unscrew-object) (object (an object (type {object}){object_props}))(tool (an object (type {tool}){tool_props}))(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Unscrewing",
+        "CoreElements": ["Agent", "Theme", "Instrument"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Starting": {
+      "action_core": "Starting",
+      "action_roles": ["action_verb", "activity", "initiator", "location", "time"],
+      "required_action_roles": ["activity", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type start-action) (activity (an object (type {activity}){activity_props}))(initiator (an object (type {initiator})))(location (an object (type {location})))(time {time}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Starting",
+        "CoreElements": ["Agent", "Activity", "Initiator"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Stopping": {
+      "action_core": "Stopping",
+      "action_roles": ["action_verb", "activity", "terminator", "location", "time"],
+      "required_action_roles": ["activity", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type stop-action) (activity (an object (type {activity}){activity_props}))(terminator (an object (type {terminator})))(location (an object (type {location})))(time {time}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Stopping",
+        "CoreElements": ["Agent", "Activity", "Terminator"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Storing": {
+      "action_core": "Storing",
+      "action_roles": ["action_verb", "object", "location", "container", "duration"],
+      "required_action_roles": ["object", "location", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type store-object) (object (an object (type {object}){object_props}))(location (an object (type {location}){location_props}))(container (an object (type {container}){container_props}))(duration {duration}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Storing",
+        "CoreElements": ["Agent", "Theme", "Location"],
+        "PeripheralElements": ["Time", "Place", "Purpose", "Manner", "Reason"]
+      }
+    },
+    "Turning": {
+      "action_core": "Turning",
+      "action_roles": ["action_verb", "object", "axis", "direction", "instrument"],
+      "required_action_roles": ["object", "axis", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type turn-object) (object (an object (type {object}){object_props}))(axis {axis})(direction {direction})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Turning",
+        "CoreElements": ["Agent", "Theme", "Axis"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "TurningOnElectricalDevice": {
+      "action_core": "TurningOnElectricalDevice",
+      "action_roles": ["action_verb", "device", "initiator", "location", "reason"],
+      "required_action_roles": ["device", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type turn-on-device) (device (an object (type {device}){device_props}))(initiator (an object (type {initiator})))(location (an object (type {location})))(reason {reason}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Turning_on",
+        "CoreElements": ["Agent", "Device"],
+        "PeripheralElements": ["Time", "Place", "Purpose", "Manner", "Reason"]
+      }
+    },
+    "UsingMeasuringCup": {
+      "action_core": "UsingMeasuringCup",
+      "action_roles": ["action_verb", "utensil", "ingredient", "amount", "unit"],
+      "required_action_roles": ["utensil", "ingredient", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type use-measuring-cup) (utensil (an object (type {utensil}){utensil_props}))(ingredient (an object (type {ingredient}){ingredient_props}))(count (amount {amount}){amount_props}(unit {unit}){unit_props}))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Using",
+        "CoreElements": ["Agent", "Instrument"],
+        "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "UsingSpiceJar": {
+      "action_core": "UsingSpiceJar",
+      "action_roles": ["action_verb", "spice_jar", "ingredient", "amount", "location"],
+      "required_action_roles": ["spice_jar", "ingredient", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type use-spice-jar) (spice_jar (an object (type {spice_jar}){spice_jar_props}))(ingredient (an object (type {ingredient}){ingredient_props}))(count (amount {amount}){amount_props})(location (an object (type {location})))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Using",
+        "CoreElements": ["Agent", "Instrument"],
+        "PeripheralElements": ["Purpose", "Time", "Place", "Manner", "Reason"]
+      }
+    },
+    "Cooking": {
+      "action_core": "Cooking",
+      "action_roles": ["action_verb", "ingredient", "result", "temperature", "duration", "location", "instrument"],
+      "required_action_roles": ["ingredient", "result", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type cook-object) (ingredient (list (type {ingredient}){ingredient_props}))(result (an object (type {result}){result_props}))(temperature {temperature})(duration {duration})(location (an object (type {location})))(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Preparing_food",
+        "CoreElements": ["Cook", "Food", "Ingredient", "Result"],
+        "PeripheralElements": ["Instrument", "HeatSource", "Temperature", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+    "Flipping": {
+      "action_core": "Flipping",
+      "action_roles": ["action_verb", "object", "axis", "direction", "instrument"],
+      "required_action_roles": ["object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type flip-object) (object (an object (type {object}){object_props}))(axis {axis})(direction {direction})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Rotating",
+        "CoreElements": ["Agent", "Theme", "Axis"],
+        "PeripheralElements": ["Time", "Place", "Manner", "Purpose", "Reason"]
+      }
+    },
+    "Shutting": {
+      "action_core": "Shutting",
+      "action_roles": ["action_verb", "object", "location", "method", "instrument"],
+      "required_action_roles": ["object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type shut-object) (object (an object (type {object}){object_props}))(location (an object (type {location})))(method {method})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Closing",
+        "CoreElements": ["Agent", "Entity", "Goal"],
+        "PeripheralElements": ["Instrument", "Manner", "Time", "Place", "Reason"]
+      }
+    },
+    "Carrying": {
+      "action_core": "Carrying",
+      "action_roles": ["action_verb", "object", "source", "destination", "instrument", "path"],
+      "required_action_roles": ["object", "source", "destination", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type carry-object) (object (an object (type {object}){object_props}))(source (an object (type {source}){source_props}))(destination (an object (type {destination}){destination_props}))(instrument (an object (type {instrument})))(path {path}))))",
+      "frame_net": {
+        "FrameNetActionCore": "Transporting",
+        "CoreElements": ["Agent", "Object", "Source", "Destination", "Path"],
+        "PeripheralElements": ["Instrument", "Method", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+
+    "Cleaning": {
+      "action_core": "Cleaning",
+      "action_roles": ["action_verb", "surface", "dirt", "instrument", "cleaner"],
+      "required_action_roles": ["surface", "dirt", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type clean-surface) (surface (an object (type {surface}){surface_props}))(dirt (an object (type {dirt}){dirt_props}))(instrument (an object (type {instrument})))(cleaner (an object (type {cleaner}))))))",
+      "frame_net": {
+        "FrameNetActionCore": "Cleaning",
+        "CoreElements": ["Agent", "Surface", "Dirt", "Result"],
+        "PeripheralElements": ["Instrument", "Method", "Cleaner", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+    "Scraping": {
+      "action_core": "Scraping",
+      "action_roles": ["action_verb", "surface", "material", "instrument", "agent"],
+      "required_action_roles": ["surface", "material", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type scrape-object) (surface (an object (type {surface}){surface_props}))(material (an object (type {material}){material_props}))(instrument (an object (type {instrument})))(agent (an object (type {agent}))))))",
+      "frame_net": {
+        "FrameNetActionCore": "Removing",
+        "CoreElements": ["Agent", "Surface", "Material", "Result"],
+        "PeripheralElements": ["Instrument", "Method", "Time", "Place", "Manner", "Purpose", "Pressure"]
+      }
+    },
+    "Assembling": {
+      "action_core": "Assembling",
+      "action_roles": ["action_verb", "parts", "result", "location", "instrument"],
+      "required_action_roles": ["parts", "result", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type assemble-object) (parts (list (type {parts}){parts_props}))(result (an object (type {result}){result_props}))(location (an object (type {location})))(instrument (an object (type {instrument}))))))",
+      "frame_net": {
+        "FrameNetActionCore": "Constructing",
+        "CoreElements": ["Agent", "Parts", "Whole", "Result"],
+        "PeripheralElements": ["Instrument", "Method", "Time", "Place", "Manner", "Purpose", "Sequence"]
+      }
+    },
+    "Separating": {
+      "action_core": "Separating",
+      "action_roles": ["action_verb", "object", "part", "instrument", "location"],
+      "required_action_roles": ["object", "part", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type separate-object) (object (an object (type {object}){object_props}))(part (an object (type {part}){part_props}))(instrument (an object (type {instrument})))(location (an object (type {location}))))))",
+      "frame_net": {
+        "FrameNetActionCore": "Separating",
+        "CoreElements": ["Agent", "Whole", "Part", "Result"],
+        "PeripheralElements": ["Instrument", "Method", "Time", "Place", "Manner", "Purpose", "Boundary"]
+      }
+    },
+    "Fastening": {
+      "action_core": "Fastening",
+      "action_roles": ["action_verb", "object1", "object2", "instrument", "agent"],
+      "required_action_roles": ["object1", "object2", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type fasten-object) (object1 (an object (type {object1}){object1_props}))(object2 (an object (type {object2}){object2_props}))(instrument (an object (type {instrument})))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Attaching",
+        "CoreElements": ["Agent", "Fastener", "Objects", "Result"],
+        "PeripheralElements": ["Instrument", "Method", "Time", "Place", "Manner", "Purpose", "SecurityLevel"]
+      }
+    },
+    "Folding": {
+      "action_core": "Folding",
+      "action_roles": ["action_verb", "object", "fold_pattern", "instrument"],
+      "required_action_roles": ["object", "fold_pattern", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type fold-object) (object (an object (type {object}){object_props}))(fold_pattern {fold_pattern})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Bending",
+        "CoreElements": ["Agent", "Material", "Folds", "Result"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Purpose", "Precision"]
+      }
+    },
+    "Wiping": {
+      "action_core": "Wiping",
+      "action_roles": ["action_verb", "surface", "substance", "instrument", "agent"],
+      "required_action_roles": ["surface", "substance", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type wipe-surface) (surface (an object (type {surface}){surface_props}))(substance (an object (type {substance}){substance_props}))(instrument (an object (type {instrument})))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Cleaning",
+        "CoreElements": ["Agent", "Surface", "WipingMaterial", "Result"],
+        "PeripheralElements": ["Instrument", "SubstanceRemoved", "Time", "Place", "Manner", "Purpose", "Direction"]
+      }
+    },
+    "Covering": {
+      "action_core": "Covering",
+      "action_roles": ["action_verb", "cover", "target", "purpose", "instrument"],
+      "required_action_roles": ["cover", "target", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type cover-object) (cover (an object (type {cover}){cover_props}))(target (an object (type {target}){target_props}))(purpose {purpose})(instrument (an object (type {instrument}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Enclosing",
+        "CoreElements": ["Agent", "Cover", "Object", "Result"],
+        "PeripheralElements": ["Instrument", "Material", "Time", "Place", "Manner", "Purpose", "Extent"]
+      }
+    },
+    "Tying": {
+      "action_core": "Tying",
+      "action_roles": ["action_verb", "rope", "object", "location", "agent"],
+      "required_action_roles": ["rope", "object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type tie-object) (rope (an object (type {rope}){rope_props}))(object (an object (type {object}){object_props}))(location (an object (type {location})))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Attaching",
+        "CoreElements": ["Agent", "Material", "Object", "Result"],
+        "PeripheralElements": ["Instrument", "KnotType", "Tension", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+    "Unpacking": {
+      "action_core": "Unpacking",
+      "action_roles": ["action_verb", "container", "content", "location", "agent"],
+      "required_action_roles": ["container", "content", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type unpack-object) (container (an object (type {container}){container_props}))(content (an object (type {content}){content_props}))(location (an object (type {location})))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Removing",
+        "CoreElements": ["Agent", "Container", "Contents", "Result"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+    "Organizing": {
+      "action_core": "Organizing",
+      "action_roles": ["action_verb", "items", "arrangement", "location", "agent"],
+      "required_action_roles": ["items", "arrangement", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type organize-objects) (items (list (type {items}){items_props}))(arrangement {arrangement})(location (an object (type {location})))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Arranging",
+        "CoreElements": ["Agent", "Items", "Arrangement", "Result"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Purpose", "Criteria"]
+      }
+    },
+    "Picking_Up": {
+      "action_core": "Picking_Up",
+      "action_roles": ["action_verb", "object", "surface", "agent"],
+      "required_action_roles": ["object", "surface", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type pick-up-object) (object (an object (type {object}){object_props}))(surface (an object (type {surface}){surface_props}))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Removing",
+        "CoreElements": ["Agent", "Object", "Source", "Result"],
+        "PeripheralElements": ["Instrument", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+    "Pushing": {
+      "action_core": "Pushing",
+      "action_roles": ["action_verb", "object", "goal", "instrument", "agent"],
+      "required_action_roles": ["object", "goal", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type push-object) (object (an object (type {object}){object_props}))(goal (an object (type {goal}){goal_props}))(instrument (an object (type {instrument})))(agent (an object (type {agent}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Exerting_force",
+        "CoreElements": ["Agent", "Object", "Result"],
+        "PeripheralElements": ["Instrument", "Direction", "Distance", "Force", "Time", "Place", "Manner", "Purpose"]
+      }
+    },
+    "Wrapping": {
+      "action_core": "Wrapping",
+      "action_roles": ["action_verb", "material", "object", "purpose", "location"],
+      "required_action_roles": ["material", "object", "action_verb"],
+      "cram_plan_syntax": "(perform (an action (type wrap-object) (material (an object (type {material}){material_props}))(object (an object (type {object}){object_props}))(purpose {purpose})(location (an object (type {location}))))))",
+      "frame_net" : {
+        "FrameNetActionCore": "Covering",
+        "CoreElements": ["Wrapper", "Object", "Result"],
+        "PeripheralElements": ["Instrument", "Material", "Time", "Place", "Manner", "Purpose", "Boundary"]
+      }
+    }
+  }
+}

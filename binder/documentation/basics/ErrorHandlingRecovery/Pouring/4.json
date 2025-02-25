@@ -1,0 +1,95 @@
+{
+  "task": "Pouring",
+  "alternate_strategies_for_dynamic_selection": [
+    {
+      "trigger": "Spillage or Overflow",
+      "condition": "Liquid spilling over the edge or missing the target.",
+      "strategy_options": [
+        {
+          "strategy": "Slow Down Pouring Speed",
+          "description": "Reduce the speed of the pour to have more control over the liquid flow."
+        },
+        {
+          "strategy": "Realign the Spout",
+          "description": "Adjust the container's angle to ensure the spout is directed properly toward the target."
+        },
+        {
+          "strategy": "Use a Funnel or Guide",
+          "description": "Place a funnel or guide over the target container to direct the flow more accurately."
+        }
+      ]
+    },
+    {
+      "trigger": "Wrong Amount Poured",
+      "condition": "The wrong amount of liquid is poured into the target container.",
+      "strategy_options": [
+        {
+          "strategy": "Use a Measuring Cup",
+          "description": "Switch to a measuring cup to accurately control the amount of liquid being poured."
+        },
+        {
+          "strategy": "Pause and Adjust Angle",
+          "description": "Pause the pouring process, reassess the angle, and control the amount poured more carefully."
+        },
+        {
+          "strategy": "Pour More Slowly",
+          "description": "Pour slowly to avoid overfilling the target container and adjust the flow rate."
+        }
+      ]
+    },
+    {
+      "trigger": "Drips or Residual Liquid",
+      "condition": "Liquid drips or leaves residual liquid after pouring.",
+      "strategy_options": [
+        {
+          "strategy": "Wipe Spout After Pouring",
+          "description": "After pouring, wipe the spout to stop any drips or residual liquid from falling."
+        },
+        {
+          "strategy": "Increase Pouring Angle",
+          "description": "Adjust the angle of the container to ensure the liquid flows fully without dripping."
+        },
+        {
+          "strategy": "Switch Containers",
+          "description": "Switch to a container with a better-designed spout to minimize residual drips."
+        }
+      ]
+    },
+    {
+      "trigger": "Unstable Container",
+      "condition": "The container is unstable or difficult to control during pouring.",
+      "strategy_options": [
+        {
+          "strategy": "Stabilize the Container",
+          "description": "Place the container on a flat surface or hold it with both hands to provide more stability."
+        },
+        {
+          "strategy": "Use a Smaller Container",
+          "description": "Switch to a smaller container for more control during the pouring process."
+        },
+        {
+          "strategy": "Pause and Reassess",
+          "description": "Stop and reassess the container's position to ensure stability before continuing."
+        }
+      ]
+    },
+    {
+      "trigger": "Misalignment of Spout and Target",
+      "condition": "The spout is not aligned with the target container, causing spillage or inaccurate pouring.",
+      "strategy_options": [
+        {
+          "strategy": "Realign the Spout",
+          "description": "Visually align the spout with the target container before resuming pouring."
+        },
+        {
+          "strategy": "Use a Funnel or Guide",
+          "description": "Place a funnel to ensure that the liquid is poured into the right spot."
+        },
+        {
+          "strategy": "Pour from a Lower Height",
+          "description": "Pour from a lower height to reduce the risk of missing the target or spilling."
+        }
+      ]
+    }
+  ]
+}

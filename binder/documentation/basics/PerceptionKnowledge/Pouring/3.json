@@ -1,0 +1,56 @@
+{
+  "task": "Pouring",
+  "tactile_feedback": [
+    {
+      "feedback": "Grip Stability",
+      "description": "Ensures the container is securely held during pouring.",
+      "examples": ["Feeling the handle of a pitcher remain steady", "Preventing a slippery bottle from slipping out of hand"]
+    },
+    {
+      "feedback": "Tilt Control",
+      "description": "Sensation of the container tilting to control the flow of liquid.",
+      "examples": ["Feeling resistance as the pitcher tilts", "Sensing the weight shift in a bottle"]
+    },
+    {
+      "feedback": "Liquid Weight",
+      "description": "Detecting the weight of the liquid inside the container to estimate the remaining volume.",
+      "examples": ["Feeling a light pitcher as it empties", "Sensing a heavy jug during initial pouring"]
+    },
+    {
+      "feedback": "Resistance at Stop",
+      "description": "Feeling the weight shift or balance change when the container is returned upright.",
+      "examples": ["Noticing the balance return when the bottle is set upright", "Sensing the stop in flow from a tilted teapot"]
+    },
+    {
+      "feedback": "Surface Texture",
+      "description": "Feeling the texture of the container to maintain control and prevent slipping.",
+      "examples": ["Rough handle texture providing grip", "Smooth glass bottle requiring firmer hold"]
+    },
+    {
+      "feedback": "Liquid Movement Inside",
+      "description": "Sensation of liquid shifting inside the container during tilting or movement.",
+      "examples": ["Feeling water slosh in a jug", "Detecting syrup moving slowly in a bottle"]
+    },
+    {
+      "feedback": "Pouring Resistance",
+      "description": "Resistance experienced due to liquid viscosity during pouring.",
+      "examples": ["Sensing light resistance when pouring water", "Feeling strong resistance when pouring honey"]
+    },
+    {
+      "feedback": "Overflow Detection",
+      "description": "Sensation of liquid spilling or overflowing onto the hand or surface.",
+      "examples": ["Feeling liquid overflow onto fingers", "Sensing drips down the side of a jug"]
+    },
+    {
+      "feedback": "Contact with Target",
+      "description": "Detecting the container's spout contact with the target to stabilize the flow.",
+      "examples": ["Feeling the jug spout rest against a funnel", "Sensing the lip of a teapot touching a cup"]
+    },
+    {
+      "feedback": "Vibration or Drips",
+      "description": "Tactile cues from small vibrations or drips indicating flow irregularities.",
+      "examples": ["Feeling drips along the spout", "Noticing slight vibrations as liquid exits"]
+    }
+  ]
+}
+

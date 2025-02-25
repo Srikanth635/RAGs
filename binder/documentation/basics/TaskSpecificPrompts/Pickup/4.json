@@ -1,0 +1,39 @@
+{
+  "task": "Grasping a Wine Glass from the Shelf",
+  "physical_requirements": [
+    {
+      "requirement": "Stable Surface",
+      "description": "The shelf should be stable and secure to support the weight of the wine glass."
+    },
+    {
+      "requirement": "Proper Reach",
+      "description": "Ensure that the object is within a comfortable reach to avoid unnecessary strain."
+    },
+    {
+      "requirement": "Secure Grip",
+      "description": "A firm grip is needed to securely hold the wine glass without risk of dropping it."
+    },
+    {
+      "requirement": "Balanced Motion",
+      "description": "Ensure controlled and smooth motion when reaching for and lifting the wine glass."
+    }
+  ],
+  "sensory_requirements": [
+    {
+      "input": "Vision",
+      "description": "Used to locate the wine glass on the shelf and ensure proper alignment for grasping."
+    },
+    {
+      "input": "Touch",
+      "description": "Senses the shape of the wine glass and helps ensure a secure grip, especially on the stem or base."
+    },
+    {
+      "input": "Proprioception",
+      "description": "Provides feedback from the hand and arm to adjust the position and pressure while grasping the glass."
+    },
+    {
+      "input": "Temperature Sensation",
+      "description": "Senses the temperature of the wine glass to adjust handling, especially if it is chilled."
+    }
+  ]
+}

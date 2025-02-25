@@ -1,0 +1,55 @@
+{
+  "task": "Cutting",
+  "visual_feedback_mechanisms": [
+    {
+      "mechanism": "Blade Alignment",
+      "description": "Ensures the cutting tool is aligned correctly with the object.",
+      "examples": ["Knife positioned straight on a vegetable", "Scissors aligned with a fabric edge"]
+    },
+    {
+      "mechanism": "Cutting Depth",
+      "description": "Provides feedback on how deep the cut is progressing.",
+      "examples": ["Visible depth of a knife in a loaf of bread", "Cutting through layers of a cake"]
+    },
+    {
+      "mechanism": "Cut Quality",
+      "description": "Monitors the smoothness and uniformity of the cut.",
+      "examples": ["Clean edges on sliced fruit", "Even width of julienne vegetables"]
+    },
+    {
+      "mechanism": "Material Separation",
+      "description": "Observes how the material separates during cutting.",
+      "examples": ["Peel separating from a fruit", "Meat portions being divided"]
+    },
+    {
+      "mechanism": "Tool Trajectory",
+      "description": "Tracks the motion of the cutting tool to ensure precision.",
+      "examples": ["Straight cutting line on cardboard", "Circular motion for pizza cutting"]
+    },
+    {
+      "mechanism": "Surface Interaction",
+      "description": "Monitors how the object interacts with the cutting surface.",
+      "examples": ["Object slipping on a cutting board", "Stable position during slicing"]
+    },
+    {
+      "mechanism": "Object Integrity",
+      "description": "Ensures the uncut parts of the object remain intact.",
+      "examples": ["Whole apple core intact after slicing", "Bread loaf maintains shape after cutting"]
+    },
+    {
+      "mechanism": "Color Changes",
+      "description": "Observes color variations to assess cutting progress.",
+      "examples": ["Inside color of an onion revealed after peeling layers", "Inner layers of a cake after slicing"]
+    },
+    {
+      "mechanism": "Edge Visibility",
+      "description": "Tracks the edges of the object to guide cutting paths.",
+      "examples": ["Following the edge of a crust on a pie", "Tracing the outline of a stencil"]
+    },
+    {
+      "mechanism": "Object Movement",
+      "description": "Detects any movement of the object during cutting.",
+      "examples": ["Object sliding on a cutting board", "Rolling fruit while being sliced"]
+    }
+  ]
+}

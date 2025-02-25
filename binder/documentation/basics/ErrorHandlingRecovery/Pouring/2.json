@@ -1,0 +1,65 @@
+{
+  "task": "Pouring",
+  "thresholds_and_metrics_for_anomaly_detection": [
+    {
+      "metric": "Pouring Speed",
+      "threshold": "Deviation greater than 20% from standard pouring speed for the material",
+      "description": "Monitors the rate of liquid flow to detect abnormal pouring speed.",
+      "detection": "Fast or slow pouring speeds may cause spills or uneven filling."
+    },
+    {
+      "metric": "Volume Poured",
+      "threshold": "Variation greater than 5% from the desired volume",
+      "description": "Compares the amount of liquid poured to the target volume.",
+      "detection": "Excessive or insufficient pouring can be detected using a measuring container."
+    },
+    {
+      "metric": "Spillage Amount",
+      "threshold": "Spillage greater than 10% of the target container's volume",
+      "description": "Monitors liquid overflow or spills during pouring.",
+      "detection": "Spillage can be detected visually or through a liquid sensor in the target container."
+    },
+    {
+      "metric": "Spout Alignment",
+      "threshold": "Angle deviation greater than 5 degrees from optimal spout alignment",
+      "description": "Tracks spout alignment with the target container.",
+      "detection": "Misalignment detected through visual feedback or sensor data showing a miss in target container."
+    },
+    {
+      "metric": "Flow Consistency",
+      "threshold": "Flow rate variance greater than 15% from expected for the liquid type",
+      "description": "Monitors whether the liquid flow is consistent and smooth.",
+      "detection": "Abrupt flow changes indicate pouring issues such as clogging or misalignment."
+    },
+    {
+      "metric": "Residual Liquid",
+      "threshold": "Residual liquid exceeding 2% of the total liquid poured",
+      "description": "Detects liquid left in the container after pouring.",
+      "detection": "Measured liquid amount in the container indicates excess residual liquid."
+    },
+    {
+      "metric": "Pour Height",
+      "threshold": "Deviation greater than 10 cm from optimal pour height",
+      "description": "Monitors the height from which the liquid is poured.",
+      "detection": "Too high or too low pouring causes splashing or overflow, detected by measuring tools or visual inspection."
+    },
+    {
+      "metric": "Pouring Angle",
+      "threshold": "Angle deviation greater than 5 degrees from ideal pour angle",
+      "description": "Measures the angle at which the liquid is being poured.",
+      "detection": "Improper pouring angle detected using angle sensors or visual monitoring."
+    },
+    {
+      "metric": "Pouring Duration",
+      "threshold": "Pouring time deviates by more than 15% from the expected duration for the given volume",
+      "description": "Tracks the time it takes to pour a certain amount of liquid.",
+      "detection": "Slower or faster pouring times indicate anomalies in the pouring process."
+    },
+    {
+      "metric": "Clogging Detection",
+      "threshold": "Flow stops or slows to less than 50% of normal speed",
+      "description": "Detects any blockages or clogs in the container or spout.",
+      "detection": "Flow inconsistencies or pressure sensors detect clogs during pouring."
+    }
+  ]
+}

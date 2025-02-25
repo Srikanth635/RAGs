@@ -1,0 +1,59 @@
+{
+  "task": "Picking_Up",
+  "requirements": {
+    "typical_objects": [
+      {
+        "object": "Small Items",
+        "examples": ["Keys", "Coins", "Pens", "Toys"],
+        "properties": ["Lightweight", "Hand-sized"]
+      },
+      {
+        "object": "Fragile Items",
+        "examples": ["Glasses", "Plates", "Decorative Objects"],
+        "properties": ["Breakable", "Requires careful handling"]
+      },
+      {
+        "object": "Heavy Items",
+        "examples": ["Books", "Boxes", "Tools"],
+        "properties": ["Requires strength", "Bulkier than hand-sized"]
+      },
+      {
+        "object": "Soft Items",
+        "examples": ["Clothes", "Cushions", "Towels"],
+        "properties": ["Flexible", "Squishy texture"]
+      },
+      {
+        "object": "Irregularly Shaped Items",
+        "examples": ["Branches", "Cables", "Toys"],
+        "properties": ["Non-uniform shape", "Varied grip points"]
+      }
+    ],
+    "typical_tools": [
+      {
+        "tool": "Hands",
+        "types": ["Bare hands", "Gloved hands"],
+        "usage": "Direct interaction for picking up most objects."
+      },
+      {
+        "tool": "Tongs",
+        "types": ["Kitchen tongs", "Grill tongs", "Laboratory tongs"],
+        "usage": "Used to pick up small or hazardous objects."
+      },
+      {
+        "tool": "Grippers",
+        "types": ["Robotic gripper", "Mechanical claw"],
+        "usage": "Used in automation or when objects are out of reach."
+      },
+      {
+        "tool": "Lifting Aids",
+        "types": ["Dollies", "Slings", "Furniture lifters"],
+        "usage": "Used for picking up and moving heavy or large items."
+      },
+      {
+        "tool": "Suction Devices",
+        "types": ["Vacuum lifters", "Glass suction cups"],
+        "usage": "Used to pick up smooth or flat objects like glass panels."
+      }
+    ]
+  }
+}

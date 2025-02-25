@@ -1,0 +1,43 @@
+{
+  "task": "Pouring Whisky into Glasses",
+  "required_tools": [
+    {
+      "tool": "Whisky Bottle",
+      "description": "The bottle containing the whisky, which is used to pour the liquid into the glass."
+    },
+    {
+      "tool": "Glass",
+      "description": "A suitable drinking glass (e.g., tumbler, whisky glass) to hold the poured whisky."
+    },
+    {
+      "tool": "Measuring Jigger (optional)",
+      "description": "A small tool for measuring exact quantities of whisky if precision is required."
+    },
+    {
+      "tool": "Bottle Opener (optional)",
+      "description": "If the whisky bottle has a cork or seal, a bottle opener or corkscrew may be required to open it."
+    }
+  ],
+  "required_conditions": [
+    {
+      "condition": "Stable Surface",
+      "description": "The glass should be placed on a flat, stable surface to prevent spillage during pouring."
+    },
+    {
+      "condition": "Proper Glass Alignment",
+      "description": "The glass should be positioned securely to avoid tilting or spilling as whisky is poured."
+    },
+    {
+      "condition": "Appropriate Pouring Angle",
+      "description": "The whisky bottle should be tilted at the right angle to ensure smooth and controlled pouring."
+    },
+    {
+      "condition": "Controlled Pouring Speed",
+      "description": "Pour at a steady pace to avoid overfilling the glass or spilling the liquid."
+    },
+    {
+      "condition": "Proper Temperature",
+      "description": "Ensure the whisky is at an ideal temperature (room temperature or slightly chilled, depending on preference)."
+    }
+  ]
+}

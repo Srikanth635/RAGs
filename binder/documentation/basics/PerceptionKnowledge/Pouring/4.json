@@ -1,0 +1,41 @@
+{
+  "task": "Pouring",
+  "ideal_force_range": [
+    {
+      "object_type": "Lightweight Containers",
+      "examples": ["Glass of water", "Small measuring cup"],
+      "force_range": "1-5 N",
+      "description": "Minimal force required to tilt and pour small volumes of liquid."
+    },
+    {
+      "object_type": "Medium-Weight Containers",
+      "examples": ["Pitcher of juice", "Teapot with water"],
+      "force_range": "5-15 N",
+      "description": "Moderate force needed to control tilt and flow for medium volumes."
+    },
+    {
+      "object_type": "Heavy Containers",
+      "examples": ["Large water jug", "5-liter oil can"],
+      "force_range": "15-30 N",
+      "description": "Higher force required to handle and pour heavier containers effectively."
+    },
+    {
+      "object_type": "Viscous Liquids",
+      "examples": ["Syrup bottle", "Honey jar"],
+      "force_range": "5-10 N",
+      "description": "Force needed to overcome liquid resistance and control flow."
+    },
+    {
+      "object_type": "Fragile Containers",
+      "examples": ["Glass bottle", "Porcelain jug"],
+      "force_range": "1-8 N",
+      "description": "Minimal to moderate force needed to prevent breakage during handling."
+    },
+    {
+      "object_type": "Large Bulk Containers",
+      "examples": ["Laundry detergent bottle", "Outdoor watering can"],
+      "force_range": "20-40 N",
+      "description": "Significant force required to lift and tilt large, heavy containers safely."
+    }
+  ]
+}

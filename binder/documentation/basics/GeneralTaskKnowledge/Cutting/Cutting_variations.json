@@ -1,0 +1,75 @@
+{
+  "task": "Cutting",
+  "variations": [
+    {
+      "type": "Technical",
+      "variation": "Precision Cutting",
+      "description": "Cutting materials into precise shapes or sizes using advanced tools.",
+      "examples": ["Laser cutting", "CNC machining"],
+      "context": "Used in manufacturing, engineering, and crafting."
+    },
+    {
+      "type": "Technical",
+      "variation": "Manual Cutting",
+      "description": "Cutting materials by hand using basic tools.",
+      "examples": ["Knife cutting", "Scissor cutting"],
+      "context": "Used in everyday household tasks and small-scale operations."
+    },
+    {
+      "type": "Technical",
+      "variation": "Heavy-Duty Cutting",
+      "description": "Cutting large or hard materials using industrial tools.",
+      "examples": ["Hydraulic cutters", "Industrial saws"],
+      "context": "Used in construction and demolition."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Culinary Cutting",
+      "description": "Cutting food items based on cultural cooking styles.",
+      "examples": ["Chopping vegetables in Western cuisine", "Julienne slicing in French cuisine", "Dicing ingredients in Asian cuisine"],
+      "context": "Varies by culinary traditions and meal preparation methods."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Traditional Craft Cutting",
+      "description": "Cutting materials for cultural art and craft practices.",
+      "examples": ["Paper cutting in Chinese art", "Cloth cutting for traditional garments in India"],
+      "context": "Reflects artistic and cultural heritage."
+    },
+    {
+      "type": "Cultural",
+      "variation": "Ceremonial Cutting",
+      "description": "Symbolic cutting for cultural or religious events.",
+      "examples": ["Ribbon cutting at inaugurations", "Cake cutting at weddings"],
+      "context": "Often associated with formal or celebratory occasions."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Outdoor Cutting",
+      "description": "Cutting tasks performed in natural or outdoor settings.",
+      "examples": ["Pruning branches", "Harvesting crops"],
+      "context": "Used in agriculture, gardening, and forestry."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Cold-Environment Cutting",
+      "description": "Cutting materials in cold conditions, where materials may be brittle.",
+      "examples": ["Ice cutting for sculptures", "Cutting frozen food"],
+      "context": "Requires specialized tools and techniques for low-temperature environments."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Underwater Cutting",
+      "description": "Cutting materials submerged in water.",
+      "examples": ["Underwater welding and cutting", "Cutting ropes during marine operations"],
+      "context": "Used in marine engineering and diving."
+    },
+    {
+      "type": "Environmental",
+      "variation": "Desert Cutting",
+      "description": "Cutting tasks in arid conditions with high dust levels.",
+      "examples": ["Cutting sandstone blocks", "Trimming plants in dry climates"],
+      "context": "Requires consideration of dust and heat during cutting."
+    }
+  ]
+}

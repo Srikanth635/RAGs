@@ -1,0 +1,55 @@
+{
+  "task": "Picking_Up",
+  "tactile_feedback": [
+    {
+      "feedback": "Grip Pressure",
+      "description": "Feedback on the amount of force applied to secure the object.",
+      "examples": ["Feeling a firm grip on a glass", "Adjusting pressure to hold a soft cushion without squeezing"]
+    },
+    {
+      "feedback": "Object Texture",
+      "description": "Detecting the surface texture of the object to adjust grip strategy.",
+      "examples": ["Smooth surface of a ceramic plate", "Rough texture of a cardboard box"]
+    },
+    {
+      "feedback": "Weight Perception",
+      "description": "Sensing the object's weight to adjust handling approach.",
+      "examples": ["Lifting a heavy book with two hands", "Picking up a light toy with one hand"]
+    },
+    {
+      "feedback": "Stability Detection",
+      "description": "Sensing if the object is balanced or slipping during pickup.",
+      "examples": ["Detecting a plate sliding in hand", "Feeling a ball roll slightly when grabbed"]
+    },
+    {
+      "feedback": "Contact Confirmation",
+      "description": "Feeling the initial contact between hand or tool and the object.",
+      "examples": ["Touching the edge of a book", "Fingers making contact with a mug handle"]
+    },
+    {
+      "feedback": "Object Movement",
+      "description": "Detecting any movement of the object during or after pickup.",
+      "examples": ["Feeling a toy shift in grip", "Sensing a bottle tip while being lifted"]
+    },
+    {
+      "feedback": "Flexibility of Object",
+      "description": "Sensing the object's flexibility to prevent damage or deformation.",
+      "examples": ["Compressing a soft pillow slightly", "Holding a flexible plastic container"]
+    },
+    {
+      "feedback": "Tool Feedback",
+      "description": "Sensing resistance or force through tools used for pickup.",
+      "examples": ["Feeling resistance in tongs while gripping a small object", "Detecting force through a robotic gripper"]
+    },
+    {
+      "feedback": "Surface Resistance",
+      "description": "Feeling the friction between the object and surface during lifting.",
+      "examples": ["Sliding a book off a polished table", "Lifting a sticky jar from a countertop"]
+    },
+    {
+      "feedback": "Temperature Sensation",
+      "description": "Detecting the object's temperature to adjust handling approach.",
+      "examples": ["Feeling a warm mug of coffee", "Touching a cold metal spoon"]
+    }
+  ]
+}

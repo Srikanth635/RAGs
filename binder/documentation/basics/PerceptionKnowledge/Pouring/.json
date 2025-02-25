@@ -1,0 +1,55 @@
+{
+  "task": "Pouring",
+  "visual_cues": [
+    {
+      "cue": "Shape",
+      "description": "Identifies the container's form to determine the pouring angle and control.",
+      "examples": ["Rounded pitcher with spout", "Narrow-neck bottle"]
+    },
+    {
+      "cue": "Size",
+      "description": "Determines the capacity of the container and the target to avoid overfilling.",
+      "examples": ["Large jug for bulk pouring", "Small cup for single servings"]
+    },
+    {
+      "cue": "Color",
+      "description": "Distinguishes between different liquids or targets.",
+      "examples": ["Transparent water versus opaque milk", "Dark coffee mug"]
+    },
+    {
+      "cue": "Fill Level",
+      "description": "Indicates the amount of liquid in the source or target container.",
+      "examples": ["Half-filled measuring cup", "Empty glass ready to be filled"]
+    },
+    {
+      "cue": "Surface Texture",
+      "description": "Identifies smooth or grooved spouts for pouring control.",
+      "examples": ["Smooth spout for consistent flow", "Textured edge for drip prevention"]
+    },
+    {
+      "cue": "Spout Direction",
+      "description": "Indicates the proper orientation of the container for pouring.",
+      "examples": ["Spout aligned with the target", "Bottle tilted at the correct angle"]
+    },
+    {
+      "cue": "Target Position",
+      "description": "Helps align the pouring container with the receiving container.",
+      "examples": ["Cup centered under the jug spout", "Funnel positioned over a bottle"]
+    },
+    {
+      "cue": "Liquid Flow",
+      "description": "Provides real-time feedback on the liquid's movement.",
+      "examples": ["Stream of water into a glass", "Oil flowing into a measuring cup"]
+    },
+    {
+      "cue": "Contrast with Background",
+      "description": "Ensures visibility of both container and target.",
+      "examples": ["Clear pitcher on a dark table", "Brightly colored cup on a neutral background"]
+    },
+    {
+      "cue": "Volume Markings",
+      "description": "Guides measurement accuracy during pouring tasks.",
+      "examples": ["Lines on a measuring cup", "Markings on a transparent bottle"]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task": "Cutting",
+  "strategies_for_recovery_from_failed_state": [
+    {
+      "strategy": "Realign the Tool",
+      "description": "Reposition the cutting tool to restore alignment and continue the cut accurately.",
+      "example": "If the knife drifts off course, realign it to the intended cutting line."
+    },
+    {
+      "strategy": "Adjust Pressure",
+      "description": "Reduce or increase the pressure applied to the tool to maintain control and avoid mishaps.",
+      "example": "If the knife is difficult to cut through a material, reduce pressure to prevent damage."
+    },
+    {
+      "strategy": "Stabilize the Object",
+      "description": "Ensure the object is properly secured to prevent movement during cutting.",
+      "example": "Place the object on a non-slip surface or use a clamp to prevent it from shifting."
+    },
+    {
+      "strategy": "Sharpen the Tool",
+      "description": "If the tool has become dull, sharpen it to restore effective cutting performance.",
+      "example": "If resistance increases, sharpen the knife blade to continue cutting smoothly."
+    },
+    {
+      "strategy": "Pause and Reassess",
+      "description": "Take a moment to stop, assess the situation, and adjust the cutting strategy accordingly.",
+      "example": "If a cut is not aligned properly, stop and adjust the angle before continuing."
+    },
+    {
+      "strategy": "Reposition the Object",
+      "description": "Adjust the object's position to improve accessibility or stability for better cutting.",
+      "example": "Move the object slightly if it's at an awkward angle to make the cut easier."
+    },
+    {
+      "strategy": "Slow Down and Focus",
+      "description": "Reduce the cutting speed to increase control and minimize errors.",
+      "example": "If the cut is uneven, slow down and apply more careful, controlled movements."
+    },
+    {
+      "strategy": "Switch Tools",
+      "description": "If the current tool is ineffective, switch to a more appropriate or sharper tool.",
+      "example": "If a serrated knife isn't cutting properly, switch to a chef’s knife for better precision."
+    },
+    {
+      "strategy": "Use Guides or Templates",
+      "description": "Use visual guides or templates to help stay on track during the cut.",
+      "example": "Use a ruler or stencil to guide a straight line for even cuts."
+    },
+    {
+      "strategy": "Minimize Distractions",
+      "description": "Remove any distractions or interruptions that could lead to further mistakes.",
+      "example": "Turn off unnecessary appliances or move other items out of the way to focus on the cutting task."
+    }
+  ]
+}

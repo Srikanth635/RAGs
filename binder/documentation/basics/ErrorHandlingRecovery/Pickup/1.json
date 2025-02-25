@@ -1,0 +1,65 @@
+{
+  "task": "Picking_Up",
+  "common_errors_and_failures": [
+    {
+      "error": "Dropped Object",
+      "cause": "Insufficient grip or accidental release.",
+      "detection": "The object falls or slides out of the user's hand or tool.",
+      "solution": "Improve grip strength and reposition hands for better control."
+    },
+    {
+      "error": "Improper Object Positioning",
+      "cause": "Incorrect hand placement or tool alignment.",
+      "detection": "Object is not fully lifted or is tilted in an awkward position.",
+      "solution": "Reposition hands or tool to ensure the object is fully and properly gripped."
+    },
+    {
+      "error": "Object Shifting",
+      "cause": "Object is unstable or slippery during pickup.",
+      "detection": "The object moves or slides out of place when attempting to lift.",
+      "solution": "Stabilize the object with a non-slip surface or reposition it for better stability."
+    },
+    {
+      "error": "Excessive Force Applied",
+      "cause": "Using too much force when lifting, leading to discomfort or damage.",
+      "detection": "Physical strain or the object getting damaged due to excessive pressure.",
+      "solution": "Apply gradual force and avoid jerking motions. Use the proper lifting technique."
+    },
+    {
+      "error": "Object Misidentification",
+      "cause": "Confusing the object with another or incorrect handling.",
+      "detection": "The object picked up does not meet the intended task or is not the correct one.",
+      "solution": "Verify the object visually before attempting to pick it up."
+    },
+    {
+      "error": "Injury from Sharp or Hazardous Objects",
+      "cause": "Contact with sharp, hot, or hazardous objects during pickup.",
+      "detection": "Pain, bleeding, or discomfort upon contact with the object.",
+      "solution": "Wear protective gloves or use tools to handle hazardous objects safely."
+    },
+    {
+      "error": "Insufficient Stability",
+      "cause": "The object is too heavy or unbalanced for safe lifting.",
+      "detection": "Difficulty lifting or feeling unstable when attempting to pick up the object.",
+      "solution": "Use lifting aids or request assistance for heavy or awkward objects."
+    },
+    {
+      "error": "Object Slips from Tool",
+      "cause": "Using inappropriate or ineffective tools for the object.",
+      "detection": "The object falls out of the tool or grip during pickup.",
+      "solution": "Choose the right tool for the task and ensure proper tool handling."
+    },
+    {
+      "error": "Clumsy or Awkward Grip",
+      "cause": "Improper hand placement or tool use leading to difficulty lifting.",
+      "detection": "The object feels unbalanced or uncomfortable in hand.",
+      "solution": "Adjust hand placement or use a better-suited lifting tool for better control."
+    },
+    {
+      "error": "Reaching Too Far",
+      "cause": "Attempting to lift an object from an awkward or extended position.",
+      "detection": "Difficulty reaching or straining to pick up the object.",
+      "solution": "Move closer to the object or reposition it to reduce strain during the pickup."
+    }
+  ]
+}

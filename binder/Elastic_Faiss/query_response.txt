@@ -1,0 +1,9 @@
+generate only object part of action designator for the NL instruction: cut the mango
+```lisp
+(object (an object
+          (type mango)
+          (name "ripe-mango")
+          (properties (size "medium")
+                      (texture "smooth")
+                      (ripeness "ripe"))))
+```

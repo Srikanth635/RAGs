@@ -1,0 +1,202 @@
+generate action designator for the NL instruction: cut the mango
+```lisp
+(an action
+    (type cutting)
+    (object (an object
+              (type mango)
+              (name "ripe-mango")
+              (properties (size "medium")
+                          (texture "smooth")
+                          (ripeness "ripe"))))
+    (tool (a tool
+            (type knife)
+            (name "cutting-knife")
+            (properties (sharpness "high")
+                        (size "medium")
+                        (material "steel")
+                        (weight "light")
+                        (edge "smooth"))))
+    (location (a location
+                (type cutting-board)
+                (name "kitchen-cutting-board")
+                (properties (material "wood")
+                            (height 0.9)
+                            (accessibility "high")
+                            (surface-type "stable"))))
+    (goal (for-object (an object
+                        (type mango)
+                        (to be-cut-into-pieces
+                          (details (type "slice")
+                                   (size "thin")
+                                   (quantity "multiple"))))))
+    (task-constraints
+      (cut-type "multiple-slices")
+      (cut-uniformly "true")
+      (remove-core "false")
+      (remove-seeds "true")
+      (maintain-shape-integrity "false"))
+    (motion-constraints
+      (kinematic-constraints
+        (degrees-of-freedom 6)
+        (workspace (boundaries (x-min 0)
+                              (x-max 1000)
+                              (y-min 0)
+                              (y-max 1000)
+                              (z-min 0)
+                              (z-max 500))
+                   (singularity-tolerance 0.01))
+        (path-constraints (trajectory-smoothness 0.9)
+                          (collision-avoidance (enabled true)
+                                              (proximity-threshold 20))))
+      (dynamic-constraints
+        (force-control (normal-force 8)
+                       (shearing-force 4))
+        (vibration-control (damping-coefficient 0.7))
+        (torque-limits (joint-1 (max-torque 10))
+                       (joint-2 (max-torque 12)))
+        (inertia-compensation (object-inertia (x 0.004)
+                                            (y 0.004)
+                                            (z 0.003))))
+      (control-constraints
+        (motion-control (control-mode "hybrid_force-position")
+                        (gain-tuning (proportional-gain 1.0)
+                                     (derivative-gain 0.5)))
+        (trajectory-execution (sampling-rate 1000)
+                              (jerk-limit 25)))
+      (environmental-constraints
+        (surface (material "wood")
+                 (friction-coefficient 0.5)
+                 (flatness-tolerance 0.02))
+        (obstacle-avoidance (obstacles (type "bowl")
+                                      (position (x 300)
+                                                (y 200)
+                                                (z 0))
+                                      (dimensions (length 100)
+                                                  (width 80)))
+                            (type "cup")
+                            (position (x 150)
+                                      (y 350)
+                                      (z 0))
+                            (dimensions (radius 50)))
+                           (avoidance-radius 20)))
+      (feedback-constraints
+        (sensors (force-sensor (sensitivity 0.1)
+                               (range 25))
+                 (camera (resolution (width 1920)
+                                    (height 1080))
+                         (field-of-view 90)
+                         (frame-rate 30))
+                 (tactile-sensor (resolution 0.01)
+                                 (sensitivity 0.04)))
+        (latency (control-loop 5)
+                 (sensor-update-rate 20)))
+      (safety-constraints
+        (force-limits (max-interaction-force 12)
+                      (human-contact-force-threshold 3))
+        (tool-safety (tool-storage-position (x 0)
+                                           (y 0)
+                                           (z 50))
+                      (disable-tool-when-idle true))
+        (collision-safety (emergency-stop (trigger-force 8)
+                                         (response-time 0.1))))))
+  (flanagan-motion-phases
+    (pre-motion-phase
+      (predictive-model
+        (expected-trajectory "smooth slicing motion")
+        (force-model
+          (initial-force 1.0)
+          (resistance-range))
+        (tool-model
+          (sharpness "high")
+          (length 15)))
+      (motion-planning
+        (trajectory "linear slice downward")
+        (obstacle-avoidance "enabled")
+        (energy-efficiency "optimized")))
+    (initiation-phase
+      (initial-state
+        (robot-position)
+        (object-position '(0.4 0 0.05))
+        (tool-position '(0.5 -0.2 0.3)))
+      (motion-initialization
+        (joint-activation
+          (joint1 35)
+          (joint2 20))
+        (velocity-profile "linear ramp-up")))
+    (execution-phase
+      (feedforward-control
+        (predicted-forces
+          (initial-force 1.0)
+          (cutting-force-range))
+        (predicted-positions
+          (start '(0.5 -0.2 0.3))
+          (end '(0.5 -0.2 0.05)))
+        (error-tolerance
+          (position-error 0.01)
+          (force-error 0.04)))
+      (feedback-control
+        (corrective-actions
+          (adjust-trajectory true)
+          (increase-force true))
+        (sensor-feedback
+          (force 1.2)
+          (position-error 0.01)
+          (slip-detected false)))
+      (sensory-integration
+        (tactile
+          (gripper-force 3.2)
+          (cutting-force 1.1))
+        (visual
+          (object-center)
+          (knife-position '(0.5 -0.2 0.2)))
+        (proprioceptive
+          (joint-positions)
+          (joint-velocities))))
+    (interaction-phase
+      (force-adaptation
+        (grip-force
+          (initial-grip 3.0)
+          (adjusted-grip 3.5))
+        (cutting-force
+          (initial-cut 1.0)
+          (adaptive-cut 1.2)))
+      (object-modeling
+        (deformation-model
+          (elasticity 0.3)
+          (strain-limit 0.5)
+          (current-deformation 0.2))
+        (material-properties
+          (hardness 0.4)
+          (friction-coefficient 0.35))))
+    (termination-phase
+      (end-effector-stabilization
+        (final-position
+          (knife-position '(0.5 -0.2 0.0)))
+        (reset-trajectory "linear reset to neutral position"))
+      (success-verification
+        (outcome-check
+          (object-cut true)
+          (pieces-separated true))
+        (error-analysis
+          (cut-quality "smooth")
+          (deviation-from-center 0.01))))
+    (post-motion-phase
+      (learning-update
+        (model-refinement
+          (force-model-update
+            (cutting-force 1.4))
+          (trajectory-model-update
+            (deviation-correction 0.01)))
+        (reinforcement
+          (successful-cut true)
+          (reinforce-parameters
+            (grip-force 3.5))))
+      (error-correction
+        (deviation-analysis
+          (position-error 0.01)
+          (force-error 0.04)
+          (slip-event false))
+        (parameter-update
+          (cutting-force-range)
+          (grip-force-range))))))
+```

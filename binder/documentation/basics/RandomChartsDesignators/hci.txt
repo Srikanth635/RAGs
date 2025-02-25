@@ -1,0 +1,19 @@
+descriptive,
+predictive,
+cognitive,
+interaction,
+user-centered design,
+system oriented models,
+task and activity models,
+social and collaboration models,
+emotional adn affective models,
+usability models
+
+
+categories:
+cognitive and behavioral models
+task based models
+predicitve perfromance models
+interaction and communication models
+affective and emotional models
+social interaction models

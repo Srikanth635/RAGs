@@ -1,0 +1,95 @@
+{
+  "task": "Pouring",
+  "household_objects_physical_properties": [
+    {
+      "object": "Pitcher",
+      "properties": {
+        "material": "Plastic, glass, metal",
+        "shape": "Tall container with a spout and handle",
+        "size": "1-2 liters typical capacity",
+        "weight": "Light to moderate when empty",
+        "special_features": ["Easy-grip handle", "Drip-free spout"]
+      }
+    },
+    {
+      "object": "Measuring Cup",
+      "properties": {
+        "material": "Plastic, glass, stainless steel",
+        "shape": "Cylindrical or bowl-shaped with markings",
+        "size": "Varies (up to 1 liter typical)",
+        "weight": "Light",
+        "special_features": ["Graduated markings", "Pouring spout"]
+      }
+    },
+    {
+      "object": "Teapot",
+      "properties": {
+        "material": "Ceramic, metal, glass",
+        "shape": "Rounded body with spout and handle",
+        "size": "0.5-2 liters typical capacity",
+        "weight": "Moderate when full",
+        "special_features": ["Heat-resistant handle", "Drip stopper"]
+      }
+    },
+    {
+      "object": "Bottle",
+      "properties": {
+        "material": "Plastic, glass",
+        "shape": "Cylindrical with a narrow neck",
+        "size": "Varies (0.5-2 liters typical)",
+        "weight": "Light when empty",
+        "special_features": ["Screw cap", "Controlled spout"]
+      }
+    },
+    {
+      "object": "Funnel",
+      "properties": {
+        "material": "Plastic, stainless steel, silicone",
+        "shape": "Wide mouth tapering to a narrow spout",
+        "size": "Varies (small to large sizes)",
+        "weight": "Light",
+        "special_features": ["Flexible spout", "Detachable filters"]
+      }
+    },
+    {
+      "object": "Oil Dispenser",
+      "properties": {
+        "material": "Glass, plastic, metal",
+        "shape": "Slim container with a controlled spout",
+        "size": "250-500 ml typical capacity",
+        "weight": "Light to moderate",
+        "special_features": ["Drip-free spout", "Sealed cap"]
+      }
+    },
+    {
+      "object": "Ladle",
+      "properties": {
+        "material": "Metal, plastic, wood",
+        "shape": "Bowl-shaped head with a long handle",
+        "size": "100-300 ml capacity",
+        "weight": "Light",
+        "special_features": ["Heat-resistant handle", "Curved head for controlled pouring"]
+      }
+    },
+    {
+      "object": "Milk Jug",
+      "properties": {
+        "material": "Ceramic, metal, glass",
+        "shape": "Small pitcher with a spout and handle",
+        "size": "300-500 ml typical capacity",
+        "weight": "Light",
+        "special_features": ["Heat-resistant design", "Drip stopper"]
+      }
+    },
+    {
+      "object": "Watering Can",
+      "properties": {
+        "material": "Plastic, metal",
+        "shape": "Container with a handle and spout",
+        "size": "1-5 liters typical capacity",
+        "weight": "Light to moderate when empty",
+        "special_features": ["Sprinkler head attachment", "Ergonomic handle"]
+      }
+    }
+  ]
+}

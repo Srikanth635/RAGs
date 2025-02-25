@@ -1,0 +1,65 @@
+{
+  "task": "Cutting",
+  "common_errors_and_failures": [
+    {
+      "error": "Uneven Cuts",
+      "cause": "Inconsistent pressure or improper technique.",
+      "detection": "Visual inspection of the cut surface shows uneven or jagged edges.",
+      "solution": "Apply consistent pressure and use a steady cutting motion."
+    },
+    {
+      "error": "Slipping Knife",
+      "cause": "Poor grip or incorrect angle of the knife.",
+      "detection": "Knife moves unexpectedly or causes injury due to slippage.",
+      "solution": "Ensure a secure grip and maintain a proper cutting angle."
+    },
+    {
+      "error": "Cutting Too Deep or Shallow",
+      "cause": "Lack of control over the cutting tool.",
+      "detection": "Visible cuts that are deeper or shallower than intended, resulting in an uneven or incomplete cut.",
+      "solution": "Adjust the cutting pressure and check the depth regularly during cutting."
+    },
+    {
+      "error": "Injury or Nicks",
+      "cause": "Inadvertent contact with the cutting edge.",
+      "detection": "Pain, bleeding, or sudden discomfort upon contact with the knife.",
+      "solution": "Use proper cutting techniques, ensure fingers are out of the way, and wear protective gloves if necessary."
+    },
+    {
+      "error": "Over-cutting or Cutting Through the Surface",
+      "cause": "Excessive force or incorrect alignment.",
+      "detection": "Damage to the surface underneath the object being cut, such as a cutting board being scored.",
+      "solution": "Control the force and ensure the tool is used at the correct angle to avoid cutting through unintended surfaces."
+    },
+    {
+      "error": "Object Slips While Cutting",
+      "cause": "Improper stabilization of the object.",
+      "detection": "The object shifts or moves during cutting, leading to a loss of control.",
+      "solution": "Stabilize the object using a non-slip mat or a proper grip to prevent movement."
+    },
+    {
+      "error": "Tool Becoming Dull",
+      "cause": "Lack of tool maintenance or improper use.",
+      "detection": "Difficulty in cutting, with noticeable increased force needed and rough edges on the object.",
+      "solution": "Regularly sharpen the cutting tool and ensure proper maintenance."
+    },
+    {
+      "error": "Excessive Force or Tension",
+      "cause": "Rushing or improper handling of the cutting tool.",
+      "detection": "Broken or bent tools, or unintended marks on the object.",
+      "solution": "Apply appropriate force and ensure the tool is suited for the material being cut."
+    },
+    {
+      "error": "Misaligned Cut",
+      "cause": "Not following a guide or cutting line properly.",
+      "detection": "Visible misalignment in the cut, deviating from the intended path.",
+      "solution": "Use guides, rulers, or draw clear lines to follow when cutting."
+    },
+    {
+      "error": "Cutting the Wrong Object",
+      "cause": "Lack of attention or focus.",
+      "detection": "Object is cut incorrectly, or an unintended object is cut.",
+      "solution": "Double-check the object to be cut and focus on the task to avoid confusion."
+    }
+  ]
+}
