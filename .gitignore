@@ -1,4 +1,6 @@
 .env
+unsloth_compiled_cache/
+./Finetune/outputs/
 ../home_testing/.env
 __pycache__
 .idea/
