@@ -1,9 +1,16 @@
-generate only object part of action designator for the NL instruction: cut the mango
+cut the apple with the black knife
 ```lisp
-(object (an object
-          (type mango)
-          (name "ripe-mango")
-          (properties (size "medium")
-                      (texture "smooth")
-                      (ripeness "ripe"))))
+(framenet
+  (frame "Cutting")
+  (core-elements
+    (agent "robot")
+    (patient "apple")
+    (instrument "black knife")
+    (result "pieces"))
+  (peripheral-elements
+    (location "unknown")
+    (manner "smoothly")
+    (purpose "prepare-food")
+    (time "now")
+    (degree "completely")))
 ```
