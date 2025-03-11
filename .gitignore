@@ -4,3 +4,5 @@ unsloth_compiled_cache/
 ../home_testing/.env
 __pycache__
 .idea/
+_unsloth_temporary_saved_buffers/
+Finetune/outputs/
