@@ -1,0 +1,162 @@
+query: half the watermelon using the long sharp machete on the kitchen top.
+
+
+response: comprehensive cram action designator in lisp format is as below
+(an action
+    (type cutting)
+    (object (an object
+              (type watermelon)
+              (name "standard-watermelon")
+              (properties (size "large")
+                          (texture "rough")
+                          (color "green")))))
+    (tool (a tool
+            (type machete)
+            (name "long-sharp-machete")
+            (properties (sharpness "very-high")
+                        (size "long")
+                        (material "steel")
+                        (weight "heavy")
+                        (color "black")
+                        (edge "smooth")))))
+    (location (a location
+                (type countertop)
+                (name "kitchen-top")
+                (properties (material "granite")
+                            (height 0.9)
+                            (accessibility "high")
+                            (surface-type "stable")))))
+    (goal (for-object (an object
+                        (type watermelon)
+                        (to be-cut-into-pieces
+                          (details (type "half")
+                                   (size "equal")
+                                   (quantity "2"))))))
+    (task-constraints
+      (cut-type "halving")
+      (cut-uniformly "true")
+      (remove-seeds "none")
+      (maintain-shape-integrity "high"))
+    (motion-constraints
+      (kinematic-constraints
+        (degrees-of-freedom 6)
+        (workspace (boundaries (x-min 0)
+                              (x-max 1000)
+                              (y-min 0)
+                              (y-max 1000)
+                              (z-min 0)
+                              (z-max 500))
+                   (singularity-tolerance 0.01))
+        (path-constraints (trajectory-smoothness 0.95)
+                          (collision-avoidance (enabled true)
+                                              (proximity-threshold 20))))
+      (dynamic-constraints
+        (force-control (normal-force 20)
+                       (shearing-force 10))
+        (vibration-control (damping-coefficient 0.8))
+        (torque-limits (joint-1 (max-torque 15))
+                       (joint-2 (max-torque 20)))
+        (inertia-compensation (object-inertia (x 0.005)
+                                            (y 0.005)
+                                            (z 0.003))))
+      (control-constraints
+        (motion-control (control-mode "hybrid_force_position")
+                        (gain-tuning (proportional-gain 1.2)
+                                     (derivative-gain 0.7)))
+        (trajectory-execution (sampling-rate 1000)
+                              (jerk-limit 30)))
+      (environmental-constraints
+        (surface (material "granite")
+                 (friction-coefficient 0.7)
+                 (flatness-tolerance 0.01))
+        (obstacle-avoidance (obstacles (type "bowl")
+                                      (position (x 400)
+                                                (y 400)
+                                                (z 0))
+                                      (dimensions (radius 60)))
+                            (avoidance-radius 25)))
+      (feedback-constraints
+        (sensors (force-sensor (sensitivity 0.1)
+                               (range 50))
+                 (camera (resolution (width 1920)
+                                    (height 1080))
+                         (field-of-view 90)
+                         (frame-rate 30))
+                 (tactile-sensor (resolution 0.01)
+                                 (sensitivity 0.05)))
+        (latency (control-loop 5)
+                 (sensor-update-rate 20)))
+      (safety-constraints
+        (force-limits (max-interaction-force 25)
+                      (human-contact-force-threshold 5))
+        (tool-safety (tool-storage-position (x 0)
+                                           (y 0)
+                                           (z 50))
+                      (disable-tool-when-idle true))
+        (collision-safety (emergency-stop (trigger-force 15)
+                                         (response-time 0.1)))))
+  (flanagan-motion-phases
+    (pre-motion-phase
+      (predictive-model
+        (expected-trajectory "smooth downward halving")
+        (force-model
+          (initial-force 2.0)
+          (resistance-range))
+        (tool-model
+          (sharpness "very-high")
+          (length 20)))
+      (motion-planning
+        (trajectory "controlled downward slice")
+        (obstacle-avoidance "none")
+        (energy-efficiency "optimized")))
+    (initiation-phase
+      (initial-state
+        (robot-position)
+        (object-position '(0.5 0 0.15))
+        (tool-position '(0.4 -0.2 0.4)))
+      (motion-initialization
+        (joint-activation
+          (joint1 50)
+          (joint2 30))
+        (velocity-profile "linear ramp-up")))
+    (execution-phase
+      (feedforward-control
+        (predicted-forces
+          (initial-force 2.0)
+          (cutting-force-range))
+        (predicted-positions
+          (start '(0.4 -0.2 0.4))
+          (end '(0.4 -0.2 0.1)))
+        (error-tolerance
+          (position-error 0.01)
+          (force-error 0.05)))
+      (feedback-control
+        (corrective-actions
+          (adjust-trajectory true)
+          (increase-force true))
+        (sensor-feedback
+          (force 2.5)
+          (position-error 0.01)
+          (slip-detected false)))
+      (sensory-integration
+        (tactile
+          (gripper-force 4.0)
+          (cutting-force 2.5))
+        (visual
+          (object-center)
+          (machete-position '(0.4 -0.2 0.2)))
+        (proprioceptive
+          (joint-positions)
+          (joint-velocities))))
+    (termination-phase
+      (end-effector-stabilization
+        (final-position
+          (machete-position '(0.4 -0.2 0.0)))
+        (reset-trajectory "linear reset to neutral position"))
+      (success-verification
+        (outcome-check
+          (object-cut true)
+          (pieces-separated true))
+        (error-analysis
+          (cut-quality "smooth")
+          (deviation-from-center 0.02))))))

@@ -1,0 +1,198 @@
+query: slice the tomato into smaller pieces using the machete
+
+
+response: comprehensive cram action designator in lisp format is as below
+(an action
+    (type slicing)
+    (object (an object
+              (type tomato)
+              (name "ripe-tomato")
+              (properties (size "medium")
+                          (texture "smooth and soft")
+                          (color "red")
+                          (juiciness "high"))))
+    (tool (a tool
+            (type machete)
+            (name "jungle-machete")
+            (properties (sharpness "very-high")
+                        (size "large")
+                        (material "carbon-steel")
+                        (weight "heavy")
+                        (color "black")
+                        (edge "serrated"))))
+    (location (a location
+                (type cutting-board)
+                (name "kitchen-cutting-board")
+                (properties (material "bamboo")
+                            (height 0.05)
+                            (stability "high")
+                            (surface-type "non-slip"))))
+    (goal (for-object (an object
+                        (type tomato)
+                        (to be-cut-into-pieces
+                          (details (type "chunk")
+                                   (size "small")
+                                   (quantity "multiple")))))
+    (task-constraints
+      (cut-type "chunks")
+      (cut-uniformly "true")
+      (remove-seeds "optional")
+      (maintain-structural-integrity "partial"))
+    (motion-constraints
+      (kinematic-constraints
+        (degrees-of-freedom 6)
+        (workspace (boundaries (x-min 0)
+                              (x-max 1200)
+                              (y-min 0)
+                              (y-max 1200)
+                              (z-min 0)
+                              (z-max 600))
+                   (singularity-tolerance 0.015))
+        (path-constraints (trajectory-smoothness 0.90)
+                          (collision-avoidance (enabled true)
+                                              (proximity-threshold 25))))
+      (dynamic-constraints
+        (force-control (normal-force 8)
+                       (shearing-force 6))
+        (vibration-control (damping-coefficient 0.85))
+        (torque-limits (joint-1 (max-torque 12))
+                       (joint-2 (max-torque 18)))
+        (inertia-compensation (object-inertia (x 0.004)
+                                            (y 0.004)
+                                            (z 0.003))))
+      (control-constraints
+        (motion-control (control-mode "hybrid_force_position")
+                        (gain-tuning (proportional-gain 1.2)
+                                     (derivative-gain 0.7)))
+        (trajectory-execution (sampling-rate 1200)
+                              (jerk-limit 35)))
+      (environmental-constraints
+        (surface (material "bamboo")
+                 (friction-coefficient 0.5)
+                 (flatness-tolerance 0.015))
+        (obstacle-avoidance (obstacles (type "bowl")
+                                      (position (x 500)
+                                                (y 500)
+                                                (z 0))
+                                      (dimensions (radius 100)))
+                            (avoidance-radius 30)))
+      (feedback-constraints
+        (sensors (force-sensor (sensitivity 0.08)
+                               (range 40))
+                 (camera (resolution (width 1920)
+                                    (height 1080))
+                         (field-of-view 95)
+                         (frame-rate 60))
+                 (tactile-sensor (resolution 0.005)
+                                 (sensitivity 0.04)))
+        (latency (control-loop 4)
+                 (sensor-update-rate 25)))
+      (safety-constraints
+        (force-limits (max-interaction-force 20)
+                      (human-contact-force-threshold 5))
+        (tool-safety (tool-storage-position (x 0)
+                                           (y 0)
+                                           (z 60))
+                      (disable-tool-when-idle true))
+        (collision-safety (emergency-stop (trigger-force 12)
+                                         (response-time 0.08)))))
+  (flanagan-motion-phases
+    (pre-motion-phase
+      (predictive-model
+        (expected-trajectory "controlled downward slice")
+        (force-model
+          (initial-force 1.5)
+          (resistance-range))
+        (tool-model
+          (sharpness "very-high")
+          (length 40)))
+      (motion-planning
+        (trajectory "angled slice motion")
+        (obstacle-avoidance "bowl avoidance")
+        (energy-efficiency "optimized")))
+    (initiation-phase
+      (initial-state
+        (robot-position)
+        (object-position '(0.6 0 0.12))
+        (tool-position '(0.5 -0.3 0.4)))
+      (motion-initialization
+        (joint-activation
+          (joint1 45)
+          (joint2 30))
+        (velocity-profile "linear ramp-up")))
+    (execution-phase
+      (feedforward-control
+        (predicted-forces
+          (initial-force 1.5)
+          (cutting-force-range))
+        (predicted-positions
+          (start '(0.5 -0.3 0.4))
+          (end '(0.5 -0.3 0.1)))
+        (error-tolerance
+          (position-error 0.008)
+          (force-error 0.04)))
+      (feedback-control
+        (corrective-actions
+          (adjust-trajectory true)
+          (increase-force true))
+        (sensor-feedback
+          (force 1.8)
+          (position-error 0.008)
+          (slip-detected false)))
+      (sensory-integration
+        (tactile
+          (gripper-force 4.0)
+          (cutting-force 1.8))
+        (visual
+          (object-center)
+          (machete-position '(0.5 -0.3 0.15)))
+        (proprioceptive
+          (joint-positions)
+          (joint-velocities))))
+    (interaction-phase
+      (force-adaptation
+        (grip-force
+          (initial-grip 4.0)
+          (adjusted-grip 4.5))
+        (cutting-force
+          (initial-cut 1.5)
+          (adaptive-cut 1.8)))
+      (object-modeling
+        (deformation-model
+          (elasticity 0.25)
+          (strain-limit 0.4)
+          (current-deformation 0.15))
+        (material-properties
+          (hardness 0.5)
+          (friction-coefficient 0.35))))
+    (termination-phase
+      (end-effector-stabilization
+        (final-position
+          (machete-position '(0.5 -0.3 0.0)))
+        (reset-trajectory "linear reset to neutral position"))
+      (success-verification
+        (outcome-check
+          (object-cut true)
+          (pieces-separated true))
+        (error-analysis
+          (cut-quality "clean")
+          (deviation-from-center 0.008))))
+    (post-motion-phase
+      (learning-update
+        (model-refinement
+          (force-model-update
+            (cutting-force 2.0))
+          (trajectory-model-update
+            (deviation-correction 0.008)))
+        (reinforcement
+          (successful-cut true)
+          (reinforce-parameters
+            (grip-force 4.5))))
+      (error-correction
+        (deviation-analysis
+          (position-error 0.008)
+          (force-error 0.04)
+          (slip-event false))
+        (parameter-update
+          (cutting-force-range)
+          (grip-force-range)))))

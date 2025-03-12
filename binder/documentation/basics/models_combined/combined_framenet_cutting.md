@@ -11,7 +11,7 @@
    - It's often employed when preparing meats, such as slicing a roast or deli meats.
    - Slicing is ideal for dishes where presentation matters, ensuring even cooking and flavor distribution.
 
-4. **Tools**: A chef�s knife, serrated knife, or mandoline can be used, depending on the ingredient.
+4. **Tools**: A chef's knife, serrated knife, or mandoline can be used, depending on the ingredient.
 
 ### Chopping
 
@@ -24,7 +24,7 @@
    - It is also useful for herbs or nuts when a more rustic texture is desired.
    - Chopping is often preferred when visual uniformity is not crucial.
 
-4. **Tools**: A chef�s knife or cleaver is generally used for chopping, as it allows for more forceful cuts.
+4. **Tools**: A chef's knife or cleaver is generally used for chopping, as it allows for more forceful cuts.
 
 ### Key Distinctions
 
