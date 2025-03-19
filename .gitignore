@@ -6,3 +6,6 @@ __pycache__
 .idea/
 _unsloth_temporary_saved_buffers/
 Finetune/outputs/
+Finetune/llama.cpp/
+Finetune/lora_model_trained/
+Finetune/lora_model_trained_2/
