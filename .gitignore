@@ -9,3 +9,4 @@ Finetune/outputs/
 Finetune/llama.cpp/
 Finetune/lora_model_trained/
 Finetune/lora_model_trained_2/
+Finetune/gemma_4b_trained/
