@@ -202,33 +202,74 @@ def query(AD_instruction,model):
     return ans
 
 
-# Main workflow
-if __name__ == "__main__":
 
-    initialize_settings()
-    AD_instruction = input("Enter query: ")
-    # AD_instruction = "cut the apple using orange sharp knife"
-    f_ind_name = faiss_index # Faiss index name
+
+from flask import Flask, request, jsonify
+app = Flask(__name__)
+
+@app.route('/', methods=['GET'])
+def home():
+    return "<h1>Welcome to the Sample Flask Server!</h1>"
+
+@app.route('/query', methods=['GET', 'POST'])
+def query_endpoint():
+    f_ind_name = faiss_index  # Faiss index name
     e_ind_name = "action-designators"  # Elasticsearch index name
+    model = "comprehensive"
+    if request.method == 'POST':
+        data = request.get_json(silent=True)
+        if data and 'instruction' in data:
+            input_instruction = data['instruction']
+            if 'model' in data:
+                model = data['model']
+        else:
+            return jsonify({"error": "Missing 'instruction' in request body"}), 400
+    else:  # GET method
+        input_instruction = request.args.get('instruction')
+        model = request.args.get('model')
+        if not input_instruction:
+            return jsonify({"error": "Missing 'instruction' parameter"}), 400
 
-    # AD_instruction = "cut the mango into 2 slices using the butter knife by placing it on the wooden board"
-    # query = "what is cram plan syntax for pouring"
-    parts = ["comprehensive","flanagan motion phases", "motion constraints", "framenet", "task constraints", "object", "tool", "location", "goal"]
-    print("Models : ",parts)
-    model = input("Enter specific model: ")
     if model == "comprehensive" or model == "":
-        query = f"generate action designator for the NL instruction: {AD_instruction}"
+        query = f"generate action designator for the NL instruction: {input_instruction}"
     else:
-        query = f"generate only {model} part of action designator for the NL instruction: {AD_instruction}"
+        query = f"generate only {model} part of action designator for the NL instruction: {input_instruction}"
 
     # Generate response
-    response = generate_response_with_rag(query,f_ind_name, e_ind_name, top_k=1)
+    response = generate_response_with_rag(query, f_ind_name, e_ind_name, top_k=1)
 
     ans = response.choices[0].message.content
-    # ans = response.message.content  # For Ollama Models
 
-    print("Generated Response:")
-    print(ans)
-    with open("query_response.txt", "w") as f:
-        f.write(query + "\n" + ans)
-        f.close()
+    return str(ans)
+
+# Main workflow
+if __name__ == "__main__":
+    app.run(debug=True)
+
+#     initialize_settings()
+#     AD_instruction = input("Enter query: ")
+#     # AD_instruction = "cut the apple using orange sharp knife"
+#     f_ind_name = faiss_index # Faiss index name
+#     e_ind_name = "action-designators"  # Elasticsearch index name
+#
+#     # AD_instruction = "cut the mango into 2 slices using the butter knife by placing it on the wooden board"
+#     # query = "what is cram plan syntax for pouring"
+#     parts = ["comprehensive","flanagan motion phases", "motion constraints", "framenet", "task constraints", "object", "tool", "location", "goal"]
+#     print("Models : ",parts)
+#     model = input("Enter specific model: ")
+#     if model == "comprehensive" or model == "":
+#         query = f"generate action designator for the NL instruction: {AD_instruction}"
+#     else:
+#         query = f"generate only {model} part of action designator for the NL instruction: {AD_instruction}"
+#
+#     # Generate response
+#     response = generate_response_with_rag(query,f_ind_name, e_ind_name, top_k=1)
+#
+#     ans = response.choices[0].message.content
+#     # ans = response.message.content  # For Ollama Models
+#
+#     print("Generated Response:")
+#     print(ans)
+#     with open("query_response.txt", "w") as f:
+#         f.write(query + "\n" + ans)
+#         f.close()

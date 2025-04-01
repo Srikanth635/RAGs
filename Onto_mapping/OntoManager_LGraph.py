@@ -267,6 +267,7 @@ graph = graph_builder.compile()
 # 9. Stream Function
 def stream_graph_updates(user_input: str):
     state = {"messages": [HumanMessage(content=user_input)]}
+    output = []
     for event in graph.stream(state):
         for node_output in event.values():
             if "messages" in node_output:
@@ -274,19 +275,26 @@ def stream_graph_updates(user_input: str):
                 if messages:
                     last_message = messages[-1]
                     if isinstance(last_message, HumanMessage):
+                        output.append(f"Human Message: {last_message.content}")
                         print(f"Human Message: {last_message.content}")
                     elif isinstance(last_message, AIMessage):
+                        output.append(f"AI Message: {last_message.content}")
                         print(f"AI Message: {last_message.content}")
                         if hasattr(last_message, "tool_calls") and last_message.tool_calls:
                             for tool_call in last_message.tool_calls:
+                                output.append(f"  Tool: {tool_call['name']}")
+                                output.append(f"  Tool Args: {tool_call['args']}")
                                 print(f"  Tool: {tool_call['name']}")
                                 print(f"  Tool Args: {tool_call['args']}")
                                 tool_results = tool_node({"messages": [last_message]})
                                 tool_result_message = tool_results["messages"][-1]
                                 if isinstance(tool_result_message, ToolMessage):
                                     print(f"  Tool Message: {tool_result_message.content}")
+                                    output.append(f"  Tool Message: {tool_result_message.content}")
                     elif isinstance(last_message, ToolMessage):
+                        output.append(f"Tool Message: {last_message.content}")
                         print(f"Tool Message: {last_message.content}")
+    return str(output)
 
 #10. Direct Graph Invocation
 def graph_invoke(user_input: str):

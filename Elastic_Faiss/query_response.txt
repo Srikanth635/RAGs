@@ -1,33 +1,39 @@
-cut the apple with the black knife
+generate action designator for the NL instruction: cut the brocolli with a serrated black sharp knife
 ```lisp
 (an action
     (type cutting)
     (object (an object
-              (type apple)
-              (name "medium-apple")
+              (type broccoli)
+              (name "broccoli-floret")
               (properties (size "medium")
-                          (texture "smooth"))))
+                          (texture "bumpy")
+                          (color "green"))))
     (tool (a tool
             (type knife)
-            (name "black-knife")
-            (properties (sharpness "high")
-                        (size "medium")
+            (name "serrated-black-sharp-knife")
+            (properties (sharpness "very-high")
                         (color "black")
+                        (type "serrated")
+                        (size "medium")
                         (material "steel")
                         (weight "light")
-                        (edge "smooth"))))
-    (location nil)
+                        (edge "serrated"))))
+    (location (a location
+                (type cutting-board)
+                (name "kitchen-cutting-board")
+                (properties (material "wood")
+                            (height 0.5)
+                            (accessibility "high")
+                            (surface-type "stable"))))
     (goal (for-object (an object
-                        (type apple)
-                        (to be-cut-into-pieces
-                          (details (type "slice")
-                                   (size "thin")
-                                   (quantity "multiple"))))))
+                        (type broccoli)
+                        (to be-cut-into-florets
+                          (details (type "florets")
+                                   (size "medium"))))))
     (task-constraints
       (cut-type "multiple-slices")
       (cut-uniformly "true")
       (remove-core "none")
-      (remove-seeds "none")
       (maintain-shape-integrity "true"))
     (motion-constraints
       (kinematic-constraints
@@ -37,41 +43,41 @@ cut the apple with the black knife
                               (y-min 0)
                               (y-max 1000)
                               (z-min 0)
-                              (z-max 500))
-                   (singularity-tolerance 0.01))
+                              (z-max 500)))
+                 (singularity-tolerance 0.01))
         (path-constraints (trajectory-smoothness 0.95)
                           (collision-avoidance (enabled true)
                                               (proximity-threshold 20))))
       (dynamic-constraints
-        (force-control (normal-force 10)
-                       (shearing-force 5))
-        (vibration-control (damping-coefficient 0.8))
-        (torque-limits (joint-1 (max-torque 10))
+        (force-control (normal-force 8)
+                       (shearing-force 4))
+        (vibration-control (damping-coefficient 0.7))
+        (torque-limits (joint-1 (max-torque 12))
                        (joint-2 (max-torque 15)))
-        (inertia-compensation (object-inertia (x 0.003)
-                                            (y 0.003)
-                                            (z 0.002))))
+        (inertia-compensation (object-inertia (x 0.005)
+                                             (y 0.005)
+                                             (z 0.003))))
       (control-constraints
-        (motion-control (control-mode "hybrid_force-position")
+        (motion-control (control-mode "hybrid_force_position")
                         (gain-tuning (proportional-gain 1.0)
                                      (derivative-gain 0.6)))
         (trajectory-execution (sampling-rate 1000)
-                              (jerk-limit 30)))
+                              (jerk-limit 20)))
       (environmental-constraints
         (surface (material "wood")
-                 (friction-coefficient 0.6)
+                 (friction-coefficient 0.5)
                  (flatness-tolerance 0.02))
-        (obstacle-avoidance (obstacles (type "cup")
+        (obstacle-avoidance (obstacles (type "bowl")
                                       (position (x 300)
                                                 (y 300)
                                                 (z 0))
-                                      (dimensions (radius 50)))
-                            (type "bowl")
-                            (position (x 200)
-                                      (y 400)
+                                      (dimensions (length 100)
+                                                  (width 80)))
+                            (type "pot")
+                            (position (x 150)
+                                      (y 350)
                                       (z 0))
-                            (dimensions (length 80)
-                                        (width 60)))
+                            (dimensions (radius 60)))
                            (avoidance-radius 20)))
       (feedback-constraints
         (sensors (force-sensor (sensitivity 0.1)
@@ -85,7 +91,7 @@ cut the apple with the black knife
         (latency (control-loop 5)
                  (sensor-update-rate 20)))
       (safety-constraints
-        (force-limits (max-interaction-force 15)
+        (force-limits (max-interaction-force 12)
                       (human-contact-force-threshold 3))
         (tool-safety (tool-storage-position (x 0)
                                            (y 0)
@@ -93,104 +99,4 @@ cut the apple with the black knife
                       (disable-tool-when-idle true))
         (collision-safety (emergency-stop (trigger-force 10)
                                          (response-time 0.1))))))
-  (flanagan-motion-phases
-    (pre-motion-phase
-      (predictive-model
-        (expected-trajectory "smooth downward cut")
-        (force-model
-          (initial-force 1.0)
-          (resistance-range))
-        (tool-model
-          (sharpness "high")
-          (length 15)))
-      (motion-planning
-        (trajectory "linear cut downward")
-        (obstacle-avoidance "none")
-        (energy-efficiency "optimized")))
-    (initiation-phase
-      (initial-state
-        (robot-position)
-        (object-position '(0.4 0 0.05))
-        (tool-position '(0.4 -0.2 0.2)))
-      (motion-initialization
-        (joint-activation
-          (joint1 40)
-          (joint2 25))
-        (velocity-profile "linear ramp-up")))
-    (execution-phase
-      (feedforward-control
-        (predicted-forces
-          (initial-force 1.0)
-          (cutting-force-range))
-        (predicted-positions
-          (start '(0.4 -0.2 0.2))
-          (end '(0.4 -0.2 0.05)))
-        (error-tolerance
-          (position-error 0.01)
-          (force-error 0.05)))
-      (feedback-control
-        (corrective-actions
-          (adjust-trajectory true)
-          (increase-force true))
-        (sensor-feedback
-          (force 1.2)
-          (position-error 0.01)
-          (slip-detected false)))
-      (sensory-integration
-        (tactile
-          (gripper-force 3.0)
-          (cutting-force 1.2))
-        (visual
-          (object-center)
-          (knife-position '(0.4 -0.2 0.18)))
-        (proprioceptive
-          (joint-positions)
-          (joint-velocities))))
-    (interaction-phase
-      (force-adaptation
-        (grip-force
-          (initial-grip 3.0)
-          (adjusted-grip 3.5))
-        (cutting-force
-          (initial-cut 1.0)
-          (adaptive-cut 1.2)))
-      (object-modeling
-        (deformation-model
-          (elasticity 0.3)
-          (strain-limit 0.5)
-          (current-deformation 0.2))
-        (material-properties
-          (hardness 0.6)
-          (friction-coefficient 0.4))))
-    (termination-phase
-      (end-effector-stabilization
-        (final-position
-          (knife-position '(0.4 -0.2 0.0)))
-        (reset-trajectory "linear reset to neutral position"))
-      (success-verification
-        (outcome-check
-          (object-cut true)
-          (pieces-separated true))
-        (error-analysis
-          (cut-quality "smooth")
-          (deviation-from-center 0.01))))
-    (post-motion-phase
-      (learning-update
-        (model-refinement
-          (force-model-update
-            (cutting-force 1.5))
-          (trajectory-model-update
-            (deviation-correction 0.01)))
-        (reinforcement
-          (successful-cut true)
-          (reinforce-parameters
-            (grip-force 3.5))))
-      (error-correction
-        (deviation-analysis
-          (position-error 0.01)
-          (force-error 0.05)
-          (slip-event false))
-        (parameter-update
-          (cutting-force-range)
-          (grip-force-range)))))
 ```
