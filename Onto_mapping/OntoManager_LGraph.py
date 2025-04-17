@@ -62,7 +62,7 @@ def get_ontology_classes_by_namespace(ontology_namespace: str) -> List[str]:
 
 @tool
 def get_ontology_classes_by_subname(class_subname: str) -> List[str]:
-    """Get all ontology classes by subname."""
+    """Get all ontology classes which contains the given class_subname substring in them."""
     result = om.get_ontology_classes_by_subname(class_subname)
     return [cls.name for cls in result]
 
